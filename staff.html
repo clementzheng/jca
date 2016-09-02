@@ -1,0 +1,479 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Journey Church of Atlanta</title>
+	<meta name="author" content="Journey Church of Atlanta">
+	
+	<!--FONTS-->
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	
+	<!--STYLE-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+	/*PAGE SPECIFIC FORMATTING*/
+
+	.background#staff_splash {
+		background: url('images/rustic.jpg') no-repeat fixed bottom center;
+		margin-bottom: 80px;
+	}
+
+	.test {
+		height: 300px;
+		background: #CCC;
+		border: 1px solid white;
+	}
+
+	.staff_thumb {
+		text-align: center;
+		margin: 30px 0 0 0;
+		cursor: pointer;
+	}
+
+	.staff_thumb img {
+		width: 100%;
+		height: 200px;
+		background: #CCC;
+		margin-bottom: 20px;
+		opacity: 0.8;
+	}
+
+	.staff_thumb:hover img {
+		opacity: 1.0;
+	}
+
+	#staff_description_container {
+		position: absolute;
+		top: 0;
+		left:; 0;
+		margin: 0;
+		background: rgba(250, 250, 250, 0.95);
+		padding: 0 40px 0 40px;
+		height: 0px;
+		overflow: hidden;
+		-webkit-transition: all 200ms ease-in-out;
+		-moz-transition: all 200ms ease-in-out;
+		-o-transition: all 200ms ease-in-out;
+		transition: all 200ms ease-in-out;
+		z-index: 101;
+	}
+
+	#staff_description_container.active {
+		height: auto;
+		padding: 90px 40px 30px 40px;
+		margin: 0px 0 30px 0;
+	}
+
+	#close_description {
+		position: absolute;
+		top: 20px;
+		right: 30px;
+		width: 40px;
+		height: 40px;
+	}
+
+	#close_description img {
+		width: 100%;
+		height: 100%;
+		opacity: 0.25;
+		cursor: pointer;
+	}
+
+	#close_description:hover img {
+		opacity: 0.5;
+	}
+
+	@media (min-width: 550px) {
+		#staff_description_container {
+			position: relative;
+			float: left;
+			margin: 0;
+			background: #EEEEEE;
+			padding: 0;
+			height: 0px;
+			overflow: hidden;
+			-webkit-transition: all 200ms ease-in-out;
+			-moz-transition: all 200ms ease-in-out;
+			-o-transition: all 200ms ease-in-out;
+			transition: all 200ms ease-in-out;
+		}
+
+		#staff_description_container.active {
+			height: 470px;
+			padding: 30px 0 30px 0;
+			margin: 40px 0 30px 0;
+		}
+
+		#close_description {
+			position: absolute;
+			top: 20px;
+			right: 30px;
+			width: 40px;
+			height: 40px;
+		}
+
+		#close_description img {
+			width: 100%;
+			height: 100%;
+			opacity: 0.25;
+			cursor: pointer;
+		}
+
+		#close_description:hover img {
+			opacity: 0.5;
+		}
+	}
+
+	.staff_description {
+		clear: both;
+		display: none;
+	}
+
+	.staff_description.active {
+		display: block;
+	}
+
+	.staff_description img {
+		background: white;
+		width: 100%;
+		height: 400px;
+	}
+
+	.staff_description .position {
+		font-family: "Montserrat", sans-serif;
+		text-transform: uppercase;
+		font-size: 1.8rem;
+		color: #888888;
+		margin-bottom: 1.0rem;
+	}
+
+	.staff_description .name {
+		font-family: "Montserrat", sans-serif;
+		font-weight: 700;
+		text-transform: capitalize;
+		font-size: 3.0rem;
+		color: black;
+		margin-bottom: 1.0rem;
+	}
+
+	.staff_description .listen {
+		text-transform: capitalize;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 1.8rem;
+		color: #019AD8;
+		margin-bottom: 3.0rem;
+		cursor: pointer;
+	}
+
+
+
+	</style>
+	
+	<!--lIBRARIES-->
+	<script language="javascript" type="text/javascript" src="lib/jquery-1.11.3.min.js"></script>
+	<script language="javascript" type="text/javascript" src="lib/jquery-ui.min.js"></script>
+	
+	
+</head>
+
+<body>
+
+	<div id="emergency_banner">
+		<span class="emergency_span_bold">
+			<b>Location Change for Sunday Eastside Service</b>
+		</span>
+		<span>
+			1234 Address Location Place, Atlanta, GA 30000
+		</span>
+	</div>
+
+	<div id="JCA_logo">
+		<a href="index.html">
+			<img src="images/jca_logo.svg">
+		</a>
+	</div>
+
+	<div class="nav_bar">
+		<div class="nav_item">
+			<div class="nav_title"><a href="imnew.html">I'm New</a></div>
+		</div>
+		<div class="nav_item">
+			<div class="nav_title"><a>About</a></div>
+			<div class="nav_link"><a>Our Story</a></div>
+			<div class="nav_link"><a>Staff</a></div>
+		</div>
+		<div class="nav_item">
+			<div class="nav_title"><a>Connect</a></div>
+			<div class="nav_link"><a>Corporate Gatherings</a></div>
+			<div class="nav_link"><a>FG Signups</a></div>
+			<div class="nav_link"><a>Ministry Teams</a></div>
+		</div>
+		<div class="nav_item">
+			<div class="nav_title"><a>Missions</a></div>
+			<div class="nav_link"><a>Partnerships</a></div>
+			<div class="nav_link"><a>Mission Trips</a></div>
+		</div>
+		<div class="nav_item">
+			<div class="nav_title"><a>Resources</a></div>
+			<div class="nav_link"><a>Sermons</a></div>
+			<div class="nav_link"><a>Special Content</a></div>
+		</div>
+		<div class="nav_item">
+			<div class="nav_title"><a>Give</a></div>
+		</div>
+	</div>
+
+	<div class="nav_bar_mobile">
+		<div class="nav_menu_icon">
+			<div id="open_nav" class="active"><img src="images/menu_white.svg"></div>
+			<div id="close_nav"><img src="images/cancel_black.svg"></div>
+		</div>
+
+		<div class="nav_content_mobile">
+			<div class="nav_item">
+				<div class="nav_title"><a>I'm New</a></div>
+			</div>
+			<div class="nav_item">
+				<div class="nav_title"><a>About</a></div>
+				<div class="nav_link"><a>Our Story</a></div>
+				<div class="nav_link"><a>Staff</a></div>
+			</div>
+			<div class="nav_item">
+				<div class="nav_title"><a>Connect</a></div>
+				<div class="nav_link"><a>Corporate Gatherings</a></div>
+				<div class="nav_link"><a>FG Signups</a></div>
+				<div class="nav_link"><a>Ministry Teams</a></div>
+			</div>
+			<div class="nav_item">
+				<div class="nav_title"><a>Missions</a></div>
+				<div class="nav_link"><a>Partnerships</a></div>
+				<div class="nav_link"><a>Mission Trips</a></div>
+			</div>
+			<div class="nav_item">
+				<div class="nav_title"><a>Resources</a></div>
+				<div class="nav_link"><a>Sermons</a></div>
+				<div class="nav_link"><a>Special Content</a></div>
+			</div>
+			<div class="nav_item">
+				<div class="nav_title"><a>Give</a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content_container">
+
+		<header class="background" id="staff_splash">
+			<div class="page_title">
+				<h1>Meet The Staff</h1>
+			</div>
+		</header>
+
+		<div class="container staff_container">
+			<div class="three column staff_thumb" id="matthew">
+				<img>
+				<h4>Matthew Ro</h4>
+			</div>
+			<div class="three column staff_thumb" id="david">
+				<img>
+				<h4>David Moon</h4>
+			</div>
+			<div class="three column staff_thumb" id="minsoo">
+				<img>
+				<h4>Minsoo Choi</h4>
+			</div>
+			<div class="three column staff_thumb" id="ben">
+				<img>
+				<h4>Ben Ahn</h4>
+			</div>
+		</div>
+
+		<div class="full_container" id="staff_description_container">
+			<div id="close_description">
+				<img src="images/cancel_black.svg">
+			</div>
+			<div class="one column_left staff_description" id="matthew_description">
+				<div class="four column">
+					<img>
+				</div>
+				<div class="six column left_buffer">
+					<p class="position">Lead Pastor</p>
+					<p class="name">Matthew Ro</p>
+					<p class="listen">&#128265; Listen</p>
+					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+			<div class="one column_left staff_description" id="david_description">
+				<div class="four column">
+					<img>
+				</div>
+				<div class="six column left_buffer">
+					<p class="position">Associate Pastor</p>
+					<p class="name">David Moon</p>
+					<p class="listen">&#128265; Listen</p>
+					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+			<div class="one column_left staff_description" id="minsoo_description">
+				<div class="four column">
+					<img>
+				</div>
+				<div class="six column left_buffer">
+					<p class="position">Pastoral Intern</p>
+					<p class="name">Minsoo Choi</p>
+					<p class="listen">&#128265; Listen</p>
+					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+			<div class="one column_left staff_description" id="ben_description">
+				<div class="four column">
+					<img>
+				</div>
+				<div class="six column left_buffer">
+					<p class="position">Pastoral Intern</p>
+					<p class="name">Ben Ahn</p>
+					<p class="listen">&#128265; Listen</p>
+					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+			<div class="one column_left staff_description" id="claudia_description">
+				<div class="four column">
+					<img>
+				</div>
+				<div class="six column left_buffer">
+					<p class="position">Ministry Administrator</p>
+					<p class="name">Claudia Robbie</p>
+					<p class="listen">&#128265; Listen</p>
+					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+			<div class="one column_left staff_description" id="jennifer_description">
+				<div class="four column">
+					<img>
+				</div>
+				<div class="six column left_buffer">
+					<p class="position">Deaconess</p>
+					<p class="name">Jennifer Hogan</p>
+					<p class="listen">&#128265; Listen</p>
+					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+			<div class="one column_left staff_description" id="stephanie_description">
+				<div class="four column">
+					<img>
+				</div>
+				<div class="six column left_buffer">
+					<p class="position">Ministry Intern</p>
+					<p class="name">Stephanie Lu</p>
+					<p class="listen">&#128265; Listen</p>
+					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+			<div class="one column_left staff_description" id="dandy_description">
+				<div class="four column">
+					<img>
+				</div>
+				<div class="six column left_buffer">
+					<p class="position">?</p>
+					<p class="name">Dandy Mejias</p>
+					<p class="listen">&#128265; Listen</p>
+					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container staff_container">
+			<div class="three column staff_thumb" id="claudia">
+				<img>
+				<h4>Claudia Robbie</h4>
+			</div>
+			<div class="three column staff_thumb" id="jennifer">
+				<img>
+				<h4>Jennifer Hogan</h4>
+			</div>
+			<div class="three column staff_thumb" id="stephanie">
+				<img>
+				<h4>Stephanie Lu</h4>
+			</div>
+			<div class="three column staff_thumb" id="dandy">
+				<img>
+				<h4>Dandy Mejias</h4>
+			</div>	
+		</div>
+
+	</div>
+
+	<div class="footer">
+	asd
+	</div>
+
+
+<!--SCRIPTS-->
+<script src="js/script.js"></script>
+<script>
+
+/*page specific script*/
+
+$(".staff_thumb").on("click", function() {
+	if (!$("#staff_description_container").hasClass("active")) {
+		$("#staff_description_container").toggleClass("active");
+	}
+	var id = this.id + "_description";
+	$("#staff_description_container .staff_description.active").toggleClass("active");
+	$("#"+id).toggleClass("active");
+	if ($(window).innerWidth()<550) {
+		$("#staff_description_container").css("top", $(window).scrollTop()+"px");
+	} else {
+		$("#staff_description_container").css("top", "0px");
+		$('html, body').animate({
+	        scrollTop: $("#staff_description_container").offset().top
+	    }, 500);
+	}
+});
+
+$("#close_description").on("click", function() {
+	if ($("#staff_description_container").hasClass("active")) {
+		$("#staff_description_container").toggleClass("active");
+	}
+});
+
+$(".content_container").on("click", function() {
+	if ($("#staff_description_container").hasClass("active")) {
+		$("#staff_description_container").toggleClass("active");
+	}
+}).children().click(function(e) {
+	return false;
+});
+
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

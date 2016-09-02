@@ -1,0 +1,363 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Journey Church of Atlanta</title>
+	<meta name="author" content="Journey Church of Atlanta">
+	
+	<!--FONTS-->
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	
+	<!--STYLE-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+	/*PAGE SPECIFIC FORMATTING*/
+
+	.background#gatherings_splash {
+		background: url('images/rustic.jpg') no-repeat fixed bottom center;
+		margin-bottom: 80px;
+	}
+
+	.test {
+		height: 300px;
+		background: #CCC;
+		border: 1px solid white;
+	}
+
+	#location_map_sunday {
+		position: relative;
+		float: left;
+		background: #CCCCCC;
+		height: 650px;
+	}
+
+	#location_map_friday {
+		position: relative;
+		float: left;
+		background: #CCCCCC;
+		height: 720px;
+	}
+
+	.top_border {
+		border-top: 2px solid #DDDDDD;
+	}
+
+	.day_heading {
+		font-family: "Montserrat", sans-serif;
+		letter-spacing: 0.1rem;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+
+	#gathering_form_div {
+		position: relative;
+		float: left;
+		width: 100%;
+		margin: 100px 0 50px 0;
+		padding-top: 0px;
+		height: 0px;
+		overflow: hidden;
+		-webkit-transition: all 200ms ease-in-out;
+		-moz-transition: all 200ms ease-in-out;
+		-o-transition: all 200ms ease-in-out;
+		transition: all 200ms ease-in-out;
+	}
+
+	#gathering_form_div.active {
+		padding-top: 100px;
+		height: 1000px;
+	}
+
+	#close_form {
+		position: absolute;
+		top: 20px;
+		right: 30px;
+		width: 40px;
+		height: 40px;
+	}
+
+	#close_form img {
+		width: 100%;
+		height: 100%;
+		opacity: 0.25;
+		cursor: pointer;
+	}
+
+	#close_form:hover img {
+		opacity: 0.5;
+	}
+
+
+
+	</style>
+	
+	<!--lIBRARIES-->
+	<script language="javascript" type="text/javascript" src="lib/jquery-1.11.3.min.js"></script>
+	<script language="javascript" type="text/javascript" src="lib/jquery-ui.min.js"></script>
+	
+	
+</head>
+
+<body>
+
+	<div id="emergency_banner">
+		<span class="emergency_span_bold">
+			<b>Location Change for Sunday Eastside Service</b>
+		</span>
+		<span>
+			1234 Address Location Place, Atlanta, GA 30000
+		</span>
+	</div>
+
+	<div id="JCA_logo">
+		<a href="index.html">
+			<img src="images/jca_logo.svg">
+		</a>
+	</div>
+
+	<div class="nav_bar">
+		<div class="nav_item">
+			<div class="nav_title"><a href="imnew.html">I'm New</a></div>
+		</div>
+		<div class="nav_item">
+			<div class="nav_title"><a>About</a></div>
+			<div class="nav_link"><a>Our Story</a></div>
+			<div class="nav_link"><a>Staff</a></div>
+		</div>
+		<div class="nav_item">
+			<div class="nav_title"><a>Connect</a></div>
+			<div class="nav_link"><a>Corporate Gatherings</a></div>
+			<div class="nav_link"><a>FG Signups</a></div>
+			<div class="nav_link"><a>Ministry Teams</a></div>
+		</div>
+		<div class="nav_item">
+			<div class="nav_title"><a>Missions</a></div>
+			<div class="nav_link"><a>Partnerships</a></div>
+			<div class="nav_link"><a>Mission Trips</a></div>
+		</div>
+		<div class="nav_item">
+			<div class="nav_title"><a>Resources</a></div>
+			<div class="nav_link"><a>Sermons</a></div>
+			<div class="nav_link"><a>Special Content</a></div>
+		</div>
+		<div class="nav_item">
+			<div class="nav_title"><a>Give</a></div>
+		</div>
+	</div>
+
+	<div class="nav_bar_mobile">
+		<div class="nav_menu_icon">
+			<div id="open_nav" class="active"><img src="images/menu_white.svg"></div>
+			<div id="close_nav"><img src="images/cancel_black.svg"></div>
+		</div>
+
+		<div class="nav_content_mobile">
+			<div class="nav_item">
+				<div class="nav_title"><a>I'm New</a></div>
+			</div>
+			<div class="nav_item">
+				<div class="nav_title"><a>About</a></div>
+				<div class="nav_link"><a>Our Story</a></div>
+				<div class="nav_link"><a>Staff</a></div>
+			</div>
+			<div class="nav_item">
+				<div class="nav_title"><a>Connect</a></div>
+				<div class="nav_link"><a>Corporate Gatherings</a></div>
+				<div class="nav_link"><a>FG Signups</a></div>
+				<div class="nav_link"><a>Ministry Teams</a></div>
+			</div>
+			<div class="nav_item">
+				<div class="nav_title"><a>Missions</a></div>
+				<div class="nav_link"><a>Partnerships</a></div>
+				<div class="nav_link"><a>Mission Trips</a></div>
+			</div>
+			<div class="nav_item">
+				<div class="nav_title"><a>Resources</a></div>
+				<div class="nav_link"><a>Sermons</a></div>
+				<div class="nav_link"><a>Special Content</a></div>
+			</div>
+			<div class="nav_item">
+				<div class="nav_title"><a>Give</a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content_container">
+
+		<header class="background" id="gatherings_splash">
+			<div class="page_title">
+				<h1>Gatherings</h1>
+			</div>
+		</header>
+
+		<div class="container">
+			<div class="twelve column block_title">
+				<h2>Sunday</h2>
+			</div>
+			<div class="twelve column">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="seven column top_buffer">
+				<h3>Midtown College Service</h3>
+				<p class="top_buffer">Description goes here.</p>
+				<p class="top_buffer">East Architecture Building (College of Design) Auditorium<br>
+				<a>245 Fourth Street NW<br>Atlanta, GA 30332</a></p>
+				<p class="top_buffer2"><a class="primary_button" id="ride_button">Students, need a ride?</a></p>
+				<br>
+				<h3 class="top_buffer">Eastside Young Adult Service</h3>
+				<p class="top_buffer">Description goes here.</p>
+				<p class="top_buffer">Westminster Presbyterian Church<br>
+				<a>1438 Sheridan Road NE<br>Atlanta, GA 30324</a></p>
+				<p class="top_buffer2"><a class="primary_button" id="kids_button">Parents, have kids?</a></p>
+			</div>
+			<div class="five column top_buffer" id="location_map_sunday">
+				<img>
+			</div>
+		</div>
+
+		<div class="full_container" id="gathering_form_div">
+			<div id="close_form">
+				<img src="images/cancel_black.svg">
+			</div>
+			<div class="container">
+				<div class="six column three column_left">
+					<p>Leave your information below and we will contact you in a bit</p>
+				</div>
+				<div class="six column three column_left">
+					<div id="gathering_form" class="form">
+						<p class="top_buffer">
+							<label for="gathering_name_input">What is your name?</label>
+							<input id="gathering_name_input" name="gathering_name_input" type="text">
+							<label for="gathering_email_input">What is your email?</label>
+							<input id="gathering_email_input" name="gathering_email_input" type="text">
+						</p>
+						<div class="bottom_buffer">
+							<label for="gathering_campus_input">What campus are you planning on attending?</label>
+							<div class="radio_button">
+								<input type="radio" name="gathering_campus_input" value="Midtown" checked>
+								<label for="midtown">Midtown</label>
+							</div>
+							<div class="radio_button">
+								<input type="radio" name="gathering_campus_input" value="Eastside">
+								<label for="Eastside">Eastside</label>
+							</div>
+						</div>
+						<br>
+						<p class="top_buffer">
+							<label for="gathering_pickup_input">Where do you need to get picked up from?</label>
+							<input id="gathering_pickup_input" name="gathering_pickup_input" type="text">
+							<label for="gathering_kids_input">How many kids do you need us to watch?</label>
+							<input id="gathering_kids_input" name="gathering_kids_input" type="text">
+						</p>
+						<p class="centered top_buffer"><a class="primary_button">Submit</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="full_container gray_wrapper">
+			<div class="container">
+				<div class="twelve column block_title">
+					<h2>Friday</h2>
+				</div>
+				<div class="seven column top_buffer right_buffer">
+					<h3>Quest</h3>
+					<p class="top_buffer">Address, Atlanta, GA12345<br>7:30 p.m.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<br>
+					<h3>Young Adult Prayer Meeting</h3>
+					<p class="top_buffer">Address, Atlanta, GA12345<br>8:00 p.m.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="five column top_buffer" id="location_map_friday">
+					<img>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="twelve column block_title">
+				<h2>Prayer Meetings</h2>
+			</div>
+			<div class="six column top_buffer top_border">
+				<h3 class="top_buffer">Young Adult</h3>
+			</div>
+			<div class="six column top_buffer top_border bottom_buffer">
+				<p class="top_buffer day_heading">Tuesday-Friday</p>
+				<p>Time: 7:00 a.m.<br>Location: Church Office</p>
+			</div>
+			<div class="six column top_buffer top_border">
+				<h3 class="top_buffer">Emory</h3>
+			</div>
+			<div class="six column top_buffer top_border bottom_buffer">
+				<p class="top_buffer day_heading">Wednesday &amp; Thursday</p>
+				<p>Time: 7:00 a.m.<br>Location: SAAC 201</p>
+			</div>
+			<div class="six column top_buffer top_border">
+				<h3 class="top_buffer">Georgia Tech</h3>
+			</div>
+			<div class="six column top_buffer top_border bottom_buffer">
+				<p class="top_buffer day_heading">Tuesday &amp; Thursday</p>
+				<p>Time: 7:00 a.m.<br>Location: Student Center Room 321</p>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="footer">
+	asd
+	</div>
+
+
+<!--SCRIPTS-->
+<script src="js/script.js"></script>
+<script>
+
+/*page specific script*/
+	$("#ride_button, #kids_button").on("click", function() {
+		$('html, body').animate({
+	        scrollTop: $("#gathering_form_div").offset().top
+	    }, 500);
+		if (!$("#gathering_form_div").hasClass("active")) {
+			$("#gathering_form_div").toggleClass("active");
+		}
+	});
+
+	$("#close_form").on("click", function() {
+		if ($("#gathering_form_div").hasClass("active")) {
+			$("#gathering_form_div").toggleClass("active");
+		}
+	});
+
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
