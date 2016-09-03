@@ -27,7 +27,7 @@ $(".nav_menu_icon").on('click', function() {
 	$("#close_nav").toggleClass("active");
 });
 
-if ($("#emergency_banner").css("display")=="block") {
+if ($("#emergency_banner").length) {
 	$(".nav_bar").css("top", "60px");
 	$(".nav_menu_icon").css("top", "60px");
 }
