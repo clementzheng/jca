@@ -82,6 +82,7 @@ p a {
 	margin: 0;
 	background: #F22C21;
 	display: block;
+	z-index: 999;
 }
 
 #emergency_banner span {
@@ -109,7 +110,7 @@ p a {
 
 .content_container {
 	box-sizing: border-box;
-	position: relative;
+	position: absolute;
 	top: 0;
 	float: left;
 	width: 100%;
