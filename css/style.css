@@ -9,7 +9,7 @@ www.getskeleton.com
 
 /*GENERAL FORMATTING*/
 html {
-	font-family: "Source Sans Pro", "Helvetica Neue", "Arial", sans-serif;
+	font-family: "Karla", "Helvetica Neue", "Arial", sans-serif;
 	font-weight: 400;
 	font-size: 62.5%;
 } 
@@ -110,8 +110,7 @@ p a {
 .content_container {
 	box-sizing: border-box;
 	position: relative;
-	margin-top: 0;
-	padding-top: 0;
+	top: 0;
 	float: left;
 	width: 100%;
 	min-width: 300px;
@@ -174,7 +173,7 @@ p a {
 	}
 	h2 {
 		font-size: 5.0rem;
-		letter-spacing: 0.5rem;
+		letter-spacing: 0.25rem;
 	}
 	.container {
 		width: 80%;
@@ -537,7 +536,7 @@ header {
 
 .nav_bar_mobile {
 	display: none;
-	width: 100%;
+	width: 100vw;
 	z-index: 100;
 }
 
@@ -585,10 +584,11 @@ header {
 	-moz-transition: all 200ms ease-in-out;
 	-o-transition: all 200ms ease-in-out;
 	transition: all 200ms ease-in-out;
+	box-sizing: border-box;
 }
 
 .nav_content_mobile.active {
-	height: 900px;
+	height: 1100px;
 	padding: 30px 0 50px 30px;
 }
 
@@ -604,8 +604,8 @@ header {
 }
 
 .nav_content_mobile .nav_item .nav_title {
-	font-size: 2.2rem;
-	line-height: 2.0rem;
+	font-size: 4vw;
+	line-height: 4vw;
 	font-weight: 700;
 	clear: both;
 }
@@ -613,8 +613,8 @@ header {
 .nav_content_mobile .nav_item .nav_link {
 	visibility: visible;
 	opacity: 1.0;
-	font-size: 2.0rem;
-	line-height: 2.0rem;
+	font-size: 4vw;
+	line-height: 4vw;
 	clear: both;
 	color: black;
 }
