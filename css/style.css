@@ -167,7 +167,7 @@ p a {
 	}
 }
 
-@media (min-width: 550px) {
+@media (min-width: 800px) {
 	h1 {
 		font-size: 8.0rem;
 		letter-spacing: 1.0rem;
@@ -247,7 +247,7 @@ header {
 }
 
 .background {
-	background: url('images/atlanta_skyline.jpg') no-repeat fixed bottom center;
+	background: url('images/atlanta_skyline.jpg') repeat fixed top center;
 	background-size: cover;
 	overflow: hidden;
 }
@@ -546,7 +546,6 @@ header {
 	top: 30px;
 	right: 30px;
 	width: 4rem;
-	height: 4rem;
 	z-index: 100;
 	opacity: 0.75;
 	cursor: pointer;
@@ -589,7 +588,7 @@ header {
 }
 
 .nav_content_mobile.active {
-	height: 1100px;
+	height: auto;
 	padding: 30px 0 50px 30px;
 }
 

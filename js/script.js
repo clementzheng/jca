@@ -14,6 +14,11 @@ if (mobile || $(window).innerWidth()<900) {
 	}
 }
 
+if (mobile) {
+	$(".container").css("width", "100%");
+	$(".container").css("padding", "0 20px");
+}
+
 $(window).on('resize', function() {
 	if ($(window).innerWidth()<900 || mobile) {
 		$(".nav_bar").css("display", "none");
