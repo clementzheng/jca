@@ -247,7 +247,11 @@ header {
 }
 
 .background {
-	background: url('images/atlanta_skyline.jpg') repeat fixed top center;
+	background-color: #222;
+	background: url('images/atlanta_skyline.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 	background-size: cover;
 	overflow: hidden;
 }
