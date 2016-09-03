@@ -9,6 +9,9 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 if (mobile || $(window).innerWidth()<900) {
 	$(".nav_bar").css("display", "none");
 	$(".nav_bar_mobile").css("display", "block");
+	if ($("#emergency_banner").length) {
+		$("#emergency_banner span").css({"width":"100%", "text-align":"center"});
+	}
 }
 
 $(window).on('resize', function() {
@@ -28,6 +31,7 @@ $(".nav_menu_icon").on('click', function() {
 });
 
 if ($("#emergency_banner").length) {
-	$(".nav_bar").css("top", "60px");
-	$(".nav_menu_icon").css("top", "60px");
+	$("#JCA_logo").css("top", "80px");
+	$(".nav_bar").css("top", "80px");
+	$(".nav_menu_icon").css("top", "80px");
 }
