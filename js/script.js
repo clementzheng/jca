@@ -17,6 +17,10 @@ if (mobile || $(window).innerWidth()<900) {
 if (mobile) {
 	$(".container").css("width", "100%");
 	$(".container").css("padding", "0 20px");
+	$(".nav_content_mobile .nav_item .nav_title").css("font-size", "6vw");
+	$(".nav_content_mobile .nav_item .nav_title").css("line-height", "6vw");
+	$(".nav_content_mobile .nav_item .nav_link").css("font-size", "6vw");
+	$(".nav_content_mobile .nav_item .nav_link").css("line-height", "6vw");
 }
 
 $(window).on('resize', function() {

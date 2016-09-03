@@ -475,8 +475,11 @@ header {
 	font-size: 1.5rem;
 	font-weight: 700;
 	letter-spacing: 0.1rem;
+	margin-bottom: 20px;
+}
+
+.nav_title a {
 	padding: 13px;
-	margin-bottom: 10px;
 }
 
 .nav_link {
@@ -502,7 +505,7 @@ header {
 	float: left;
 	padding: 18px 0 20px 13px;
 	margin-top: -10px;
-	width: 200px;
+	width: 150px;
 	border-radius: 0 5px 5px 5px;
 	visibility: hidden;
 }
@@ -517,7 +520,7 @@ header {
 
 .nav_item:hover .nav_link a {
 	color: #555555;
-	width: 225px;
+	width: 190px;
 	background: white;
 	visibility: visible;
 }
@@ -530,6 +533,7 @@ header {
 
 .nav_item:hover .nav_title a {
 	color: #555555;
+	background: white;
 }
 
 .nav_link:hover a {
@@ -607,8 +611,8 @@ header {
 }
 
 .nav_content_mobile .nav_item .nav_title {
-	font-size: 4vw;
-	line-height: 4vw;
+	font-size: 2rem;
+	line-height: 2rem;
 	font-weight: 700;
 	clear: both;
 }
@@ -616,8 +620,8 @@ header {
 .nav_content_mobile .nav_item .nav_link {
 	visibility: visible;
 	opacity: 1.0;
-	font-size: 4vw;
-	line-height: 4vw;
+	font-size: 2rem;
+	line-height: 2rem;
 	clear: both;
 	color: black;
 }

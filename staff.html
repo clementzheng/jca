@@ -92,7 +92,7 @@
 		opacity: 0.5;
 	}
 
-	@media (min-width: 550px) {
+	@media (min-width: 800px) {
 		#staff_description_container {
 			position: relative;
 			float: left;
@@ -269,8 +269,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="content_container">
 
+	<div class="content_container">
 		<header class="background" id="staff_splash">
 			<div class="page_title">
 				<h1>Meet The Staff</h1>
@@ -294,9 +294,24 @@
 				<img>
 				<h4>Ben Ahn</h4>
 			</div>
-		</div>
+			<div class="three column staff_thumb" id="claudia">
+				<img>
+				<h4>Claudia Robbie</h4>
+			</div>
+			<div class="three column staff_thumb" id="jennifer">
+				<img>
+				<h4>Jennifer Hogan</h4>
+			</div>
+			<div class="three column staff_thumb" id="stephanie">
+				<img>
+				<h4>Stephanie Lu</h4>
+			</div>
+			<div class="three column staff_thumb" id="dandy">
+				<img>
+				<h4>Dandy Mejias</h4>
+			</div>	
 
-		<div class="full_container" id="staff_description_container">
+			<div class="twleve column" id="staff_description_container">
 			<div id="close_description">
 				<img src="images/cancel_black.svg">
 			</div>
@@ -390,23 +405,6 @@
 			</div>
 		</div>
 
-		<div class="container staff_container">
-			<div class="three column staff_thumb" id="claudia">
-				<img>
-				<h4>Claudia Robbie</h4>
-			</div>
-			<div class="three column staff_thumb" id="jennifer">
-				<img>
-				<h4>Jennifer Hogan</h4>
-			</div>
-			<div class="three column staff_thumb" id="stephanie">
-				<img>
-				<h4>Stephanie Lu</h4>
-			</div>
-			<div class="three column staff_thumb" id="dandy">
-				<img>
-				<h4>Dandy Mejias</h4>
-			</div>	
 		</div>
 
 		<div class="footer">
@@ -422,35 +420,42 @@
 
 /*page specific script*/
 
+$("html").on("click", function(e) {
+	var container = $("#staff_description_container");
+    if (!container.is(e.target) && container.has(e.target).length === 0 && !staffBool) {
+       	if ($("#staff_description_container").hasClass("active")) {
+			$("#staff_description_container").toggleClass("active");
+		}
+    }
+    if (staffBool) {
+    	staffBool = false;
+    }
+});
+
+var staffBool = false;
 $(".staff_thumb").on("click", function() {
+	$(this).parent().after($("#staff_description_container"));
+	staffBool = true;
 	if (!$("#staff_description_container").hasClass("active")) {
 		$("#staff_description_container").toggleClass("active");
 	}
+	var index  = $(this).index();
+	var closestFour = Math.floor(index/4)*4+3;
+	var appendThisId = $(".staff_thumb").get(closestFour).id;
+	console.log(appendThisId);
+	$("#"+appendThisId).after($("#staff_description_container"));
 	var id = this.id + "_description";
 	$("#staff_description_container .staff_description.active").toggleClass("active");
 	$("#"+id).toggleClass("active");
-	if ($(window).innerWidth()<550) {
-		$("#staff_description_container").css("top", $(window).scrollTop()+"px");
-	} else {
-		$("#staff_description_container").css("top", "0px");
-		$('html, body').animate({
-	        scrollTop: $("#staff_description_container").offset().top
-	    }, 500);
-	}
+	$('html, body').animate({
+        scrollTop: $("#staff_description_container").offset().top
+    }, 500);
 });
 
 $("#close_description").on("click", function() {
 	if ($("#staff_description_container").hasClass("active")) {
 		$("#staff_description_container").toggleClass("active");
 	}
-});
-
-$(".content_container").on("click", function() {
-	if ($("#staff_description_container").hasClass("active")) {
-		$("#staff_description_container").toggleClass("active");
-	}
-}).children().click(function(e) {
-	return false;
 });
 
 </script>
