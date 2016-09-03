@@ -12,6 +12,7 @@ html {
 	font-family: "Source Sans Pro", "Helvetica Neue", "Arial", sans-serif;
 	font-weight: 400;
 	font-size: 62.5%;
+	background: #000;
 } 
 
 body {
@@ -81,7 +82,7 @@ p a {
 	padding: 15px 0;
 	margin: 0;
 	background: #F22C21;
-	display: none;
+	display: block;
 }
 
 #emergency_banner span {
