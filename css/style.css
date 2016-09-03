@@ -160,14 +160,18 @@ p a {
 	text-align: center;
 }
 
-@media (min-width: 400px) {
+@media only screen 
+	and (min-width: 400px) 
+	and (-webkit-min-device-pixel-ratio: 2) {
 	.container {
 		width: 85%;
 		padding: 0;
 	}
 }
 
-@media (min-width: 800px) {
+@media only screen 
+	and (min-width: 800px) 
+	and (-webkit-min-device-pixel-ratio: 1) {
 	h1 {
 		font-size: 8.0rem;
 		letter-spacing: 1.0rem;
