@@ -21,6 +21,7 @@ if (mobile) {
 	$(".nav_content_mobile .nav_item .nav_title").css("line-height", "6vw");
 	$(".nav_content_mobile .nav_item .nav_link").css("font-size", "5vw");
 	$(".nav_content_mobile .nav_item .nav_link").css("line-height", "6vw");
+	$(".nav_menu_icon").css("width", "6rem");
 }
 
 $(window).on('resize', function() {
@@ -30,6 +31,7 @@ $(window).on('resize', function() {
 	} else {
 		$(".nav_bar").css("display", "block");
 		$(".nav_bar_mobile").css("display", "none");
+		$(".content_container").css("top", 0);
 	}	
 });
 
@@ -37,10 +39,12 @@ $(".nav_menu_icon").on('click', function() {
 	$(this).parent().find(".nav_content_mobile").toggleClass("active");
 	$("#open_nav").toggleClass("active");
 	$("#close_nav").toggleClass("active");
+	var h = $(".nav_content_mobile").height();
+	$(".content_container").css("top", h+"px");
 });
 
 if ($("#emergency_banner").length) {
 	$("#JCA_logo").css("top", "80px");
 	$(".nav_bar").css("top", "80px");
-	$(".nav_menu_icon").css("top", "80px");
+	$(".nav_menu_icon").css("top", "90px");
 }
