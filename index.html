@@ -121,6 +121,84 @@
 		opacity: 0.5;
 	}
 
+	#landingTitleDiv {
+		margin-top: -10.0rem;
+	}
+
+	.landingTitle {
+		position: relative;
+		float: left;
+		margin: 2.0rem 2vw 0;
+		padding: 0;
+		text-align: left;
+		width: 60vw;
+		height: 7.0rem;
+	}
+
+	.landingTitle span {
+		position: relative;
+		float: left;
+		width: inherit;
+		padding: 0;
+		margin: 0;
+	}
+
+	.landingTitle span h1 {
+		-webkit-transition: all 800ms ease-in-out;
+		-moz-transition: all 800ms ease-in-out;
+		-o-transition: all 800ms ease-in-out;
+		transition: all 800ms ease-in-out;
+		text-transform: none;
+		font-size: 7.0rem;
+		letter-spacing: 0.2rem;
+		color: rgba(255, 255, 255, 1.0);
+	}
+
+	@media only screen 
+		and (min-width: 800px) 
+		and (-webkit-min-device-pixel-ratio: 1) {
+		#landingTitleDiv {
+			margin-top: -15.0rem;
+			padding: 0;
+		}
+
+		.landingTitle span h1 {
+			font-size: 10.0rem;
+			letter-spacing: 0.1rem;
+		}
+
+		.landingTitle {
+			margin: 1.0rem 10vw;
+			padding: 0;
+			width: 70vw;
+			height: 11.0rem;
+			text-align: left;
+		}
+	}
+
+	#landingTitle3 span h1 {
+		position: absolute;
+		width: inherit;
+		overflow: show;
+		color: rgba(255, 255, 255, 0.0);
+		font-style: italic;
+	}
+
+	#landingTitle3 span.active h1 {
+		color: rgba(255, 255, 255, 1.0);
+	}
+
+	#landingTitle3 span.passive {
+		-webkit-transition: none;
+		-moz-transition: none;
+		-o-transition: none;
+		transition: none;
+	}
+
+	.highlight {
+		color: red;
+	}
+
 	</style>
 	
 	<!--lIBRARIES-->
@@ -131,7 +209,8 @@
 </head>
 
 <body>
-
+	
+	<!--
 	<div id="emergency_banner">
 		<span class="emergency_span_bold">
 			<b>Location Change for Sunday Eastside Service</b>
@@ -140,6 +219,7 @@
 			1234 Address Location Place, Atlanta, GA 30000
 		</span>
 	</div>
+	-->
 
 	<div id="JCA_logo">
 		<a href="index.html">
@@ -152,18 +232,19 @@
 			<div class="nav_title"><a href="imnew.html">I'm New</a></div>
 		</div>
 		<div class="nav_item">
-			<div class="nav_title"><a href="story.html">About</a></div>
+			<div class="nav_title"><a>About</a></div>
 			<div class="nav_link"><a href="story.html">Our Story</a></div>
+			<div class="nav_link"><a href="beliefs.html">Beliefs</a></div>
 			<div class="nav_link"><a href="staff.html">Staff</a></div>
 		</div>
 		<div class="nav_item">
-			<div class="nav_title"><a href="gatherings.html">Connect</a></div>
-			<div class="nav_link"><a href="gatherings.html">Corporate Gatherings</a></div>
-			<div class="nav_link"><a href="familygroups.html">FG Signups</a></div>
+			<div class="nav_title"><a>Connect</a></div>
+			<div class="nav_link"><a href="gatherings.html">Gatherings</a></div>
+			<div class="nav_link"><a href="familygroups.html">Family Groups</a></div>
 			<div class="nav_link"><a>Ministry Teams</a></div>
 		</div>
 		<div class="nav_item">
-			<div class="nav_title"><a href="missions.html">Missions</a></div>
+			<div class="nav_title"><a>Missions</a></div>
 			<div class="nav_link"><a href="missions.html">Partnerships</a></div>
 			<div class="nav_link"><a>Mission Trips</a></div>
 		</div>
@@ -188,18 +269,19 @@
 				<div class="nav_title"><a href="imnew.html">I'm New</a></div>
 			</div>
 			<div class="nav_item">
-				<div class="nav_title"><a href="story.html">About</a></div>
+				<div class="nav_title"><a>About</a></div>
 				<div class="nav_link"><a href="story.html">Our Story</a></div>
+				<div class="nav_link"><a href="beliefs.html">Beliefs</a></div>
 				<div class="nav_link"><a href="staff.html">Staff</a></div>
 			</div>
 			<div class="nav_item">
-				<div class="nav_title"><a href="gatherings.html">Connect</a></div>
-				<div class="nav_link"><a href="gatherings.html">Corporate Gatherings</a></div>
-				<div class="nav_link"><a href="familygroups.html">FG Signups</a></div>
+				<div class="nav_title"><a>Connect</a></div>
+				<div class="nav_link"><a href="gatherings.html">Gatherings</a></div>
+				<div class="nav_link"><a href="familygroups.html">Family Groups</a></div>
 				<div class="nav_link"><a>Ministry Teams</a></div>
 			</div>
 			<div class="nav_item">
-				<div class="nav_title"><a href="missions.html">Missions</a></div>
+				<div class="nav_title"><a>Missions</a></div>
 				<div class="nav_link"><a href="missions.html">Partnerships</a></div>
 				<div class="nav_link"><a>Mission Trips</a></div>
 			</div>
@@ -217,44 +299,24 @@
 	<div class="content_container">
 
 		<header class="background" id="landing_splash">
-			<div class="page_title">
-				<h1>Welcome</h1>
-				<h4>to The Journey Church of Atlanta</h4>
+			<div class="page_title" id="landingTitleDiv">
+				<div id="landingTitle1" class="landingTitle"><span><h1>Journey&nbsp;welcomes</h1></span></div>
+				<div id="landingTitle3" class="landingTitle">
+					<span class="active"><h1>you.</h1></span>
+					<span><h1>atlanta.</h1></span>
+					<span><h1>the world.</h1></span>
+				</div>
 			</div>
 		</header>
 
 		<div class="full_container" id="first_time_splash">
 			<div class="twelve column">
-				<h2>Checking us out for the first time?</h2>
+				<h2>Here for the first time?</h2>
 				<p><a class="secondary_button" href="imnew.html">Learn More</a><p>
 			</div>
 		</div>
 
-		<div class="full_container content_block top_buffer">
-			<div class="twelve column block_title">
-				<h2>Community Events</h2>
-			</div>
-			<div class="four column test bottom_buffer">
-				
-			</div>
-			<div class="four column test bottom_buffer">
-				
-			</div>
-			<div class="four column test bottom_buffer">
-				
-			</div>
-			<div class="four column test bottom_buffer">
-				
-			</div>
-			<div class="four column test bottom_buffer">
-				
-			</div>
-			<div class="four column test bottom_buffer">
-				
-			</div>
-		</div>
-
-		<div class="full_container gray_wrapper">
+		<div class="full_container" id="join_us">
 			<div class="container">
 				<div class="twelve column block_title">
 					<h2>Join us on Sundays</h2>
@@ -265,7 +327,7 @@
 				<div class="six column centered bottom_buffer">
 					<h4 class="bottom_buffer">MIDTOWN SERVICE<br>11:00 a.m.</h4>
 					<p>Description goes here.</p>
-					<p>East Architecture Building (College of Design) Auditorium<br>
+					<p>East Architecture Bldg (College of Design) Auditorium<br>
 					<a>245 Fourth Street NW<br>Atlanta, GA 30332</a></p>
 					<p class="top_buffer"><a class="primary_button" id="ride_button">Students, need a ride?</a></p>
 				</div>
@@ -322,6 +384,24 @@
 			</div>
 		</div>
 
+		<div class="full_container" id="updates">
+			<div class="container">
+				<div class="twelve column block_title">
+					<h2>Looking for Updates?</h2>
+				</div>
+				<div class="six column bottom_buffer">
+					<h4 class="bottom_buffer">Service Locations (10/2 2016)</h4>
+					<p><b>Midtown Service at 11:00 a.m.</b><br>No change</p>
+					<p class="highlight"><b>Eastside Service at 1:30 p.m.</b><br>Briarcliff Baptist Church<br>3039 Briarcliff Rd NE Atlanta GA 30329</p>
+				</div>
+				<div class="six column bottom_buffer">
+					<h4 class="bottom_buffer">Upcoming Events</h4>
+					<p>Description goes here.</p>
+					
+				</div>
+			</div>
+		</div>
+
 		<div class="footer">
 			asd
 		</div>
@@ -345,9 +425,33 @@
 
 	$("#close_form").on("click", function() {
 		if ($("#gathering_form_div").hasClass("active")) {
-			$("#gathering_form_div").toggleClass("active");
+			$('html, body').animate({
+		        scrollTop: $("#join_us").offset().top
+		    }, 500, function() {
+		    	$("#gathering_form_div").toggleClass("active");
+		    });
 		}
 	});
+
+	var titleCount = 0;
+	var titleLength = $("#landingTitle3 span").length;
+	function changeTitle() {
+		/*
+		$("#landingTitle3 .passive").toggleClass("passive");
+		$("#landingTitle3 span:eq("+(titleCount-1+titleLength)%titleLength+")").toggleClass("passive");
+
+		$("#landingTitle3 span").css("left", "-100vw");
+		$("#landingTitle3 span:eq("+titleCount+")").css("left", "100vw");
+		titleCount = (titleCount + 1) % titleLength;
+		$("#landingTitle3 span:eq("+titleCount+")").css("left", "0vw");
+		*/
+
+		$("#landingTitle3 span:eq("+titleCount+") h1").css("color", "rgba(255, 255, 255, 0");
+		titleCount = (titleCount + 1) % titleLength;
+		$("#landingTitle3 span:eq("+titleCount+") h1").css("color", "rgba(255, 255, 255, 1.0");
+	}
+
+	setInterval(changeTitle, 2500);
 
 </script>
 </body>

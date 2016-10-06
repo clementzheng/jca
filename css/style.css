@@ -453,9 +453,15 @@ header {
 .nav_bar {
 	z-index: 100;
 	position: absolute;
-	top: 20px;	
+	top: 40px;	
 	right: 30px;
 	display: block;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	user-select: none;           /* Non-prefixed version, currently not supported by any browser */
 }
 
 .nav_item {
@@ -550,6 +556,12 @@ header {
 	display: none;
 	width: 100vw;
 	z-index: 100;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	user-select: none;           /* Non-prefixed version, currently not supported by any browser */
 }
 
 .nav_menu_icon {
@@ -633,14 +645,29 @@ header {
 .nav_content_mobile .nav_item .nav_link a {
 	visibility: visible;
 	color: black;
+	background: none;
 }
 
 .nav_content_mobile .nav_item .nav_link:hover {
 	color: black;
 	opacity: 0.8;
+	background: none;
 }
 
 .nav_content_mobile .nav_item:hover .nav_title {
 	color: black;
 	opacity: 1.0;
+	background: none;
+}
+
+.nav_content_mobile .nav_item .nav_link:hover a {
+	color: black;
+	opacity: 0.8;
+	background: none;
+}
+
+.nav_content_mobile .nav_item:hover .nav_title a {
+	color: black;
+	opacity: 1.0;
+	background: none;
 }
