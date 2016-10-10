@@ -51,6 +51,10 @@
 		opacity: 1.0;
 	}
 
+	p.description {
+		margin-top: 25px;
+	}
+
 	#staff_description_container {
 		position: absolute;
 		top: 0;
@@ -96,11 +100,10 @@
 		#staff_description_container {
 			position: relative;
 			float: left;
-			margin: 0;
-			background: #EEEEEE;
+			background: #FFF;
 			padding: 0;
 			height: 0px;
-			overflow: hidden;
+			width: 100%;
 			-webkit-transition: all 200ms ease-in-out;
 			-moz-transition: all 200ms ease-in-out;
 			-o-transition: all 200ms ease-in-out;
@@ -108,9 +111,12 @@
 		}
 
 		#staff_description_container.active {
-			height: auto;
-			padding: 30px 0 30px 0;
-			margin: 40px 0 30px 0;
+			overflow: auto;
+			display: block;
+			padding: 60px 0 60px 0;
+			margin: 60px 0 30px 0px;
+			border-top: 1px solid #AAA;
+			border-bottom: 1px solid #AAA;
 		}
 
 		#close_description {
@@ -281,7 +287,7 @@
 			</div>
 		</header>
 
-		<div class="container staff_container">
+		<div class="container staff_container end_div">
 			<div class="three column staff_thumb" id="matthew">
 				<img>
 				<h4>Matthew Ro</h4>
@@ -319,91 +325,84 @@
 			<div id="close_description">
 				<img src="images/cancel_black.svg">
 			</div>
-			<div class="one column_left staff_description" id="matthew_description">
+			<div class="staff_description" id="matthew_description">
 				<div class="four column">
 					<img>
 				</div>
-				<div class="six column left_buffer">
+				<div class="seven column left_buffer">
 					<p class="position">Lead Pastor</p>
 					<p class="name">Matthew Ro</p>
-					<p class="listen">&#128265; Listen</p>
-					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p class="description">After completing his Master of Divinity from Biblical Theological Seminary in May 2002 and serving five years in the Greater Philadelphia area as a youth pastor and associate pastor, &ldquo;P. Matt&rdquo; felt a call from the Lord in 2003 to plant a campus church in Atlanta.  With an initial team of six members, The Journey Church of Atlanta was launched in August 2004. What initially began as an exclusively campus church, Journey has now grown into a multi-site, multi-generational, multi-cultural ministry with a commitment to church-planting, disciple-making, and reaching the lost for Christ.</p>
+					<p>P. Matt's personal mission statement is to see hope restored in people's lives through the Gospel of Jesus Christ.  His main ministry responsibilities include: pioneering, staff/leadership development, teaching, counseling, and leading with vision.  He enjoys reading, spending time with his family, and following his beloved Michigan State football and basketball teams.  P. Matt and his wife, Julia, were married in May 2006 and are the proud parents of two daughters, Ella and Audrey. </p>
 				</div>
 			</div>
-			<div class="one column_left staff_description" id="david_description">
+			<div class="staff_description" id="david_description">
 				<div class="four column">
 					<img>
 				</div>
-				<div class="six column left_buffer">
-					<p class="position">Associate Pastor</p>
+				<div class="seven column left_buffer">
+					<p class="position">Singles Pastor</p>
 					<p class="name">David Moon</p>
-					<p class="listen">&#128265; Listen</p>
 					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 			</div>
-			<div class="one column_left staff_description" id="minsoo_description">
+			<div class="staff_description" id="minsoo_description">
 				<div class="four column">
 					<img>
 				</div>
-				<div class="six column left_buffer">
+				<div class="seven column left_buffer">
 					<p class="position">Pastoral Intern</p>
 					<p class="name">Minsoo Choi</p>
-					<p class="listen">&#128265; Listen</p>
 					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 			</div>
-			<div class="one column_left staff_description" id="ben_description">
+			<div class="staff_description" id="ben_description">
 				<div class="four column">
 					<img>
 				</div>
-				<div class="six column left_buffer">
+				<div class="seven column left_buffer">
 					<p class="position">Pastoral Intern</p>
 					<p class="name">Ben Ahn</p>
-					<p class="listen">&#128265; Listen</p>
 					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 			</div>
-			<div class="one column_left staff_description" id="claudia_description">
+			<div class="staff_description" id="claudia_description">
 				<div class="four column">
 					<img>
 				</div>
-				<div class="six column left_buffer">
+				<div class="seven column left_buffer">
 					<p class="position">Ministry Administrator</p>
 					<p class="name">Claudia Robbie</p>
-					<p class="listen">&#128265; Listen</p>
 					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 			</div>
-			<div class="one column_left staff_description" id="jennifer_description">
+			<div class="staff_description" id="jennifer_description">
 				<div class="four column">
 					<img>
 				</div>
-				<div class="six column left_buffer">
+				<div class="seven column left_buffer">
 					<p class="position">Deaconess</p>
 					<p class="name">Jennifer Hogan</p>
-					<p class="listen">&#128265; Listen</p>
 					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 			</div>
-			<div class="one column_left staff_description" id="stephanie_description">
+			<div class="staff_description" id="stephanie_description">
 				<div class="four column">
 					<img>
 				</div>
-				<div class="six column left_buffer">
+				<div class="seven column left_buffer">
 					<p class="position">Ministry Intern</p>
 					<p class="name">Stephanie Lu</p>
-					<p class="listen">&#128265; Listen</p>
 					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 			</div>
-			<div class="one column_left staff_description" id="dandy_description">
+			<div class="staff_description" id="dandy_description">
 				<div class="four column">
 					<img>
 				</div>
-				<div class="six column left_buffer">
+				<div class="seven column left_buffer">
 					<p class="position">?</p>
 					<p class="name">Dandy Mejias</p>
-					<p class="listen">&#128265; Listen</p>
 					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 			</div>
@@ -453,7 +452,7 @@ $(".staff_thumb").on("click", function() {
 	$("#staff_description_container .staff_description.active").toggleClass("active");
 	$("#"+id).toggleClass("active");
 	$('html, body').animate({
-        scrollTop: $("#staff_description_container").offset().top
+        scrollTop: $("#staff_description_container").offset().top - 60
     }, 500);
 });
 
