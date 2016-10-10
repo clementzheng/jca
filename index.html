@@ -91,6 +91,7 @@
 		padding-top: 0px;
 		height: 0px;
 		overflow: hidden;
+		z-index: 99;
 		-webkit-transition: all 200ms ease-in-out;
 		-moz-transition: all 200ms ease-in-out;
 		-o-transition: all 200ms ease-in-out;
@@ -144,6 +145,7 @@
 	}
 
 	.landingTitle span h1 {
+		font-family: "Karla", sans-serif;
 		-webkit-transition: all 800ms ease-in-out;
 		-moz-transition: all 800ms ease-in-out;
 		-o-transition: all 800ms ease-in-out;
@@ -303,7 +305,7 @@
 				<div id="landingTitle3" class="landingTitle">
 					<span class="active"><h1>you.</h1></span>
 					<span><h1>Atlanta.</h1></span>
-					<span><h1>the World.</h1></span>
+					<span><h1>the world.</h1></span>
 				</div>
 			</div>
 		</header>
@@ -315,7 +317,7 @@
 			</div>
 		</div>
 
-		<div class="full_container" id="join_us">
+		<div class="full_container top_buffer2" id="join_us">
 			<div class="container">
 				<div class="twelve column block_title">
 					<h2>Join us on Sundays</h2>
@@ -360,7 +362,7 @@
 							<input id="gathering_email_input" name="gathering_email_input" type="text">
 						</p>
 						<div class="bottom_buffer">
-							<label for="gathering_campus_input">What campus are you planning on attending?</label>
+							<label for="gathering_campus_input">What campus do you plan to attend?</label><br>
 							<div class="radio_button">
 								<input type="radio" name="gathering_campus_input" value="Midtown" checked>
 								<label for="midtown">Midtown</label>
@@ -383,7 +385,7 @@
 			</div>
 		</div>
 
-		<div class="full_container" id="updates">
+		<div class="full_container end_div" id="updates">
 			<div class="container">
 				<div class="twelve column block_title">
 					<h2>Looking for Updates?</h2>
@@ -402,7 +404,33 @@
 		</div>
 
 		<div class="footer">
-			asd
+			<div class="container">
+				<div class="four column" style="text-align: left;">
+					<h4>Sunday 11:00 AM at MIDTOWN</h4>
+					<p>Click for transportation details<br>
+					East Architecture Auditorium (College of Design)<br>
+					245 Fourth Street NW<br>
+					Atlanta, GA 30332</p>
+				</div>
+				<div class="four column" style="text-align: left;">
+					<h4>Sunday 1:30 PM at EASTSIDE</h4>
+					<p>Click for childcare details<br>
+					Westminster Presbyterian Church<br>
+					1438 Sheridan Rd NE<br>
+					Atlanta, GA 30324</p>
+				</div>
+				<div class="four column" style="text-align: left;">
+					<h4>CHURCH OFFICE</h4>
+					<p>3700 Longview Dr., Chamblee, GA 30341<br>
+					<i>Mailing Address</i><br>
+					The Journey Church of Atlanta<br>
+					PO Box 15575, Atlanta, GA 30333</p>
+				</div><br>
+				<div class="twelve column" style="text-align: center; margin-top: 50px">
+					<h4>A member of <a target="_blank" href="http://www.amichurches.com/">Acts Ministries International</a></h4>
+				</div>
+			</div>
+
 		</div>
 
 	</div>
@@ -450,7 +478,7 @@
 		$("#landingTitle3 span:eq("+titleCount+") h1").css("color", "rgba(255, 255, 255, 1.0");
 	}
 
-	setInterval(changeTitle, 2500);
+	setInterval(changeTitle, 2700);
 
 </script>
 </body>

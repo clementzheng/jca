@@ -18,7 +18,7 @@
 	/*PAGE SPECIFIC FORMATTING*/
 
 	.background#imnew_splash {
-		background: url('images/park.jpg') no-repeat fixed bottom center;
+		background: url('images/park.jpg') no-repeat fixed center center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -26,10 +26,23 @@
 		overflow: hidden;
 	}
 
+	#whoweare {
+		background: #222 url('images/park_blur.jpg') no-repeat fixed center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		overflow: hidden;
+		min-height: 100vh;
+		color: white;
+		box-sizing: border-box;
+		padding: 20vh 0;
+	}
+
 	#fgsignup {
 		width: 100%;
 		text-align: center;
-		margin-top: 40px;
+		margin-top: 90px;
 	}
 
 	.test {
@@ -46,6 +59,7 @@
 		padding-top: 0px;
 		height: 0px;
 		overflow: hidden;
+		z-index: 99;
 		-webkit-transition: all 200ms ease-in-out;
 		-moz-transition: all 200ms ease-in-out;
 		-o-transition: all 200ms ease-in-out;
@@ -95,6 +109,11 @@
 		font-size: 1.7rem;
 		font-weight: 700;
 		letter-spacing: 0.2rem;
+	}
+
+	.primary_button {
+		color: black;
+		border: 1px solid #222;
 	}
 
 	</style>
@@ -202,61 +221,58 @@
 			</div>
 		</header>
 
-		<div class="container">
-			<div class="twelve column block_title">
-				<h2>Who We Are</h2>
-			</div>
-			<div class="six column bottom_buffer right_buffer">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div>
-			<div class="six column bottom_buffer left_buffer">
-				<img src="images/placeholder.jpg">
-			</div>
-			<br>
-			<div class="six column bottom_buffer right_buffer">
-				<img src="images/placeholder.jpg">
-			</div>
-			<div class="six column bottom_buffer left_buffer">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<div class="full_container" id="whoweare">
+			<div class="container">
+				<div class="twelve column block_title">
+					<h2>Who We Are</h2>
+				</div>
+				<div class="twelve column bottom_buffer">
+					<p>The Journey Church of Atlanta is a community all about God and all about people. Jesus calls us to be a family that extends grace, mercy and forgiveness to everyone, and to love others as Jesus has loved us. Striving to do things with excellence and love, we want to see people saved, set free, discipled and empowered to love and serve others. This is a place where alongside peers you can work out your personal faith no matter what you’ve been through or where you are in your relationship with Jesus.</p>
+					<p>We’re specifically passionate about inspiring college students because we believe that if you can change college students you can change the world. So in addition to young professionals and families, we go to the collegiates and hold services and small group (Bible studies) on four different campuses around Atlanta.</p>
+				</div>
 			</div>
 		</div>
 
-		<div class="container">
-			<div class="twelve column block_title">
-				<h2>FG Signups</h2>
+		<div class="full_container">
+			<div class="container top_buffer2 bottom_buffer2">
+				<div class="twelve column block_title">
+					<h2>Visit a Family Group</h2>
+				</div>
+				<div class="twelve column bottom_buffer">
+					<p>Life is meant to be lived in community. We were made to live enjoy life in community (Father, Son and Holy Spirit). You were created to laugh, work, play and to share the joy of salvation with everyone.</p>
+					<p>A family group is a group of 10&ndash;15 people who gather weekly to study God’s word, pray, share our struggles and blessings and build Biblical friendships. Groups are usually formed by similar life stage. JCA offers you a chance to connect with others and grow with God through small, family setting.</p>
+					<p>We encourage you to join a family group, and experience life with other people.</p>
+					<p id="fgsignup"><a class="secondary_button" href="familygroups.html">Learn More</a></p>
+				</div>		
 			</div>
-			<div class="twelve column test bottom_buffer">
+		</div>
+		<div class="full_container" id="sunday">
+			<div class="container top_buffer2">
+				<div class="twelve column block_title">
+					<h2>Join us on Sundays</h2>
+				</div>
+				<div class="twelve column bottom_buffer">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="six column centered bottom_buffer">
+					<h4 class="bottom_buffer">MIDTOWN SERVICE<br>11:00 a.m.</h4>
+					<p>Description goes here.</p>
+					<p>East Architecture Bldg (College of Design) Auditorium<br>
+					<a>245 Fourth Street NW<br>Atlanta, GA 30332</a></p>
+					<p class="top_buffer"><a class="primary_button" id="ride_button">Students, need a ride?</a></p>
+				</div>
+				<div class="six column centered bottom_buffer">
+					<h4 class="bottom_buffer">EASTSIDE SERVICE<br>1:30 p.m.</h4>
+					<p>Description goes here.</p>
+					<p>Westminster Presbyterian Church<br>
+					<a>1438 Sheridan Road NE<br>Atlanta, GA 30324</a></p>
+					<p class="top_buffer"><a class="primary_button" id="kids_button">Parents, have kids?</a></p>
+				</div>
 			</div>
-			<div class="twelve column bottom_buffer">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<p id="fgsignup"><a class="secondary_button">Learn More</a><p>
-			</div>
-			
 		</div>
 
-		<div class="container">
-			<div class="twelve column block_title">
-				<h2>Join us on Sundays</h2>
-			</div>
-			<div class="twelve column bottom_buffer">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div>
-			<div class="six column centered bottom_buffer">
-				<h4 class="bottom_buffer">MIDTOWN SERVICE<br>11:00 a.m.</h4>
-				<p>Description goes here.</p>
-				<p>East Architecture Building (College of Design) Auditorium<br>
-				<a>245 Fourth Street NW<br>Atlanta, GA 30332</a></p>
-				<p class="top_buffer"><a class="primary_button" id="ride_button">Students, need a ride?</a></p>
-			</div>
-			<div class="six column centered bottom_buffer">
-				<h4 class="bottom_buffer">EASTSIDE SERVICE<br>1:30 p.m.</h4>
-				<p>Description goes here.</p>
-				<p>Westminster Presbyterian Church<br>
-				<a>1438 Sheridan Road NE<br>Atlanta, GA 30324</a></p>
-				<p class="top_buffer"><a class="primary_button" id="kids_button">Parents, have kids?</a></p>
-			</div>
-			<div class="twelve column top_buffer bottom_buffer test">
-				
+		<div class="full_container" class="bottom_buffer2">
+			<div class="twelve column top_buffer bottom_buffer test">		
 			</div>
 		</div>
 
@@ -277,7 +293,7 @@
 							<input id="gathering_email_input" name="gathering_email_input" type="text">
 						</p>
 						<div class="bottom_buffer">
-							<label for="gathering_campus_input">What campus are you planning on attending?</label>
+							<label for="gathering_campus_input">What campus do you plan to attend?</label><br>
 							<div class="radio_button">
 								<input type="radio" name="gathering_campus_input" value="Midtown" checked>
 								<label for="midtown">Midtown</label>
@@ -300,35 +316,60 @@
 			</div>
 		</div>
 
-		<div class="container">
-			<div class="twelve column block_title">
-				<h3>Learn More About Us</h3>
-			</div>
-			<div class="four column learn_more_link">
-				<a>
-					<img>
-					<p class="learn_more_title top_buffer">Sermons</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</a>
-			</div>
-			<div class="four column learn_more_link">
-				<a>
-					<img>
-					<p class="learn_more_title top_buffer">Family Groups</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</a>
-			</div>
-			<div class="four column learn_more_link">
-				<a>
-					<img>
-					<p class="learn_more_title top_buffer">Ministry and Outreach</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</a>
+		<div class="full_container">
+			<div class="container end_div top_buffer2">
+				<div class="twelve column block_title">
+					<h3>Learn More About Us</h3>
+				</div>
+				<div class="four column learn_more_link">
+					<a>
+						<img>
+						<p class="learn_more_title top_buffer">Sermons</p>
+					</a>
+				</div>
+				<div class="four column learn_more_link">
+					<a>
+						<img>
+						<p class="learn_more_title top_buffer">Family Groups</p>
+					</a>
+				</div>
+				<div class="four column learn_more_link">
+					<a>
+						<img>
+						<p class="learn_more_title top_buffer">Ministry and Outreach</p>
+					</a>
+				</div>
 			</div>
 		</div>
 
 		<div class="footer">
-			asd
+			<div class="container">
+				<div class="four column" style="text-align: left;">
+					<h4>Sunday 11:00 AM at MIDTOWN</h4>
+					<p>Click for transportation details<br>
+					East Architecture Auditorium (College of Design)<br>
+					245 Fourth Street NW<br>
+					Atlanta, GA 30332</p>
+				</div>
+				<div class="four column" style="text-align: left;">
+					<h4>Sunday 1:30 PM at EASTSIDE</h4>
+					<p>Click for childcare details<br>
+					Westminster Presbyterian Church<br>
+					1438 Sheridan Rd NE<br>
+					Atlanta, GA 30324</p>
+				</div>
+				<div class="four column" style="text-align: left;">
+					<h4>CHURCH OFFICE</h4>
+					<p>3700 Longview Dr., Chamblee, GA 30341<br>
+					<i>Mailing Address</i><br>
+					The Journey Church of Atlanta<br>
+					PO Box 15575, Atlanta, GA 30333</p>
+				</div><br>
+				<div class="twelve column" style="text-align: center; margin-top: 50px">
+					<h4>A member of <a target="_blank" href="http://www.amichurches.com/">Acts Ministries International</a></h4>
+				</div>
+			</div>
+
 		</div>
 
 	</div>
@@ -350,7 +391,11 @@
 
 	$("#close_form").on("click", function() {
 		if ($("#gathering_form_div").hasClass("active")) {
-			$("#gathering_form_div").toggleClass("active");
+			$('html, body').animate({
+		        scrollTop: $("#sunday").offset().top
+		    }, 500, function() {
+		    	$("#gathering_form_div").toggleClass("active");
+		    });
 		}
 	});
 
