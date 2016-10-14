@@ -18,19 +18,36 @@
 	/*PAGE SPECIFIC FORMATTING*/
 
 	.background#fg_splash {
-		background: url('images/mountain.jpg') no-repeat fixed bottom center;
+		background: url('images/mountain.jpg') no-repeat fixed center center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
 		overflow: hidden;
-		margin-bottom: 80px;
+	}
+
+	#familygroups {
+		background: #222 url('images/mountain_blur.jpg') no-repeat fixed center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		overflow: hidden;
+		min-height: 100vh;
+		color: white;
+		box-sizing: border-box;
+		padding: 20vh 0;
 	}
 
 	.test {
 		height: 300px;
 		background: #CCC;
 		border: 1px solid white;
+	}
+
+	.draw_line {
+		border-top: 2px solid #DDDDDD;
+		padding-top: 30px;
 	}
 
 
@@ -136,42 +153,66 @@
 
 		<header class="background" id="fg_splash">
 			<div class="page_title">
-				<h1>Family Groups</h1>
+				<h1>Church is Family</h1>
 			</div>
 		</header>
 
-		<div class="container">
-			<div class="six column right_buffer">
-				<img class="test">
+		<div class="full_container" id="familygroups">
+			<div class="container">
+				<div class="twelve column block_title">
+					<h2>Family Groups</h2>
+				</div>
+				<div class="twelve column bottom_buffer">
+					<p>You weren’t meant to go through life alone.  God Himself exists in community&mdash;Father, Son and Holy Spirit&mdash;and we’re all sons and daughters of our Heavenly Father.  You were created to laugh, work, shed tears and share the joy of salvation with a family.<br><br>
+					Feel at home and grow with God in an intimate setting, apart from Sunday worship.<br><br>
+					The Journey Church is made of more than a dozen “family groups” spanning multiple neighborhoods and four college campuses.  Visit a family group gathering and discover the blessing of sharing life with other Christians.  Here, you’ll connect with 10-15 people of similar age who meet weekly to study God’s word, pray, serve and journey through life together.
+					</p>
+				</div>
 			</div>
-			<div class="six column left_buffer bottom_buffer">
-				<h3 class="bottom_buffer">College Students</h3>
-				<p><i>Sunday-Thursday evenings</i></p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+		</div>
+
+		<div class="container top_buffer2">
+			<div class="five column right_buffer draw_line">
+				<h3 class="bottom_buffer">Campus Communities</h3>
+				<p><i>Monday through Wednesday evenings</i></p>
 			</div>
-			<div class="six column right_buffer bottom_buffer right_align">
-				<h3 class="bottom_buffer">Young Adult</h3>
-				<p><i>Sunday-Thursday evenings</i></p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			<div class="seven column left_buffer bottom_buffer draw_line">
+				<p>The Journey Church offers family groups on each of the following campuses:<br><br>
+				Georgia State University<br>
+				Georgia Institute of Technology<br>
+				Emory University<br>
+				Oxford College
+				</p>
 			</div>
-			<div class="six column left_buffer">
-				<img class="test">
+			<div class="five column right_buffer draw_line">
+				<h3 class="bottom_buffer">Singles and Families</h3>
+				<p><i>Sunday through Wednesday evenings</i></p>
+			</div>
+			<div class="seven column left_buffer bottom_buffer draw_line">
+				<p>The Journey Church offers family groups in the following areas:<br><br>
+				North Druid Hills<br>
+				Westside/West Highlands<br>
+				Lindbergh<br>
+				Chamblee<br>
+				Chamblee-Tucker<br>
+				Shallowford
+				</p>
 			</div>
 		</div>
 
 		<div class="full_container gray_wrapper">
 			<div class="container">
 				<div class="twelve column block_title">
-					<h2>Get Plugged In</h2>
+					<h2>Visit a family group</h2>
 				</div>
 				<div class="twelve column centered">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>If you’re interested in finding a group that fits you, or just want more information, please fill out the fields below.  You’ll receive an email response shortly!</p>
 				</div>
 				<div class="six column three column_left top_buffer">
 					<div id="fg_form" class="form">
 						<label for="fg_name_input">Name</label>
 						<input id="fg_name_input" name="fg_name_input" type="text">
-						<label for="fg_year_input">Year in school of Young Adult</label>
+						<label for="fg_year_input">Year in school, or Young Adult</label>
 						<input id="fg_year_input" name="fg_year_input" type="text">
 						<label for="fg_date_input">Preferred date</label>
 						<input id="fg_date_input" name="fg_date_input" type="text">
@@ -183,8 +224,35 @@
 		</div>
 
 		<div class="footer">
-			asd
+			<div class="container">
+				<div class="four column" style="text-align: left;">
+					<h4>Sunday 11:00 AM at MIDTOWN</h4>
+					<p><a>Click for transportation details</a><br>
+					East Architecture Auditorium (College of Design)<br>
+					245 Fourth Street NW<br>
+					Atlanta, GA 30332</p>
+				</div>
+				<div class="four column" style="text-align: left;">
+					<h4>Sunday 1:30 PM at EASTSIDE</h4>
+					<p><a>Click for childcare details</a><br>
+					Westminster Presbyterian Church<br>
+					1438 Sheridan Rd NE<br>
+					Atlanta, GA 30324</p>
+				</div>
+				<div class="four column" style="text-align: left;">
+					<h4>CHURCH OFFICE</h4>
+					<p>3700 Longview Dr., Chamblee, GA 30341<br><br>
+					<h4>Mailing Address</h4>
+					<p>The Journey Church of Atlanta<br>
+					PO Box 15575, Atlanta, GA 30333</p>
+				</div><br>
+				<div class="twelve column" style="text-align: center; margin-top: 50px">
+					<h4>A member of <a target="_blank" href="http://www.amichurches.com/">Acts Ministries International</a></h4>
+				</div>
+			</div>
+
 		</div>
+
 
 	</div>
 
