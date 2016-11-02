@@ -18,7 +18,7 @@
 	/*PAGE SPECIFIC FORMATTING*/
 
 	.background#landing_splash {
-		background: #222 url('images/atlanta_skyline_bw.jpg') no-repeat fixed center center;
+		background: #222 url('images/atlanta_skyline.jpg') no-repeat fixed center center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -26,8 +26,40 @@
 		overflow: hidden;
 	}
 
+	#message_splash {
+		background: #222 url('images/atlanta_skyline_blur.jpg') no-repeat fixed center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		overflow: hidden;
+		height: 100vh;
+		text-align: center;
+	}
+
+	#message_splash div {
+		position: absolute;	
+		top: 40%;
+		margin-top: -7.5rem;
+		color: white;
+		text-align: center;
+		box-sizing: border-box;
+		padding: 0 20px;
+	}
+
+	#message_splash div h2 {
+		font-size: 6.0rem;
+	}
+
+	#message_splash div p {
+		font-family: serif;
+		margin: 50px 0 0 0;
+		font-size: 2.5rem;
+		line-height: 3.0rem;
+	}
+
 	#first_time_splash {
-		background: #222 url('images/atlanta_skyline_bw.jpg') no-repeat fixed center center;
+		background: #222 url('images/atlanta_skyline_blur.jpg') no-repeat fixed center center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -233,24 +265,24 @@
 			<div class="nav_title"><a href="imnew.html">I'm New</a></div>
 		</div>
 		<div class="nav_item">
-			<div class="nav_title"><a>About</a></div>
+			<div class="nav_title">About</div>
 			<div class="nav_link"><a href="story.html">Our Story</a></div>
 			<div class="nav_link"><a href="beliefs.html">Beliefs</a></div>
 			<div class="nav_link"><a href="staff.html">Leadership</a></div>
 		</div>
 		<div class="nav_item">
-			<div class="nav_title"><a>Connect</a></div>
+			<div class="nav_title">Connect</div>
 			<div class="nav_link"><a href="gatherings.html">Gatherings</a></div>
 			<div class="nav_link"><a href="familygroups.html">Family Groups</a></div>
 			<div class="nav_link"><a>Ministry Teams</a></div>
 		</div>
 		<div class="nav_item">
-			<div class="nav_title"><a>Missions</a></div>
+			<div class="nav_title">Missions</div>
 			<div class="nav_link"><a href="missions.html">Partnerships</a></div>
 			<div class="nav_link"><a>Mission Trips</a></div>
 		</div>
 		<div class="nav_item">
-			<div class="nav_title"><a>Resources</a></div>
+			<div class="nav_title">Resources</div>
 			<div class="nav_link"><a>Sermons</a></div>
 			<div class="nav_link"><a>Special Content</a></div>
 		</div>
@@ -309,7 +341,12 @@
 				</div>
 			</div>
 		</header>
-
+		<div class="full_container" id="message_splash">
+			<div class="eight column two column_left">
+				<h2>Journey Church of Atlanta is a community all about God and all about people.</h2>
+				<p><i>Come journey with us, no matter what you’ve been through.  Let’s experience Christ’s love together.</i></p>
+			</div>
+		</div>
 		<div class="full_container" id="first_time_splash">
 			<div class="twelve column">
 				<h2>Here for the first time?</h2>
@@ -327,14 +364,14 @@
 				</div>
 				<div class="six column centered bottom_buffer">
 					<h4 class="bottom_buffer">MIDTOWN SERVICE<br>11:00 a.m.</h4>
-					<p>Description goes here.</p>
-					<p>East Architecture Bldg (College of Design) Auditorium<br>
+					<p><i>Service for college students and college-aged young adults. Right on Georgia Tech campus. Rides provided from GSU, Emory and Oxford.</i></p>
+					<p>Architecture East Auditorium<br>
 					<a>245 Fourth Street NW<br>Atlanta, GA 30332</a></p>
 					<p class="top_buffer"><a class="primary_button" id="ride_button">Students, need a ride?</a></p>
 				</div>
 				<div class="six column centered bottom_buffer">
 					<h4 class="bottom_buffer">EASTSIDE SERVICE<br>1:30 p.m.</h4>
-					<p>Description goes here.</p>
+					<p><i>Service for professionals, married couples and families. Sunday school offered for +4yo. Cry room available for younger children.</i></p>
 					<p>Westminster Presbyterian Church<br>
 					<a>1438 Sheridan Road NE<br>Atlanta, GA 30324</a></p>
 					<p class="top_buffer"><a class="primary_button" id="kids_button">Parents, have kids?</a></p>

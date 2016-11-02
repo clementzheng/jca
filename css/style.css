@@ -485,6 +485,7 @@ header {
 /*NAV BAR DESKTOP*/
 
 .nav_bar {
+	font-family: "Karla", sans-serif;
 	z-index: 100;
 	position: absolute;
 	top: 40px;	
@@ -502,7 +503,6 @@ header {
 	position: relative;
 	float: left;
 	margin: 0 25px 0 0;
-	font-family: "Karla", sans-serif;
 	text-transform: uppercase;
 	color: white;
 	cursor: pointer;
@@ -519,11 +519,11 @@ header {
 	font-size: 1.5rem;
 	font-weight: 700;
 	letter-spacing: 0.1rem;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
+	padding: 5px 16px;
 }
 
 .nav_title a {
-	padding: 13px;
 }
 
 .nav_link {
@@ -547,41 +547,49 @@ header {
 .nav_link a {
 	position: relative;
 	float: left;
-	padding: 18px 0 20px 13px;
+	padding: 18px 0 20px 16px;
 	margin-top: -10px;
 	width: 150px;
 	border-radius: 0 5px 5px 5px;
 	visibility: hidden;
+	background-color: #FFF;
 }
 
 .nav_item:hover .nav_link {
-	line-height: 1.75rem;
+	line-height: 0.8rem;
 	visibility: visible;
 	opacity: 1;
 	filter: alpha(opacity=100);
-	color: #555555;
+	color: #FFF;
 }
 
 .nav_item:hover .nav_link a {
-	color: #555555;
+	color: #FFF;
 	width: 190px;
-	background: white;
+	background: none;
 	visibility: visible;
 }
 
 .nav_item:hover .nav_title {
 	opacity: 1.0;
-	background: white;
-	color: #555555;
+	background: none;
+	color: #FFF;
 }
 
 .nav_item:hover .nav_title a {
-	color: #555555;
-	background: white;
+	color: transparent !important;
+	text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.8);
+	-webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
 }
 
 .nav_link:hover a {
-	color: black !important;
+	color: transparent !important;
+	text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.8);
+	-webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
 }
 
 /*NAV BAR MOBILE*/
