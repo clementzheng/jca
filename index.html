@@ -10,7 +10,7 @@
 	<!--FONTS-->
 	<link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 
 	<!--STYLE-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -48,13 +48,13 @@
 	}
 
 	#message_splash div h2 {
-		font-size: 6.0rem;
+		font-size: 5.0rem;
 	}
 
 	#message_splash div p {
-		font-family: serif;
+		font-family: "Lora", serif;
 		margin: 50px 0 0 0;
-		font-size: 2.5rem;
+		font-size: 2.0rem;
 		line-height: 3.0rem;
 	}
 
@@ -360,7 +360,7 @@
 					<h2>Join us on Sundays</h2>
 				</div>
 				<div class="twelve column bottom_buffer">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Our Sunday celebrations are prayerful, Spirit-filled, Bible-based times of worship, teaching and community building. We would love to see you this Sunday.  You can find us at the following times and locations:</p>
 				</div>
 				<div class="six column centered bottom_buffer">
 					<h4 class="bottom_buffer">MIDTOWN SERVICE<br>11:00 a.m.</h4>
@@ -376,9 +376,9 @@
 					<a>1438 Sheridan Road NE<br>Atlanta, GA 30324</a></p>
 					<p class="top_buffer"><a class="primary_button" id="kids_button">Parents, have kids?</a></p>
 				</div>
-				<div class="twelve column top_buffer bottom_buffer test">
+			</div>
+			<div class="twelve column top_buffer bottom_buffer test">
 					
-				</div>
 			</div>
 		</div>
 
@@ -428,13 +428,13 @@
 					<h2>Looking for Updates?</h2>
 				</div>
 				<div class="six column bottom_buffer">
-					<h4 class="bottom_buffer">Service Locations (10/2 2016)</h4>
-					<p><b>Midtown Service at 11:00 a.m.</b><br>No change</p>
-					<p class="highlight"><b>Eastside Service at 1:30 p.m.</b><br>Briarcliff Baptist Church<br>3039 Briarcliff Rd NE Atlanta GA 30329</p>
+					<h4 class="bottom_buffer">Service Locations</h4>
+					<p><b>10/28/17 Friday:</b><br>Eastside prayer meeting canceled.</p>
+					<p class="highlight"><b>10/30/17 Sunday:</b><br>Midtown service at 11:00 AM location changed to <a href="https://www.google.com/maps/place/Westminster+Presbyterian+Church/@33.825496,-84.3433737,17z/data=!3m1!4b1!4m5!3m4!1s0x88f506131c027893:0xa66e47c7279e1933!8m2!3d33.825496!4d-84.341185" target="_blank">Westminster Presbyterian Church.</a></p>
 				</div>
 				<div class="six column bottom_buffer">
 					<h4 class="bottom_buffer">Upcoming Events</h4>
-					<p>Description goes here.</p>
+					<p><b>10/29/16 Saturday: </b><br>Trunk-or-Treat at 4:00 PM. Contact admin@jcatlanta.org for location.</p>
 					
 				</div>
 			</div>
@@ -491,9 +491,8 @@
 		if ($("#gathering_form_div").hasClass("active")) {
 			$('html, body').animate({
 		        scrollTop: $("#join_us").offset().top
-		    }, 500, function() {
-		    	$("#gathering_form_div").toggleClass("active");
-		    });
+		    }, 500);
+		    $("#gathering_form_div").toggleClass("active");
 		}
 	});
 
