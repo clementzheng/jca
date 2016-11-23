@@ -19,6 +19,7 @@ body {
 	padding: 0;
 	top: 0;
 	font-size: 1.5rem;
+	color: #333;
 	 -webkit-text-size-adjust: 100%;
 }
 
@@ -34,7 +35,7 @@ p {
 }
 
 h1, h2, h3, h4 {
-	font-family: "Montserrat", "Karla", sans-serif;
+	font-family: "Lato", "Karla", sans-serif;
 	font-weight: 700;
 	padding: 0;
 	margin: 0;
@@ -352,6 +353,7 @@ header {
 }
 
 .secondary_button {
+	font-family: "Karla", sans-serif;
 	font-size: 1.6rem;
 	font-weight: 400;
 	text-transform: uppercase;

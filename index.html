@@ -11,22 +11,28 @@
 	<link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
-
+	<link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:700,700i,900,900i" rel="stylesheet">
 	<!--STYLE-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<style>
 	/*PAGE SPECIFIC FORMATTING*/
 
 	.background#landing_splash {
-		background: #222 url('images/atlanta_skyline.jpg') no-repeat fixed center center;
+		background: #222 url('images/atlanta_long.png') no-repeat center bottom;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
 		overflow: hidden;
+		height: auto;
 	}
 
-	#message_splash {
+	#landing_splash .full_container {
+		min-height: 100vh;
+	}
+
+	/*#message_splash {
 		background: #222 url('images/atlanta_skyline_blur.jpg') no-repeat fixed center center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -35,12 +41,12 @@
 		overflow: hidden;
 		height: 100vh;
 		text-align: center;
-	}
+	}*/
 
 	#message_splash div {
 		position: absolute;	
-		top: 40%;
-		margin-top: -7.5rem;
+		top: 30%;
+		margin-top: -3.5rem;
 		color: white;
 		text-align: center;
 		box-sizing: border-box;
@@ -48,14 +54,14 @@
 	}
 
 	#message_splash div h2 {
-		font-size: 5.0rem;
+		font-size: 4.0rem;
 	}
 
 	#message_splash div p {
-		font-family: "Lora", serif;
+		font-family: "Gentium Book Basic", serif;
 		margin: 50px 0 0 0;
-		font-size: 2.0rem;
-		line-height: 3.0rem;
+		font-size: 2.5rem;
+		line-height: 3.3rem;
 	}
 
 	#first_time_splash {
@@ -119,7 +125,7 @@
 		position: relative;
 		float: left;
 		width: 100%;
-		margin: 100px 0 50px 0;
+		margin: 0;
 		padding-top: 0px;
 		height: 0px;
 		overflow: hidden;
@@ -131,8 +137,9 @@
 	}
 
 	#gathering_form_div.active {
-		padding-top: 100px;
-		height: 1000px;
+		margin: 50px 0 50px 0;
+		padding-top: 50px;
+		height: 900px;
 	}
 
 	#close_form {
@@ -228,8 +235,47 @@
 		transition: none;
 	}
 
+	#location_map {
+		background: #CCC;
+		height: 60vh;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	#location_map img {
+		width: 100%;
+	}
+
 	.highlight {
 		color: red;
+	}
+
+	#updates {
+		position: relative;
+		float: left;
+		width: 100%;
+		padding: 80px 0 40px 0;
+		background: #DDD;
+	}
+
+	#service_updates {
+		text-align: left;
+	}
+
+	#event_updates {
+		text-align: left;
+	}
+
+	#service_updates h4 {
+		font-weight: 900;
+	}
+
+	#event_updates h4 {
+		font-weight: 900;
+	}
+
+	#updates_heading {
+		font-weight: 700;
 	}
 
 	</style>
@@ -332,27 +378,32 @@
 	<div class="content_container">
 
 		<header class="background" id="landing_splash">
-			<div class="page_title" id="landingTitleDiv">
-				<div id="landingTitle1" class="landingTitle"><span><h1>Journey&nbsp;welcomes</h1></span></div>
-				<div id="landingTitle3" class="landingTitle">
-					<span class="active"><h1>you.</h1></span>
-					<span><h1>Atlanta.</h1></span>
-					<span><h1>the world.</h1></span>
+			<div class="full_container">
+				<div class="page_title" id="landingTitleDiv">
+					<div id="landingTitle1" class="landingTitle"><span><h1>Journey&nbsp;welcomes</h1></span></div>
+					<div id="landingTitle3" class="landingTitle">
+						<span class="active"><h1>you.</h1></span>
+						<span><h1>Atlanta.</h1></span>
+						<span><h1>the world.</h1></span>
+					</div>
+				</div>
+			</div>
+			<div class="full_container" id="message_splash">
+				<div class="six column three column_left">
+					<h2>Journey Church of Atlanta is a community all about God and all about people.</h2>
+					<p><i>Come journey with us, no matter what you’ve been through.<br>Let’s experience Christ’s love together.</i></p>
+					<p><a class="secondary_button" href="imnew.html">Learn More</a><p>
 				</div>
 			</div>
 		</header>
-		<div class="full_container" id="message_splash">
-			<div class="eight column two column_left">
+
+		<!-- <div class="full_container" id="message_splash">
+			<div class="six column three column_left">
 				<h2>Journey Church of Atlanta is a community all about God and all about people.</h2>
-				<p><i>Come journey with us, no matter what you’ve been through.  Let’s experience Christ’s love together.</i></p>
-			</div>
-		</div>
-		<div class="full_container" id="first_time_splash">
-			<div class="twelve column">
-				<h2>Here for the first time?</h2>
+				<p><i>Come journey with us, no matter what you’ve been through.<br>Let’s experience Christ’s love together.</i></p>
 				<p><a class="secondary_button" href="imnew.html">Learn More</a><p>
 			</div>
-		</div>
+		</div> -->
 
 		<div class="full_container top_buffer2" id="join_us">
 			<div class="container">
@@ -363,22 +414,19 @@
 					<p>Our Sunday celebrations are prayerful, Spirit-filled, Bible-based times of worship, teaching and community building. We would love to see you this Sunday.  You can find us at the following times and locations:</p>
 				</div>
 				<div class="six column centered bottom_buffer">
-					<h4 class="bottom_buffer">MIDTOWN SERVICE<br>11:00 a.m.</h4>
+					<h4 class="bottom_buffer">Midtown Service<br>11:00 AM</h4>
 					<p><i>Service for college students and college-aged young adults. Right on Georgia Tech campus. Rides provided from GSU, Emory and Oxford.</i></p>
 					<p>Architecture East Auditorium<br>
 					<a>245 Fourth Street NW<br>Atlanta, GA 30332</a></p>
 					<p class="top_buffer"><a class="primary_button" id="ride_button">Students, need a ride?</a></p>
 				</div>
 				<div class="six column centered bottom_buffer">
-					<h4 class="bottom_buffer">EASTSIDE SERVICE<br>1:30 p.m.</h4>
+					<h4 class="bottom_buffer">Eastside Service<br>1:30 PM</h4>
 					<p><i>Service for professionals, married couples and families. Sunday school offered for +4yo. Cry room available for younger children.</i></p>
 					<p>Westminster Presbyterian Church<br>
 					<a>1438 Sheridan Road NE<br>Atlanta, GA 30324</a></p>
 					<p class="top_buffer"><a class="primary_button" id="kids_button">Parents, have kids?</a></p>
 				</div>
-			</div>
-			<div class="twelve column top_buffer bottom_buffer test">
-					
 			</div>
 		</div>
 
@@ -422,23 +470,30 @@
 			</div>
 		</div>
 
-		<div class="full_container end_div" id="updates">
+		<div class="full_container">
+			<div class="twelve column top_buffer" id="location_map">
+					<img src="images/map_dummy.png">
+			</div>
+		</div>
+
+		<div class="full_container" id="updates">
 			<div class="container">
-				<div class="twelve column block_title">
-					<h2>Looking for Updates?</h2>
+				<div class="two column bottom_buffer">
+					<h4 class="bottom_buffer" id="updates_heading">Updates</h4>
 				</div>
-				<div class="six column bottom_buffer">
-					<h4 class="bottom_buffer">Service Locations</h4>
+				<div class="five column bottom_buffer" id="service_updates">
+					<h4 class="bottom_buffer">Locations</h4>
 					<p><b>10/28/17 Friday:</b><br>Eastside prayer meeting canceled.</p>
-					<p class="highlight"><b>10/30/17 Sunday:</b><br>Midtown service at 11:00 AM location changed to <a href="https://www.google.com/maps/place/Westminster+Presbyterian+Church/@33.825496,-84.3433737,17z/data=!3m1!4b1!4m5!3m4!1s0x88f506131c027893:0xa66e47c7279e1933!8m2!3d33.825496!4d-84.341185" target="_blank">Westminster Presbyterian Church.</a></p>
+					<p><b>10/30/17 Sunday:</b><br>Midtown service at 11:00 AM location changed to <a href="https://www.google.com/maps/place/Westminster+Presbyterian+Church/@33.825496,-84.3433737,17z/data=!3m1!4b1!4m5!3m4!1s0x88f506131c027893:0xa66e47c7279e1933!8m2!3d33.825496!4d-84.341185" target="_blank">Westminster Presbyterian Church.</a></p>
 				</div>
-				<div class="six column bottom_buffer">
-					<h4 class="bottom_buffer">Upcoming Events</h4>
+				<div class="five column bottom_buffer" id="event_updates">
+					<h4 class="bottom_buffer">Events</h4>
 					<p><b>10/29/16 Saturday: </b><br>Trunk-or-Treat at 4:00 PM. Contact admin@jcatlanta.org for location.</p>
 					
 				</div>
 			</div>
 		</div>
+
 
 		<div class="footer">
 			<div class="container">
