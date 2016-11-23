@@ -48,3 +48,9 @@ if ($("#emergency_banner").length) {
 	$(".nav_bar").css("top", "80px");
 	$(".nav_menu_icon").css("top", "90px");
 }
+
+$('p').each(function(){
+    var string = $(this).html();
+    string = string.replace(/ ([^ ]*)$/,'&nbsp;$1');
+    $(this).html(string);
+});
