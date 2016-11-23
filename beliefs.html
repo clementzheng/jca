@@ -12,13 +12,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:700,700i,900,900i" rel="stylesheet">
 	<!--STYLE-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<style>
 	/*PAGE SPECIFIC FORMATTING*/
 
 	.background#belief_splash {
-		background: url('images/park.jpg') no-repeat fixed bottom center;
+		background: url('images/vines.jpg') no-repeat fixed bottom center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -27,7 +28,7 @@
 	}
 
 	#belief_content {
-		background: url('images/park_blur.jpg') no-repeat fixed bottom center;
+		background: url('images/vines_blur.jpg') no-repeat fixed bottom center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -45,10 +46,7 @@
 	#belief_content h4 {
 		font-family: "Gentium Book Basic", serif;
 		font-weight: 400;
-		font-style: italic;
 		font-size: 2.3rem;
-		letter-spacing: 0.1rem;
-		padding-top: 1rem;
 	}
 
 	.test {
@@ -70,6 +68,74 @@
 	.draw_line {
 		border-top: 1px solid rgba(255, 255, 255, 0.3);
 		padding: 3.0rem 0 0 0;
+	}
+
+	.about_div {
+		overflow-x: hidden;
+		-webkit-transition: all 400ms ease-in-out;
+		-moz-transition: all 400ms ease-in-out;
+		-o-transition: all 400ms ease-in-out;
+		transition: all 400ms ease-in-out;
+	}
+
+	.about_div .about_title {
+		position: relative;
+		float: left;
+		text-align: center;
+		width: 100%;
+		opacity: 1.0;
+		font-style: italic;
+		letter-spacing: 0.1rem;
+		-webkit-transition: all 200ms ease-in-out;
+		-moz-transition: all 200ms ease-in-out;
+		-o-transition: all 200ms ease-in-out;
+		transition: all 200ms ease-in-out;
+	}
+
+	.about_div:hover .about_title {
+		letter-spacing: 0.05rem;
+	}
+
+	.about_div:hover {
+		cursor: pointer;
+	}
+
+	.about_div .about_description {
+		position: relative;
+		float: right;
+		width: 100%;
+		padding: 0 30px;
+		max-height: 0px;
+		margin-right: -100%;
+		overflow: hidden;
+		box-sizing: border-box;
+		-webkit-transition: all 400ms ease-in-out;
+		-moz-transition: all 400ms ease-in-out;
+		-o-transition: all 400ms ease-in-out;
+		transition: all 400ms ease-in-out;
+	}
+
+	.about_div.active .about_title {
+		text-align: center;
+		width: 100%;
+	}
+
+	.about_div.active .about_description {
+		max-height: 250px;
+		margin-right: 0px;
+	}
+
+	@media only screen 
+	and (min-width: 800px) 
+	and (-webkit-min-device-pixel-ratio: 1) {
+		.about_div.active .about_title {
+			width: 35%;
+		}
+
+		.about_div .about_description {
+			width: 65%;
+			margin-right: -70%;
+		}
 	}
 
 	</style>
@@ -173,80 +239,173 @@
 
 		<header class="background" id="belief_splash">
 			<div class="page_title">
-				<h1>Believe</h1>
+				<h1>What We Believe</h1>
 			</div>
 		</header>
 
 		<div class="full_container" id="belief_content">
-		<div class="container top_buffer2 bottom_buffer2">
-			<div class="five column bottom_buffer draw_line">
-				<h4>About The Bible</h4>
-			</div>
-			<div class="seven column bottom_buffer  draw_line">
-				<p>We believe the Bible, both the Old and New Testaments, is the only inspired, infallible, and authoritative Word of God. It is the supreme source of truth for Christian faith and living.</p>
-			</div>
-			<div class="five column bottom_buffer draw_line">
-				<h4>About God</h4>
-			</div>
-			<div class="seven column bottom_buffer draw_line">
-				<p>We believe in one God, Creator of all things, infinitely perfect and eternally existing in three persons: Father, Son, and Holy Spirit.</p>
-			</div>
-			<div class="five column bottom_buffer draw_line">
-				<h4>About Jesus Christ</h4>
-			</div>
-			<div class="seven column bottom_buffer draw_line">
-				<p>We believe that Jesus Christ is true God and true man, having been conceived of the Holy Spirit and born of the virgin Mary. He died on the cross, the complete and final sacrifice for our sins according to the Scriptures. Further, He arose bodily from the dead, ascended into heaven where, at God's right hand, He intercedes for His people and rules as Lord over all.</p>
-			</div>
-			<div class="five column bottom_buffer draw_line">
-				<h4>About The Holy Spirit</h4>
-			</div>
-			<div class="seven column bottom_buffer draw_line">
-				<p>We believe that the ministry of the Holy Spirit is to glorify the Lord Jesus Christ, and during this age to convict the world of sin. He also regenerates the believing sinner, indwells, guides, instructs, and empowers us for godly living and sacrifice.</p>
-			</div>
-			<div class="five column bottom_buffer draw_line">
-				<h4>About Man</h4>
-			</div>
-			<div class="seven column bottom_buffer draw_line">
-				<p>We believe that the man was created in the image of God but fell into sin and is therefore lost, and only through regeneration by the Holy Spirit can salvation and spiritual life be obtained.</p>
-			</div>
-			<div class="five column bottom_buffer draw_line">
-				<h4>About Salvation</h4>
-			</div>
-			<div class="seven column bottom_buffer draw_line">
-				<p>We believe that the shed blood of Jesus Christ and His resurrection provide the only ground for justification and salvation for all who believe, and only such as receive Jesus Christ by faith are born of the Holy Spirit and thus become children of God.</p>
-			</div>
-			<div class="five column bottom_buffer draw_line">
-				<h4>About Future Events</h4>
-			</div>
-			<div class="seven column bottom_buffer draw_line">
-				<p>We believe in the visible, personal, glorious, imminent return of Jesus Christ, bodily resurrection of the dead, the rapture of the church, the judgment of the just and the unjust and the fulfillment of Christ's Kingdom in the new heavens and the new earth. Then shall the eager expectation of creation be fulfilled and the whole earth shall proclaim the glory of God who makes all things new.</p>
-			</div>
-			<div class="five column bottom_buffer draw_line">
-				<h4>About The Church</h4>
-			</div>
-			<div class="seven column bottom_buffer draw_line">
-				<p>We believe that the true Church is composed of all such persons who through saving faith in Jesus Christ have been regenerated by the Holy Spirit and are united together in the body of Christ. We believe that Jesus Christ is the Head of the Church, and that every local church has the right under Christ to decide and govern its own affairs.</p>
-			</div>
-			<div class="five column bottom_buffer draw_line">
-				<h4>About Ordinances</h4>
-			</div>
-			<div class="seven column bottom_buffer draw_line">
-				<p>We believe that water baptism and the Lord's Supper are ordinances to be observed by the Church during the present age. They are, however, not to be regarded as means of salvation.</p>
-			</div>
-			<div class="five column bottom_buffer draw_line">
-				<h4>About Marriage</h4>
-			</div>
-			<div class="seven column bottom_buffer draw_line">
-				<p>We define marriage as the permanent, exclusive, comprehensive, and conjugal “one flesh” union of one man and one woman, intrinsically ordered to procreation and biological family, and in furtherance of the moral, spiritual, and public good of binding father, mother, and child.</p>
-			</div>
-			<div class="five column bottom_buffer draw_line">
-				<h4>About The Sanctity of Life</h4>
-			</div>
-			<div class="seven column bottom_buffer draw_line">
-				<p>We believe that God made Adam by breathing into his nostrils the breath of life. Genesis declares that God created people in His own image, the image of God, which He did not do with animals and plants.  This means that in humans, a reflection of God Himself can be seen as we have souls that live on after the body has died.  Due to this sacredness of human life, we believe that all human life is sacred from conception until natural death, and the taking of a life, whether in or out of the womb, is morally wrong.</p>
+			<div class="container top_buffer2 bottom_buffer2">
+				<div class="about_div twelve column draw_line">
+					<div class="bottom_buffer about_title">
+						<h4>The Bible</h4>
+					</div>
+					<div class="bottom_buffer about_description">
+						<p>We believe the Bible, both the Old and New Testaments, is the only inspired, infallible, and authoritative Word of God. It is the supreme source of truth for Christian faith and living.</p>
+					</div>
+				</div>
+				<div class="about_div twelve column draw_line">
+					<div class="bottom_buffer about_title">
+						<h4>God</h4>
+					</div>
+					<div class="bottom_buffer about_description">
+						<p>We believe in one God, Creator of all things, infinitely perfect and eternally existing in three persons: Father, Son, and Holy Spirit.</p>
+					</div>
+				</div>
+				<div class="about_div twelve column draw_line">
+					<div class="bottom_buffer about_title">
+						<h4>Jesus Christ</h4>
+					</div>
+					<div class="bottom_buffer about_description">
+						<p>We believe that Jesus Christ is true God and true man, having been conceived of the Holy Spirit and born of the virgin Mary. He died on the cross, the complete and final sacrifice for our sins according to the Scriptures. Further, He arose bodily from the dead, ascended into heaven where, at God's right hand, He intercedes for His people and rules as Lord over all.</p>
+					</div>
+				</div>
+				<div class="about_div twelve column draw_line">
+					<div class="bottom_buffer about_title">
+						<h4>The Holy Spirit</h4>
+					</div>
+					<div class="bottom_buffer about_description">
+						<p>We believe that the ministry of the Holy Spirit is to glorify the Lord Jesus Christ, and during this age to convict the world of sin. He also regenerates the believing sinner, indwells, guides, instructs, and empowers us for godly living and sacrifice.</p>
+					</div>
+				</div>
+				<div class="about_div twelve column draw_line">
+					<div class="bottom_buffer about_title">
+						<h4>Man</h4>
+					</div>
+					<div class="bottom_buffer about_description">
+						<p>We believe that the man was created in the image of God but fell into sin and is therefore lost, and only through regeneration by the Holy Spirit can salvation and spiritual life be obtained.</p>
+					</div>
+				</div>
+				<div class="about_div twelve column draw_line">
+					<div class="bottom_buffer about_title">
+						<h4>Salvation</h4>
+					</div>
+					<div class="bottom_buffer about_description">
+						<p>We believe that the shed blood of Jesus Christ and His resurrection provide the only ground for justification and salvation for all who believe, and only such as receive Jesus Christ by faith are born of the Holy Spirit and thus become children of God.</p>
+					</div>
+				</div>
+				<div class="about_div twelve column draw_line">
+					<div class="bottom_buffer about_title">
+						<h4>Future Events</h4>
+					</div>
+					<div class="bottom_buffer about_description">
+						<p>We believe in the visible, personal, glorious, imminent return of Jesus Christ, bodily resurrection of the dead, the rapture of the church, the judgment of the just and the unjust and the fulfillment of Christ's Kingdom in the new heavens and the new earth. Then shall the eager expectation of creation be fulfilled and the whole earth shall proclaim the glory of God who makes all things new.</p>
+					</div>
+				</div>
+				<div class="about_div twelve column draw_line">
+					<div class="bottom_buffer about_title">
+						<h4>The Church</h4>
+					</div>
+					<div class="bottom_buffer about_description">
+						<p>We believe that the true Church is composed of all such persons who through saving faith in Jesus Christ have been regenerated by the Holy Spirit and are united together in the body of Christ. We believe that Jesus Christ is the Head of the Church, and that every local church has the right under Christ to decide and govern its own affairs.</p>
+					</div>
+				</div>
+				<div class="about_div twelve column draw_line">
+					<div class="bottom_buffer about_title">
+						<h4>Ordinances</h4>
+					</div>
+					<div class="bottom_buffer about_description">
+						<p>We believe that water baptism and the Lord's Supper are ordinances to be observed by the Church during the present age. They are, however, not to be regarded as means of salvation.</p>
+					</div>
+				</div>
+				<div class="about_div twelve column draw_line">
+					<div class="bottom_buffer about_title">
+						<h4>Marriage</h4>
+					</div>
+					<div class="bottom_buffer about_description">
+						<p>We define marriage as the permanent, exclusive, comprehensive, and conjugal “one flesh” union of one man and one woman, intrinsically ordered to procreation and biological family, and in furtherance of the moral, spiritual, and public good of binding father, mother, and child.</p>
+					</div>
+				</div>
+				<div class="about_div twelve column draw_line">
+					<div class="bottom_buffer about_title">
+						<h4>The Sanctity of Life</h4>
+					</div>
+					<div class="bottom_buffer about_description">
+						<p>We believe that God made Adam by breathing into his nostrils the breath of life. Genesis declares that God created people in His own image, the image of God, which He did not do with animals and plants.  This means that in humans, a reflection of God Himself can be seen as we have souls that live on after the body has died.  Due to this sacredness of human life, we believe that all human life is sacred from conception until natural death, and the taking of a life, whether in or out of the womb, is morally wrong.</p>
+					</div>
+				</div>
 			</div>
 		</div>
-		</div>
+
+		<!-- <div class="full_container" id="belief_content">
+			<div class="container top_buffer2 bottom_buffer2">
+				<div class="five column bottom_buffer draw_line">
+					<h4>About The Bible</h4>
+				</div>
+				<div class="seven column bottom_buffer  draw_line">
+					<p>We believe the Bible, both the Old and New Testaments, is the only inspired, infallible, and authoritative Word of God. It is the supreme source of truth for Christian faith and living.</p>
+				</div>
+				<div class="five column bottom_buffer draw_line">
+					<h4>About God</h4>
+				</div>
+				<div class="seven column bottom_buffer draw_line">
+					<p>We believe in one God, Creator of all things, infinitely perfect and eternally existing in three persons: Father, Son, and Holy Spirit.</p>
+				</div>
+				<div class="five column bottom_buffer draw_line">
+					<h4>About Jesus Christ</h4>
+				</div>
+				<div class="seven column bottom_buffer draw_line">
+					<p>We believe that Jesus Christ is true God and true man, having been conceived of the Holy Spirit and born of the virgin Mary. He died on the cross, the complete and final sacrifice for our sins according to the Scriptures. Further, He arose bodily from the dead, ascended into heaven where, at God's right hand, He intercedes for His people and rules as Lord over all.</p>
+				</div>
+				<div class="five column bottom_buffer draw_line">
+					<h4>About The Holy Spirit</h4>
+				</div>
+				<div class="seven column bottom_buffer draw_line">
+					<p>We believe that the ministry of the Holy Spirit is to glorify the Lord Jesus Christ, and during this age to convict the world of sin. He also regenerates the believing sinner, indwells, guides, instructs, and empowers us for godly living and sacrifice.</p>
+				</div>
+				<div class="five column bottom_buffer draw_line">
+					<h4>About Man</h4>
+				</div>
+				<div class="seven column bottom_buffer draw_line">
+					<p>We believe that the man was created in the image of God but fell into sin and is therefore lost, and only through regeneration by the Holy Spirit can salvation and spiritual life be obtained.</p>
+				</div>
+				<div class="five column bottom_buffer draw_line">
+					<h4>About Salvation</h4>
+				</div>
+				<div class="seven column bottom_buffer draw_line">
+					<p>We believe that the shed blood of Jesus Christ and His resurrection provide the only ground for justification and salvation for all who believe, and only such as receive Jesus Christ by faith are born of the Holy Spirit and thus become children of God.</p>
+				</div>
+				<div class="five column bottom_buffer draw_line">
+					<h4>About Future Events</h4>
+				</div>
+				<div class="seven column bottom_buffer draw_line">
+					<p>We believe in the visible, personal, glorious, imminent return of Jesus Christ, bodily resurrection of the dead, the rapture of the church, the judgment of the just and the unjust and the fulfillment of Christ's Kingdom in the new heavens and the new earth. Then shall the eager expectation of creation be fulfilled and the whole earth shall proclaim the glory of God who makes all things new.</p>
+				</div>
+				<div class="five column bottom_buffer draw_line">
+					<h4>About The Church</h4>
+				</div>
+				<div class="seven column bottom_buffer draw_line">
+					<p>We believe that the true Church is composed of all such persons who through saving faith in Jesus Christ have been regenerated by the Holy Spirit and are united together in the body of Christ. We believe that Jesus Christ is the Head of the Church, and that every local church has the right under Christ to decide and govern its own affairs.</p>
+				</div>
+				<div class="five column bottom_buffer draw_line">
+					<h4>About Ordinances</h4>
+				</div>
+				<div class="seven column bottom_buffer draw_line">
+					<p>We believe that water baptism and the Lord's Supper are ordinances to be observed by the Church during the present age. They are, however, not to be regarded as means of salvation.</p>
+				</div>
+				<div class="five column bottom_buffer draw_line">
+					<h4>About Marriage</h4>
+				</div>
+				<div class="seven column bottom_buffer draw_line">
+					<p>We define marriage as the permanent, exclusive, comprehensive, and conjugal “one flesh” union of one man and one woman, intrinsically ordered to procreation and biological family, and in furtherance of the moral, spiritual, and public good of binding father, mother, and child.</p>
+				</div>
+				<div class="five column bottom_buffer draw_line">
+					<h4>About The Sanctity of Life</h4>
+				</div>
+				<div class="seven column bottom_buffer draw_line">
+					<p>We believe that God made Adam by breathing into his nostrils the breath of life. Genesis declares that God created people in His own image, the image of God, which He did not do with animals and plants.  This means that in humans, a reflection of God Himself can be seen as we have souls that live on after the body has died.  Due to this sacredness of human life, we believe that all human life is sacred from conception until natural death, and the taking of a life, whether in or out of the womb, is morally wrong.</p>
+				</div>
+			</div>
+		</div> -->
 
 		<div class="footer">
 			<div class="container">
@@ -283,6 +442,22 @@
 <!--SCRIPTS-->
 <script src="js/script.js"></script>
 	
+<script>
+
+/*page specific script*/
+	$('.about_div').on('click', function() {
+		$('html, body').animate({
+	        scrollTop: $(this).offset().top-250
+	    }, 500);
+		if ($(this).hasClass('active')) {
+			$(this).toggleClass('active');
+		} else {
+			$('.about_div.active').toggleClass('active');
+			$(this).toggleClass('active');
+		}
+	});
+
+</script>
 </body>
 
 </html>
