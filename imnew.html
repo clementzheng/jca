@@ -11,13 +11,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:700,700i,900,900i" rel="stylesheet">
 	<!--STYLE-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<style>
 	/*PAGE SPECIFIC FORMATTING*/
 
 	.background#imnew_splash {
-		background: url('images/church_vertical.jpeg') no-repeat center center;
+		background: url('images/church_vertical_white.jpg') no-repeat center bottom;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -29,11 +31,11 @@
 	#imnew_splash .container {
 		min-height: 100vh;
 		overflow: hidden;
-		color: white;
+		color: #333;
 	}
 
 	#imnew_splash .page_title {
-		top: 50vh;
+		top: 45vh;
 	}
 
 	#imnew_splash .container {
@@ -41,12 +43,9 @@
 	}
 
 	#imnew_splash .column {
-		text-align: left;
 	}
 
 	#imnew_splash .column p {
-		font-size: 2.0rem;
-		line-height: 3.2rem;
 	}
 
 	#whoweare {
@@ -134,9 +133,32 @@
 		letter-spacing: 0.2rem;
 	}
 
-	.primary_button {
-		color: black;
-		border: 1px solid #222;
+	.container#intro_text {
+		min-height: 80vh;
+		margin-bottom: 120px;
+	}
+
+	#intro_text p {
+		margin: 0 0 3rem 0;
+		font-size: 1.7rem;
+		line-height: 2.8rem;
+	}
+
+	#intro_text p i {
+		font-family: "Gentium Book Basic", serif;
+		padding: 0 5vw;
+		display: block;
+	}
+
+	#location_map {
+		background: #CCC;
+		height: 60vh;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	#location_map img {
+		width: 100%;
 	}
 
 	</style>
@@ -243,22 +265,24 @@
 					<h1>We're so glad you're here</h1>
 				</div>
 			</div>
-			<div class="container">
-				<div class="ten column block_title one column_left">
+			<div class="container" id="intro_text">
+				<div class="ten column one column_left block_title">
 					<h2>Journey Church is a community all about God and all about people.</h2>
 				</div>
 				<div class="ten column one column_left">
-					<p>Jesus calls us to be a family that extends grace, mercy and forgiveness to everyone, and to love others as Jesus has loved us.  Striving to serve with love and excellence, we want to see people saved, set free, transformed and empowered to serve others.
+					<p>Jesus calls us to be a family that extends grace, mercy and forgiveness to everyone and loves others as Jesus has loved us.  We want to see people saved, set free, transformed and then empowered to serve others.  No matter what you’ve been through or where you are in your relationship with Jesus, you’re welcome here.</p>
 
-					<p>We share God’s love with the world through making disciples.  We are college students, young professionals, and families passionate about investing in people and communities.</p>
+					<p>College students, professionals, and families who call Journey their home are passionate about investing in communities and believe that Jesus can transform anyone’s life.  We strive to follow Him, raise up leaders, and plant churches in Georgia, in the U.S.A., and all around the world because Jesus gave us this glorious command and promise:</p>
 
-					<p>No matter what you’ve been through or where you are in your relationship with Jesus, you’re welcome here.  This is a community where you’re free to work out your unique faith journey with people who care.</p>
+					<p><i>Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age. (Matthew 28:19&ndash;20)</i></p>
+
+					<p>We long to see the multiplication, maturation, and mobilization of passionate followers of Jesus Christ in a church planting movement.  FInd out more about our emphasis on missional living here.</p>
 				</div>
 			</div>
 		</header>
 
 		<div class="full_container">
-			<div class="container top_buffer2 bottom_buffer2">
+			<div class="container bottom_buffer2">
 				<div class="twelve column block_title">
 					<h2>Visit a Family Group</h2>
 				</div>
@@ -271,12 +295,12 @@
 			</div>
 		</div>
 		<div class="full_container" id="sunday">
-			<div class="container top_buffer2">
+			<div class="container">
 				<div class="twelve column block_title">
 					<h2>Join us on Sundays</h2>
 				</div>
 				<div class="twelve column bottom_buffer">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Our Sunday celebrations are prayerful, Spirit-filled, Bible-based times of worship, teaching and community building. We would love to see you this Sunday.  You can find us at the following times and locations:</p>
 				</div>
 				<div class="six column centered bottom_buffer">
 					<h4 class="bottom_buffer">Midtown Service<br>11:00 AM</h4>
@@ -292,11 +316,6 @@
 					<a>1438 Sheridan Road NE<br>Atlanta, GA 30324</a></p>
 					<p class="top_buffer"><a class="primary_button" id="kids_button">Parents, have kids?</a></p>
 				</div>
-			</div>
-		</div>
-
-		<div class="full_container" class="bottom_buffer2">
-			<div class="twelve column top_buffer bottom_buffer test">		
 			</div>
 		</div>
 
@@ -337,6 +356,12 @@
 						<p class="centered top_buffer"><a class="primary_button">Submit</a></p>
 					</div>
 				</div>
+			</div>
+		</div>
+
+		<div class="full_container">
+			<div class="twelve column top_buffer bottom_buffer2" id="location_map">
+					<img src="images/map_dummy.png">
 			</div>
 		</div>
 
@@ -418,9 +443,8 @@
 		if ($("#gathering_form_div").hasClass("active")) {
 			$('html, body').animate({
 		        scrollTop: $("#sunday").offset().top
-		    }, 500, function() {
-		    	$("#gathering_form_div").toggleClass("active");
-		    });
+		    }, 500);
+		    $("#gathering_form_div").toggleClass("active");
 		}
 	});
 

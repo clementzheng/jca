@@ -168,11 +168,11 @@
 	.landingTitle {
 		position: relative;
 		float: left;
-		margin: 2.0rem 2vw 0;
+		margin: 1.0rem 2vw 0 0;
 		padding: 0;
 		text-align: left;
-		width: 60vw;
-		height: 7.0rem;
+		max-width: 60vw;
+		height: auto;
 	}
 
 	.landingTitle span {
@@ -180,7 +180,7 @@
 		float: left;
 		width: inherit;
 		padding: 0;
-		margin: 0;
+		margin: 0 3.5rem 0 0;
 	}
 
 	.landingTitle span h1 {
@@ -191,7 +191,7 @@
 		transition: all 800ms ease-in-out;
 		text-transform: none;
 		font-size: 7.0rem;
-		letter-spacing: 0.2rem;
+		letter-spacing: 0.0rem;
 		color: rgba(255, 255, 255, 1.0);
 	}
 
@@ -205,16 +205,22 @@
 
 		.landingTitle span h1 {
 			font-size: 10.0rem;
-			letter-spacing: 0.1rem;
+			letter-spacing: 0.0rem;
 		}
 
 		.landingTitle {
-			margin: 1.0rem 10vw;
+			margin: 1.0rem 10vw 0 10vw;
 			padding: 0;
-			width: 70vw;
-			height: 11.0rem;
+			max-width: 70vw;
 			text-align: left;
 		}
+	}
+
+	#landingTitle3 {
+		position: relative;
+		float: left;
+		width: 100vw;
+		margin-top: 0;
 	}
 
 	#landingTitle3 span h1 {
@@ -259,11 +265,11 @@
 	}
 
 	#service_updates {
-		text-align: left;
+		text-align: center;
 	}
 
 	#event_updates {
-		text-align: left;
+		text-align: center;
 	}
 
 	#service_updates h4 {
@@ -380,7 +386,7 @@
 		<header class="background" id="landing_splash">
 			<div class="full_container">
 				<div class="page_title" id="landingTitleDiv">
-					<div id="landingTitle1" class="landingTitle"><span><h1>Journey&nbsp;welcomes</h1></span></div>
+					<div id="landingTitle1" class="landingTitle"><span><h1>Journey</h1></span><span><h1>welcomes</h1></span></div>
 					<div id="landingTitle3" class="landingTitle">
 						<span class="active"><h1>you.</h1></span>
 						<span><h1>Atlanta.</h1></span>
@@ -478,16 +484,13 @@
 
 		<div class="full_container" id="updates">
 			<div class="container">
-				<div class="two column bottom_buffer">
-					<h4 class="bottom_buffer" id="updates_heading">Updates</h4>
-				</div>
-				<div class="five column bottom_buffer" id="service_updates">
-					<h4 class="bottom_buffer">Locations</h4>
+				<div class="six column bottom_buffer" id="service_updates">
+					<h4 class="bottom_buffer">Location Updates</h4>
 					<p><b>10/28/17 Friday:</b><br>Eastside prayer meeting canceled.</p>
 					<p><b>10/30/17 Sunday:</b><br>Midtown service at 11:00 AM location changed to <a href="https://www.google.com/maps/place/Westminster+Presbyterian+Church/@33.825496,-84.3433737,17z/data=!3m1!4b1!4m5!3m4!1s0x88f506131c027893:0xa66e47c7279e1933!8m2!3d33.825496!4d-84.341185" target="_blank">Westminster Presbyterian Church.</a></p>
 				</div>
-				<div class="five column bottom_buffer" id="event_updates">
-					<h4 class="bottom_buffer">Events</h4>
+				<div class="six column bottom_buffer" id="event_updates">
+					<h4 class="bottom_buffer">Upcoming Events</h4>
 					<p><b>10/29/16 Saturday: </b><br>Trunk-or-Treat at 4:00 PM. Contact admin@jcatlanta.org for location.</p>
 					
 				</div>
