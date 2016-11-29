@@ -34,7 +34,14 @@ p {
 	padding: 0;
 }
 
-h1, h2, h3, h4 {
+h1 {
+	font-family: "Karla", sans-serif;
+	font-weight: 700;
+	padding: 0;
+	margin: 0;
+}
+
+h2, h3, h4 {
 	font-family: "Lato", "Karla", sans-serif;
 	font-weight: 700;
 	padding: 0;
@@ -44,7 +51,7 @@ h1, h2, h3, h4 {
 h1 {
 	font-size: 5.0rem;
 	letter-spacing: 0.3rem;
-	text-transform: capitalize;
+	text-transform: none;
 }
 
 h2 {
@@ -177,8 +184,8 @@ p a {
 	and (min-width: 800px) 
 	and (-webkit-min-device-pixel-ratio: 1) {
 	h1 {
-		font-size: 9.0rem;
-		letter-spacing: 0.4rem;
+		font-size: 10.0rem;
+		letter-spacing: 0.0rem;
 	}
 	h2 {
 		font-size: 4.0rem;
