@@ -50,7 +50,9 @@ if ($("#emergency_banner").length) {
 }
 
 $('p').each(function(){
-    var string = $(this).html();
-    string = string.replace(/ ([^ ]*)$/,'&nbsp;$1');
-    $(this).html(string);
+	if ($(this).children().length==0) {
+	    var string = $(this).html();
+	    string = string.replace(/ ([^ ]*)$/,'&nbsp;$1');
+	    $(this).html(string);
+	}
 });
