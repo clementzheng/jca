@@ -164,6 +164,19 @@
 		margin: 0 0 0 0.5rem;
 	}
 
+	.dataTables_info {
+		font-size: 1.4rem;
+	}
+
+	.dataTables_paginate {
+		float: right;
+		font-size: 1.4rem;
+	}
+
+	.dataTables_paginate a {
+		margin: 0 0.5rem;
+	}
+
 
 
 	</style>
@@ -362,6 +375,12 @@
 					</tbody>
 				
 				</table>
+			</div>
+			<div class="five column top_buffer">
+				<div class="dataTables_info" id="sermon_table_info" role="status" aria-live="polite">Showing 1 to 10 of 50 entries</div>
+			</div>
+			<div class="seven column top_buffer">
+				<div class="dataTables_paginate paging_simple_numbers" id="sermon_table_paginate"><a class="paginate_button previous disabled" aria-controls="sermon_table" data-dt-idx="0" tabindex="0" id="sermon_table_previous">Previous</a><span><a class="paginate_button current" aria-controls="sermon_table" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="sermon_table" data-dt-idx="2" tabindex="0">2</a><a class="paginate_button " aria-controls="sermon_table" data-dt-idx="3" tabindex="0">3</a><a class="paginate_button " aria-controls="sermon_table" data-dt-idx="4" tabindex="0">4</a><a class="paginate_button " aria-controls="sermon_table" data-dt-idx="5" tabindex="0">5</a></span><a class="paginate_button next" aria-controls="sermon_table" data-dt-idx="6" tabindex="0" id="sermon_table_next">Next</a></div>
 			</div>
 		</div>
 
