@@ -103,6 +103,46 @@
 		font-family: "Gentium Book Basic", serif;
 	}
 
+	.expand {
+	}
+
+	.expand h4 {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	.expand .description {
+		max-height: 0;
+		overflow: hidden;
+		-webkit-transition: all 300ms ease-in-out;
+		-moz-transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		transition: all 300ms ease-in-out;
+	}
+
+	.expand div {
+		max-height: 0px;
+		overflow: hidden;
+		-webkit-transition: all 300ms ease-in-out;
+		-moz-transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		transition: all 300ms ease-in-out;
+	}
+
+	.expand.active .description {
+		max-height: 400px;
+		overflow: hidden;
+	}
+
+	.expand.active div {
+		max-height: 400px;
+		overflow: hidden;
+	}
+
+	.expand.active h4 {
+		text-decoration: none;
+	}
+
 
 
 	</style>
@@ -216,11 +256,11 @@
 			</div>
 		</header>
 
-		<div class="container">
+		<div class="container bottom_buffer2">
 			<div class="twelve column block_title">
 				<h2>We get together Sundays, Fridays, Mondays to Thursdays. Pretty much everyday!</h2>
 			</div>
-			<div class="twelve column">
+			<div class="twelve column bottom_buffer">
 				<p>It’s true&mdash;there’s always some kind of meeting going on at Journey not because we love meetings, but because we love doing life together.  Whether that means breaking bread, worshipping or serving, we know it’s better together.  Check out the following corporate gathering times to get plugged into the community.  Everyone is welcome.</p>
 			</div>
 		</div>
@@ -248,28 +288,36 @@
 			</div>
 		</div>
 
-		<div class="container top_buffer">
+		<div class="container top_buffer expand">
+			<h4 class="bottom_buffer centered">Eastside Service: Sunday School &amp; Childcare</h4>
 			<div class="twelve column">
-				<h4 class="top_buffer bottom_buffer centered">Eastside Service: Sunday School &amp; Childcare</h4>
-				<p>During the 1:30 PM Sunday service at Eastside, we hold “Little Travelers” Sunday School for children in grades kindergarten and up.  We’d love for your children to participate.  If you have children younger than kindergarten age, please let us know via the above form so we can make the most suitable arrangements.</p>
+				<p class="description">During the 1:30 PM Sunday service at Eastside, we hold “Little Travelers” Sunday School for children in grades kindergarten and up.  We’d love for your children to participate.  If you have children younger than kindergarten age, please let us know via the above form so we can make the most suitable arrangements.</p>
 			</div>
 		</div>
 
-		<div class="container top_buffer bottom_buffer">
+		<div class="container top_buffer expand">
+			<h4 class="bottom_buffer centered">Midtown Service: Transportation</h4>
 			<div class="twelve column">
-				<h4 class="top_buffer bottom_buffer centered">Midtown Service: Transportation</h4>
-				<p>Transportation is available for our Midtown service at 11:00 AM.  Please see below for the pick-up locations and times. For more information, please send us a message via the form above.</p>
+				<p class="description">Transportation is available for our Midtown service at 11:00 AM.  Please see below for the pick-up locations and times. For more information, please send us a message via the form above.</p>
 			</div>
-			<div class="three column"><p><i class="pickup">Georgia State University</i></p></div><div class="eight column"><p>Commons @ 10:40 AM</p></div><br>
-			<div class="three column"><p><i class="pickup">Oxford College</i></p></div><div class="eight column"><p>In front of Lil's cafeteria @ 10:15 AM</p></div><br>
-			<div class="three column"><p><i class="pickup">Emory Main Campus</i></p></div><div class="eight column"><p>Dobbs Circle (next to Tarbutton Hall, down the hill from Dobbs Hall) @ 10:15 AM &amp; 10:30 AM</p></div><br>
-			<div class="three column"><p><i class="pickup">Emory Clairmont Campus</i></p></div><div class="eight column"><p>SAAC Circle @ 10:30 AM</p></div>
+			<div>
+				<div class="three column"><p class="description"><i class="pickup">Georgia State University</i></p></div><div class="eight column"><p class="description">Commons @ 10:40 AM</p></div>
+			</div>
+			<div>
+				<div class="three column"><p class="description"><i class="pickup">Oxford College</i></p></div><div class="eight column"><p class="description">In front of Lil's cafeteria @ 10:15 AM</p></div>
+			</div>
+			<div>
+				<div class="three column"><p class="description"><i class="pickup">Emory Main Campus</i></p></div><div class="eight column"><p class="description">Dobbs Circle (next to Tarbutton Hall, down the hill from Dobbs Hall) @ 10:15 AM &amp; 10:30 AM</p></div>
+			</div>
+			<div>
+				<div class="three column"><p class="description"><i class="pickup">Emory Clairmont Campus</i></p></div><div class="eight column"><p class="description">SAAC Circle @ 10:30 AM</p></div>
+			</div>
 		</div>
 
-		<div class="container top_buffer bottom_buffer">
+		<div class="container top_buffer bottom_buffer expand">
+			<h4 class="bottom_buffer centered">Midtown Service: Parking Details</h4>
 			<div class="twelve column">
-				<h4 class="top_buffer bottom_buffer centered">Midtown Service: Parking Details</h4>
-				<p>Sunday parking on Georgia Tech campus is free of charge in Area Lot 4: <a href="https://goo.gl/maps/NRyedi6p1QQ2" target="_blank">345 Ferst Drive, Atlanta, GA 30318</a>. Please see the below map for where to enter the lot (red point) and for the parking spaces (in blue) that are the shortest walk to Architecture East Auditorium (in yellow).</p>
+				<p class="description">Sunday parking on Georgia Tech campus is free of charge in Area Lot 4: <a href="https://goo.gl/maps/NRyedi6p1QQ2" target="_blank">345 Ferst Drive, Atlanta, GA 30318</a>. Please see the below map for where to enter the lot (red point) and for the parking spaces (in blue) that are the shortest walk to Architecture East Auditorium (in yellow).</p>
 			</div>
 		</div>
 
@@ -406,6 +454,10 @@
 		if ($("#gathering_form_div").hasClass("active")) {
 			$("#gathering_form_div").toggleClass("active");
 		}
+	});
+
+	$(".expand").on("click", function() {
+		$(this).toggleClass("active");
 	});
 
 </script>
