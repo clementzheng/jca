@@ -121,13 +121,13 @@
 		border: 1px solid white;
 	}
 
-	#gathering_form_div {
+	#students_form_div {
 		position: relative;
 		float: left;
 		width: 100%;
 		margin: 0;
 		padding-top: 0px;
-		height: 0px;
+		max-height: 0px;
 		overflow: hidden;
 		z-index: 99;
 		-webkit-transition: all 200ms ease-in-out;
@@ -136,13 +136,59 @@
 		transition: all 200ms ease-in-out;
 	}
 
-	#gathering_form_div.active {
+	#students_form_div.active {
 		margin: 50px 0 50px 0;
 		padding-top: 50px;
-		height: 900px;
+		max-height: 2000px;
 	}
 
-	#close_form {
+	#parents_form_div {
+		position: relative;
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding-top: 0px;
+		max-height: 0px;
+		overflow: hidden;
+		z-index: 99;
+		-webkit-transition: all 200ms ease-in-out;
+		-moz-transition: all 200ms ease-in-out;
+		-o-transition: all 200ms ease-in-out;
+		transition: all 200ms ease-in-out;
+	}
+
+	#parents_form_div.active {
+		margin: 50px 0 50px 0;
+		padding-top: 50px;
+		max-height: 2000px;
+	}
+
+	.radio_button {
+		clear: both;
+	}
+
+	#contact_form_div {
+		position: relative;
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding-top: 0px;
+		max-height: 0px;
+		overflow: hidden;
+		z-index: 99;
+		-webkit-transition: all 200ms ease-in-out;
+		-moz-transition: all 200ms ease-in-out;
+		-o-transition: all 200ms ease-in-out;
+		transition: all 200ms ease-in-out;
+	}
+
+	#contact_form_div.active {
+		margin: 50px 0 50px 0;
+		padding-top: 50px;
+		max-height: 900px;
+	}
+
+	.close_form {
 		position: absolute;
 		top: 20px;
 		right: 30px;
@@ -150,14 +196,14 @@
 		height: 40px;
 	}
 
-	#close_form img {
+	.close_form img {
 		width: 100%;
 		height: 100%;
 		opacity: 0.25;
 		cursor: pointer;
 	}
 
-	#close_form:hover img {
+	.close_form:hover img {
 		opacity: 0.5;
 	}
 
@@ -256,20 +302,16 @@
 		color: red;
 	}
 
+	#contact_us h4 {
+		font-weight: 900;
+	}
+
 	#updates {
 		position: relative;
 		float: left;
 		width: 100%;
 		padding: 80px 0 40px 0;
-		background: #DDD;
-	}
-
-	#service_updates {
-		text-align: center;
-	}
-
-	#event_updates {
-		text-align: center;
+		background: #EEE;
 	}
 
 	#service_updates h4 {
@@ -442,40 +484,81 @@
 			</div>
 		</div>
 
-		<div class="full_container" id="gathering_form_div">
-			<div id="close_form">
+		<div class="full_container" id="students_form_div">
+			<div class="close_form">
 				<img src="images/cancel_black.svg">
 			</div>
 			<div class="container">
-				<div class="six column three column_left">
-					<p>Leave your information below and we will contact you in a bit</p>
+				<div class="twelve column">
+					<h3 class="centered bottom_buffer">Students, need a ride?</h3>
+					<p>Submit this form if you’d like a ride, and we’ll contact you within 24 hours.  Transportation is available for our Midtown service at 11:00 AM.  Please see below for the pick-up locations and times.</p>
 				</div>
-				<div class="six column three column_left">
+				<div>
+					<div class="four column"><p><b>Georgia State University</b></p></div><div class="eight column"><p>Commons @ 10:40 AM</p></div>
+					<div class="four column"><p><b>Oxford College</b></p></div><div class="eight column"><p>In front of Lil's cafeteria @ 10:15 AM</p></div>
+					<div class="four column"><p><b>Emory Main Campus</b></p></div><div class="eight column"><p>Dobbs Circle (next to Tarbutton Hall, down the hill from Dobbs Hall) @ 10:15 AM &amp; 10:30 AM</p></div>
+					<div class="four column"><p><b>Emory Clairmont Campus</b></p></div><div class="eight column"><p>SAAC Circle @ 10:30 AM</p></div>
+				</div>
+				<div class="eight column two column_left top_buffer">
 					<div id="gathering_form" class="form">
 						<p class="top_buffer">
-							<label for="gathering_name_input">What is your name?</label>
-							<input id="gathering_name_input" name="gathering_name_input" type="text">
-							<label for="gathering_email_input">What is your email?</label>
-							<input id="gathering_email_input" name="gathering_email_input" type="text">
+							<label for="student_name_input">What is your name?</label>
+							<input id="student_name_input" name="gathering_name_input" type="text">
+							<label for="student_email_input">What is your email?</label>
+							<input id="student_email_input" name="gathering_email_input" type="text">
 						</p>
 						<div class="bottom_buffer">
-							<label for="gathering_campus_input">What campus do you plan to attend?</label><br>
+							<label for="student_campus_input">From which campus do you need a ride?</label><br>
 							<div class="radio_button">
-								<input type="radio" name="gathering_campus_input" value="Midtown" checked>
-								<label for="midtown">Midtown</label>
+								<input type="radio" name="gathering_campus_input" value="gsu" checked>
+								<label for="gsu">Georgia State University Commons</label>
 							</div>
 							<div class="radio_button">
-								<input type="radio" name="gathering_campus_input" value="Eastside">
-								<label for="Eastside">Eastside</label>
+								<input type="radio" name="gathering_campus_input" value="oxford">
+								<label for="oxford">Oxford College Lil's</label>
+							</div>
+							<div class="radio_button">
+								<input type="radio" name="gathering_campus_input" value="emory">
+								<label for="oxford">Emory Dobbs Circle</label>
+							</div>
+							<div class="radio_button">
+								<input type="radio" name="gathering_campus_input" value="clairmont">
+								<label for="clairmont">Emory SAAC Circle</label>
 							</div>
 						</div>
 						<br>
+						<p class="centered top_buffer2"><a class="primary_button">Submit</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="full_container" id="parents_form_div">
+			<div class="close_form">
+				<img src="images/cancel_black.svg">
+			</div>
+			<div class="container">
+				<div class="twelve column">
+					<h3 class="centered bottom_buffer">Parents, need childcare?</h3>
+					<p>Submit this form if you’d like your child to participate in “Little Travelers” Sunday School, or need additional childcare, and we’ll contact you within 24 hours.  During the 1:30 PM Sunday service at Eastside, we hold “Little Travelers” Sunday School for children in grades kindergarten and up.  We’d love for your children to participate.  If you have children younger than kindergarten age, please let us know via the above form so we can make the most suitable arrangements.</p>
+				</div>
+				<div>
+					<div class="four column"><p><b>Before your Sunday visit</b></p></div><div class="eight column"><p>Please fill out this form to let us know the names and ages of your children, as well as any allergies or other important notes.</p></div>
+					<div class="four column"><p><b>On Sunday</b></p></div><div class="eight column"><p>Let any greeter on the Welcoming Team know that you would like your children to participate in Little Travelers.  The greeter will then escort your family to the Sunday School room.</p></div>
+				</div>
+				<div class="eight column two column_left top_buffer">
+					<div id="gathering_form" class="form">
 						<p class="top_buffer">
-							<label for="gathering_pickup_input">Where do you need to get picked up from?</label>
-							<input id="gathering_pickup_input" name="gathering_pickup_input" type="text">
-							<label for="gathering_kids_input">How many kids do you need us to watch?</label>
-							<input id="gathering_kids_input" name="gathering_kids_input" type="text">
+							<label for="parent_name_input">What is your name?</label>
+							<input id="parent_name_input" name="parent_name_input" type="text">
+							<label for="parent_email_input">What is your email?</label>
+							<input id="parent_email_input" name="parent_email_input" type="text">
+							<label for="parent_kids_input">What are the names and ages of your children?</label>
+							<textarea id="parent_kids_input" name="parent_kids_input" style="clear:both; width: 100%; height: 100px; margin: 20px 0; resize: none;"></textarea>
+							<label for="parent_message_input">Do your children have any allergies?<br>Or, is there something else important we should know about your child?</label>
+							<textarea id="parent_message_input" name="parent_message_input" style="clear:both; width: 100%; height: 150px; margin-top: 20px; resize: none;"></textarea>
 						</p>
+						<br>
 						<p class="centered top_buffer"><a class="primary_button">Submit</a></p>
 					</div>
 				</div>
@@ -488,8 +571,43 @@
 			</div>
 		</div>
 
-		<div class="full_container" id="updates">
+		<div class="full_container centered" id="contact_us">
 			<div class="container">
+				<div class="twelve column top_buffer2 bottom_buffer2">
+					<p><h4>Contact Us</h4></p>
+					<p>Click below to send us a message, or mail us at this address:</p>
+					<p><i>The Journey Church of Atlanta
+					<br>PO Box 15575
+					<br>Atlanta, GA 30333</i></p>
+					<p class="top_buffer"><a class="primary_button" id="contact_us_button">Contact Us</a></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="full_container" id="contact_form_div">
+			<div class="close_form">
+				<img src="images/cancel_black.svg">
+			</div>
+			<div class="container top_buffer2 bottom_buffer2">
+				<div class="eight column two column_left">
+					<p>Leave your information below and we will contact you in a bit</p>
+				</div>
+				<div class="eight column two column_left">
+					<div id="fg_form" class="form">
+						<label for="fg_name_input">What is your name?</label>
+						<input id="fg_name_input" name="contact_name_input" type="text">
+						<label for="fg_year_input">Email Address?</label>
+						<input id="fg_year_input" name="contact_email_input" type="text">
+						<label for="fg_year_input">Message</label>
+						<input id="fg_year_input" name="contact_message_input" type="text">
+						<p class="centered top_buffer"><a class="primary_button">Submit</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="full_container" id="updates">
+			<div class="container centered">
 				<div class="six column bottom_buffer" id="service_updates">
 					<h4 class="bottom_buffer">Location Updates</h4>
 					<p><b>10/28/17 Friday:</b><br>Eastside prayer meeting canceled.</p>
@@ -542,21 +660,71 @@
 <script>
 
 /*page specific script*/
-	$("#ride_button, #kids_button").on("click", function() {
-		$('html, body').animate({
-	        scrollTop: $("#gathering_form_div").offset().top
-	    }, 500);
-		if (!$("#gathering_form_div").hasClass("active")) {
-			$("#gathering_form_div").toggleClass("active");
+	$("#ride_button").on("click", function() {
+		if ($("#parents_form_div").hasClass("active")) {
+			$("#parents_form_div").toggleClass("active");
+			if (!$("#students_form_div").hasClass("active")) {
+				$("#students_form_div").toggleClass("active");
+			}
+		} else {
+			$('html, body').animate({
+	       		scrollTop: $("#students_form_div").offset().top
+		    }, 500);
+			if (!$("#students_form_div").hasClass("active")) {
+				$("#students_form_div").toggleClass("active");
+			}
 		}
 	});
 
-	$("#close_form").on("click", function() {
-		if ($("#gathering_form_div").hasClass("active")) {
+	$("#students_form_div .close_form").on("click", function() {
+		if ($("#students_form_div").hasClass("active")) {
 			$('html, body').animate({
 		        scrollTop: $("#join_us").offset().top
 		    }, 500);
-		    $("#gathering_form_div").toggleClass("active");
+		    $("#students_form_div").toggleClass("active");
+		}
+	});
+
+	$("#kids_button").on("click", function() {
+		if ($("#students_form_div").hasClass("active")) {
+			$("#students_form_div").toggleClass("active");
+			if (!$("#parents_form_div").hasClass("active")) {
+				$("#parents_form_div").toggleClass("active");
+			}
+		} else {
+			$('html, body').animate({
+		        scrollTop: $("#parents_form_div").offset().top
+		    }, 500);
+			if (!$("#parents_form_div").hasClass("active")) {
+				$("#parents_form_div").toggleClass("active");
+			}
+		}
+	});
+
+	$("#parents_form_div .close_form").on("click", function() {
+		if ($("#parents_form_div").hasClass("active")) {
+			$('html, body').animate({
+		        scrollTop: $("#join_us").offset().top
+		    }, 500);
+		    $("#parents_form_div").toggleClass("active");
+		}
+	});
+
+	$("#contact_us_button").on("click", function() {
+		$('html, body').animate({
+	        scrollTop: $("#contact_form_div").offset().top
+	    }, 500);
+		if (!$("#contact_form_div").hasClass("active")) {
+			$("#contact_form_div").toggleClass("active");
+		}
+	});
+
+	$("#contact_form_div .close_form").on("click", function() {
+		if ($("#contact_form_div").hasClass("active")) {
+			$("#contact_form_div").toggleClass("active");
+			$('html, body').animate({
+		        scrollTop: $("#contact_us").offset().top + 300
+		    }, 500);
 		}
 	});
 
