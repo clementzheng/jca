@@ -107,6 +107,10 @@ p a {
 	text-align: center;
 }
 
+.emergency_span_bold {
+	font-weight: 700;
+}
+
 @media (min-width: 550px) {
 	#emergency_banner span {
 		width: 50%;
