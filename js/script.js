@@ -22,6 +22,7 @@ if (mobile) {
 	$(".nav_content_mobile .nav_item .nav_link").css("font-size", "5vw");
 	$(".nav_content_mobile .nav_item .nav_link").css("line-height", "6vw");
 	$(".nav_menu_icon").css("width", "6rem");
+	$("#JCA_logo").css("height", "80px");
 }
 
 $(window).on('resize', function() {

@@ -255,18 +255,26 @@ p a {
 #JCA_logo a img {
 	position: absolute;
 	top: 0;
-	left: -200px;
+	-ms-transform-origin: 0% 0%;
+	-webkit-transform-origin: 0% 0%;
+	transform-origin: 0% 0%;
+	-ms-transform: rotateY(90deg);
+	-webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
 	height: 100%;
 	background: none;
-	opacity: 0.9;
-	-webkit-transition: all 400ms ease-in-out;
-	-moz-transition: all 400ms ease-in-out;
-	-o-transition: all 400ms ease-in-out;
-	transition: all 400ms ease-in-out;
+	opacity: 0.0;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
 }
 
 #JCA_logo a img.active {
-	left: 0px;
+	-ms-transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    opacity: 0.9;
 }
 
 #JCA_logo:hover a img.active {
