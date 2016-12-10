@@ -245,17 +245,31 @@ p a {
 	box-sizing: border-box;
 	top: 30px;
 	left: 30px;
-	width: 60px;
-	height: 60px;
+	height: 55px;
+	width: 100px;
 	margin: 0;
 	padding: 0;
 	z-index: 3;
 }
 
 #JCA_logo a img {
-	width: 100%;
+	position: absolute;
+	top: 0;
+	left: -200px;
 	height: 100%;
 	background: none;
+	opacity: 0.9;
+	-webkit-transition: all 400ms ease-in-out;
+	-moz-transition: all 400ms ease-in-out;
+	-o-transition: all 400ms ease-in-out;
+	transition: all 400ms ease-in-out;
+}
+
+#JCA_logo a img.active {
+	left: 0px;
+}
+
+#JCA_logo:hover a img.active {
 }
 
 header {
@@ -680,7 +694,7 @@ header {
 .nav_content_mobile .nav_item {
 	color: black;
 	clear: both;
-	margin-bottom: 30px;
+	margin-bottom: 60px;
 }
 
 .nav_content_mobile .nav_item a {
@@ -690,7 +704,7 @@ header {
 
 .nav_content_mobile .nav_item .nav_title {
 	font-size: 2rem;
-	line-height: 2rem;
+	line-height: 2.3rem;
 	font-weight: 700;
 	clear: both;
 }
@@ -699,7 +713,7 @@ header {
 	visibility: visible;
 	opacity: 1.0;
 	font-size: 2rem;
-	line-height: 2rem;
+	line-height: 2.3rem;
 	clear: both;
 	color: black;
 }

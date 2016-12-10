@@ -56,3 +56,11 @@ $('p').each(function(){
 	    $(this).html(string);
 	}
 });
+
+$('#JCA_logo').mouseenter(function() {
+	$('#JCA_logo a img').toggleClass('active');
+});
+
+$('#JCA_logo').mouseleave(function() {
+	$('#JCA_logo a img').toggleClass('active');
+});
