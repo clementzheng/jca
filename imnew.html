@@ -19,13 +19,13 @@
 	/*PAGE SPECIFIC FORMATTING*/
 
 	.background#imnew_splash {
-		background: url('images/church_vertical_white.jpg') no-repeat center bottom;
+		background: url('images/family.jpg') no-repeat fixed center center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
 		overflow: hidden;
-		height: auto;
+		height: 100vh;
 	}
 
 	#imnew_splash .container {
@@ -49,16 +49,14 @@
 	}
 
 	#whoweare {
-		background: #222 url('images/park_blur.jpg') no-repeat fixed center center;
+		/*background: #222 url('images/park_blur.jpg') no-repeat fixed center center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
-		overflow: hidden;
-		min-height: 100vh;
-		color: white;
+		overflow: hidden;*/
 		box-sizing: border-box;
-		padding: 20vh 0;
+		margin: 150px 0;
 	}
 
 	#fgsignup {
@@ -194,8 +192,10 @@
 
 	#intro_text p i {
 		font-family: "Gentium Book Basic", serif;
-		padding: 0 5vw;
-		display: block;
+		font-weight: 400;
+		font-size: 2.2rem;
+		letter-spacing: 0.05rem;
+		line-height: 3.0rem;
 	}
 
 	#location_map {
@@ -207,6 +207,49 @@
 
 	#location_map img {
 		width: 100%;
+	}
+
+	#sunday_title_block {
+		position: relative;
+		float: left;
+		height: auto;
+		background: #222 url('images/family.jpg') no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		box-sizing: border-box;
+	}
+
+	#sunday_title_block .block_title {
+		padding: 12vh 0;
+		margin: 0;
+		color: white;
+	}
+
+	#family_title_block {
+		position: relative;
+		float: left;
+		height: auto;
+		background: #222 url('images/family.jpg') no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		box-sizing: border-box;
+	}
+
+	#family_title_block .block_title {
+		padding: 12vh 0 10vh 0;
+		margin: 0;
+		color: white;
+	}
+
+	#family_title_block .block_title p {
+		padding: 0;
+		margin: 2.5rem 0 0 0;
+		font-family: "Gentium Book Basic", serif;
+		font-size: 2.5rem;
 	}
 
 	</style>
@@ -315,145 +358,73 @@
 		<header class="background" id="imnew_splash">
 			<div class="container">
 				<div class="page_title">
-					<h1>We're so glad<br>you're here</h1>
-				</div>
-			</div>
-			<div class="container" id="intro_text">
-				<div class="twelve column block_title">
-					<h2>Journey Church is a community all about God and all about people.</h2>
-				</div>
-				<div class="twelve column">
-					<p>Jesus calls us to be a family that extends grace, mercy and forgiveness to everyone and loves others as Jesus has loved us.  We want to see people saved, set free, transformed and then empowered to serve others.  No matter what you’ve been through or where you are in your relationship with Jesus, you’re welcome here.</p>
-
-					<p>College students, professionals, and families who call Journey their home are passionate about investing in communities and believe that Jesus can transform anyone’s life.  We strive to follow Him, raise up leaders, and plant churches in Georgia, in the U.S.A., and all around the world because Jesus gave us this glorious command and promise:</p>
-
-					<p><i>Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age. (Matthew 28:19&ndash;20)</i></p>
-
-					<p>We long to see the multiplication, maturation, and mobilization of passionate followers of Jesus Christ in a church planting movement.  FInd out more about our emphasis on missional living here.</p>
+					<h1>Welcome</h1>
 				</div>
 			</div>
 		</header>
 
-		<div class="full_container" id="sunday">
+		<div class="full_container" id="whoweare">
+			<div class="container" id="intro_text">
+				<div class="six column">
+					<p><i>The Journey Church of Atlanta is a community all about God and all about people.</i></p>
+					<p>Jesus calls us to be a family that extends grace, mercy and forgiveness to everyone and loves others as Jesus has loved us.  We want to see people saved, set free, transformed and then empowered to serve others.  No matter what you’ve been through or where you are in your relationship with Jesus, you’re welcome here.</p>
+				</div>
+				<div class="six column bottom_buffer2">
+					<img src="images/partners_small.jpg">
+				</div>
+				<br>
+				<div class="six column">
+					<img src="images/partners_small.jpg">
+				</div>
+				<div class="six column bottom_buffer2">
+					<p><i>Our vision is to multiply, mature and mobilize followers of Jesus Christ in a church planting movement.</i></p>
+					<p>We believe that the local church is not a physical building but a community.  Church is a home, and the people are family.  It’s in the church that we experience revival, spiritual transformation, and the fullness of God’s kingdom.</p>
+				</div>
+				<br>
+				<div class="ten column one column_left top_buffer centered">
+					<p>We strive to follow Jesus Christ, raise up other followers, and plant churches in the US and around the world because Jesus gave us this glorious command and promise:</p>
+					<p><i>Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age. (Matthew 28:19&ndash;20)</i></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="full_container bottom_buffer" id="sunday_title_block">
+			<div class="twelve column block_title">
+				<h2>Visit us this Sunday</h2>
+			</div>
+		</div>
+
+		<div class="full_container top_buffer2 bottom_buffer2" id="join_us">
 			<div class="container">
-				<div class="twelve column block_title">
-					<h2>Join us for Sunday celebration</h2>
+				<div class="six column top_buffer bottom_buffer centered">
+					<h4 class="">11:00AM</h4>
+					<p class=""><i>college (18&ndash;24yo) service</i></p>
+					<p class="top_buffer">Georgia Tech Architecture East Auditorium<br>
+					<a class="address">245 Fourth Street NW<br>Atlanta, GA 30332</a></p>
+					<a href="college.html"><p class="centered top_buffer primary_button" id="ride_button">Click for<br>parking and ride information</p></a>
 				</div>
-				<div class="twelve column bottom_buffer centered">
-					<p>One of the best ways to get to know our community is to visit us on a Sunday.  Our Sunday celebrations are prayerful, Spirit-filled, Bible-based times of worship, teaching and breaking bread together. We would love to see you this Sunday.  You can find us at the following times and locations:</p>
-				</div>
-				<div class="six column centered bottom_buffer">
-					<h4 class="bottom_buffer">Midtown Service<br>11:00 AM</h4>
-					<p><i>Service for college students and college-aged young adults. Right on Georgia Tech campus. Rides provided from GSU, Emory and Oxford.</i></p>
-					<p>Architecture East Auditorium<br>
-					<a>245 Fourth Street NW<br>Atlanta, GA 30332</a></p>
-					<p class="top_buffer"><a class="primary_button" id="ride_button">Students, need a ride?</a></p>
-				</div>
-				<div class="six column centered bottom_buffer">
-					<h4 class="bottom_buffer">Eastside Service<br>1:30 PM</h4>
-					<p><i>Service for professionals, married couples and families. Sunday school offered for +4yo. Cry room available for younger children.</i></p>
-					<p>Westminster Presbyterian Church<br>
-					<a>1438 Sheridan Road NE<br>Atlanta, GA 30324</a></p>
-					<p class="top_buffer"><a class="primary_button" id="kids_button">Parents, need childcare?</a></p>
+				<div class="six column top_buffer bottom_buffer centered">
+					<h4>1:30 PM</h4>
+					<p><i>with children's ministry</i></p>
+					<p class="top_buffer bottom_buffer">Westminster Presbyterian Church<br>
+					<a class="address">1438 Sheridan Road NE<br>Atlanta, GA 30324</a></p>
+					<a href="kids.html"><p class="centered top_buffer primary_button" id="kids_button">Click for<br>children's ministry details</p></a>
 				</div>
 			</div>
 		</div>
 
-		<div class="full_container form_div" id="students_form_div">
-			<div class="close_form">
-				<img src="images/cancel_black.svg">
+		<div class="full_container bottom_buffer2 top_buffer2" id="family_title_block">
+			<div class="twelve column block_title">
+				<h2>Go deeper with a small group</h2>
+				<p><i>To us, church is family. That’s why we call our small, Bible study groups “Family Group.”</i></p>
 			</div>
+		</div>
+
+		<div class="full_container top_buffer2 bottom_buffer2">
 			<div class="container">
-				<div class="twelve column">
-					<h3 class="centered bottom_buffer">Students, need a ride?</h3>
-					<p>Submit this form if you’d like a ride, and we’ll contact you within 24 hours.  Transportation is available for our Midtown service at 11:00 AM.  Please see below for the pick-up locations and times.</p>
-				</div>
-				<div>
-					<div class="four column"><p><b>Georgia State University</b></p></div><div class="eight column"><p>Commons @ 10:40 AM</p></div>
-					<div class="four column"><p><b>Oxford College</b></p></div><div class="eight column"><p>In front of Lil's cafeteria @ 10:15 AM</p></div>
-					<div class="four column"><p><b>Emory Main Campus</b></p></div><div class="eight column"><p>Dobbs Circle (next to Tarbutton Hall, down the hill from Dobbs Hall) @ 10:15 AM &amp; 10:30 AM</p></div>
-					<div class="four column"><p><b>Emory Clairmont Campus</b></p></div><div class="eight column"><p>SAAC Circle @ 10:30 AM</p></div>
-				</div>
-				<div class="eight column two column_left top_buffer">
-					<div id="gathering_form" class="form">
-						<p class="top_buffer">
-							<label for="student_name_input">What is your name?</label>
-							<input id="student_name_input" name="gathering_name_input" type="text">
-							<label for="student_email_input">What is your email?</label>
-							<input id="student_email_input" name="gathering_email_input" type="text">
-						</p>
-						<div class="bottom_buffer">
-							<label for="student_campus_input">From which campus do you need a ride?</label><br>
-							<div class="radio_button">
-								<input type="radio" name="gathering_campus_input" value="gsu" checked>
-								<label for="gsu">Georgia State University Commons</label>
-							</div>
-							<div class="radio_button">
-								<input type="radio" name="gathering_campus_input" value="oxford">
-								<label for="oxford">Oxford College Lil's</label>
-							</div>
-							<div class="radio_button">
-								<input type="radio" name="gathering_campus_input" value="emory">
-								<label for="oxford">Emory Dobbs Circle</label>
-							</div>
-							<div class="radio_button">
-								<input type="radio" name="gathering_campus_input" value="clairmont">
-								<label for="clairmont">Emory SAAC Circle</label>
-							</div>
-						</div>
-						<br>
-						<p class="centered top_buffer2 bottom_buffer2"><a class="primary_button">Submit</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="full_container form_div" id="parents_form_div">
-			<div class="close_form">
-				<img src="images/cancel_black.svg">
-			</div>
-			<div class="container">
-				<div class="twelve column">
-					<h3 class="centered bottom_buffer">Parents, need childcare?</h3>
-					<p>Submit this form if you’d like your child to participate in “Little Travelers” Sunday School, or need additional childcare, and we’ll contact you within 24 hours.  During the 1:30 PM Sunday service at Eastside, we hold “Little Travelers” Sunday School for children in grades kindergarten and up.  We’d love for your children to participate.  If you have children younger than kindergarten age, please let us know via the above form so we can make the most suitable arrangements.</p>
-				</div>
-				<div>
-					<div class="four column"><p><b>Before your Sunday visit</b></p></div><div class="eight column"><p>Please fill out this form to let us know the names and ages of your children, as well as any allergies or other important notes.</p></div>
-					<div class="four column"><p><b>On Sunday</b></p></div><div class="eight column"><p>Let any greeter on the Welcoming Team know that you would like your children to participate in Little Travelers.  The greeter will then escort your family to the Sunday School room.</p></div>
-				</div>
-				<div class="eight column two column_left top_buffer">
-					<div id="gathering_form" class="form">
-						<p class="top_buffer">
-							<label for="parent_name_input">What is your name?</label>
-							<input id="parent_name_input" name="parent_name_input" type="text">
-							<label for="parent_email_input">What is your email?</label>
-							<input id="parent_email_input" name="parent_email_input" type="text">
-							<label for="parent_kids_input">What are the names and ages of your children?</label>
-							<textarea id="parent_kids_input" name="parent_kids_input" style="clear:both; width: 100%; height: 100px; margin: 20px 0; resize: none;"></textarea>
-							<label for="parent_message_input">Do your children have any allergies?<br>Or, is there something else important we should know about your child?</label>
-							<textarea id="parent_message_input" name="parent_message_input" style="clear:both; width: 100%; height: 150px; margin-top: 20px; resize: none;"></textarea>
-						</p>
-						<br>
-						<p class="centered top_buffer bottom_buffer2"><a class="primary_button">Submit</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="full_container">
-			<div class="twelve column top_buffer bottom_buffer2" id="location_map">
-					<img src="images/map_dummy.png">
-			</div>
-		</div>
-
-		<div class="full_container">
-			<div class="container bottom_buffer">
-				<div class="twelve column block_title">
-					<h2>Go deeper with a small group</h2>
-				</div>
 				<div class="twelve column bottom_buffer centered">
 					<p>To us, church is family.  Visit a small, “family” group gathering and discover the joy of sharing life with other brothers and sisters.  Here, you’ll connect with 10-15 people who gather weekly to study God’s word, pray, serve, laugh, cry and do life together.  You weren’t meant to journey through life alone.</p>
-					<p id="fgsignup"><a class="secondary_button" href="familygroups.html">Learn More</a></p>
+					<p id="fgsignup"><a class="primary_button" href="familygroup.html">Locations and Times</a></p>
 				</div>		
 			</div>
 		</div>
@@ -523,55 +494,6 @@
 <script>
 
 /*page specific script*/
-	$("#ride_button").on("click", function() {
-		if ($("#parents_form_div").hasClass("active")) {
-			$("#parents_form_div").toggleClass("active");
-			if (!$("#students_form_div").hasClass("active")) {
-				$("#students_form_div").toggleClass("active");
-			}
-		} else {
-			$('html, body').animate({
-	       		scrollTop: $("#students_form_div").offset().top
-		    }, 500);
-			if (!$("#students_form_div").hasClass("active")) {
-				$("#students_form_div").toggleClass("active");
-			}
-		}
-	});
-
-	$("#students_form_div .close_form").on("click", function() {
-		if ($("#students_form_div").hasClass("active")) {
-			$('html, body').animate({
-		        scrollTop: $("#sunday").offset().top
-		    }, 500);
-		    $("#students_form_div").toggleClass("active");
-		}
-	});
-
-	$("#kids_button").on("click", function() {
-		if ($("#students_form_div").hasClass("active")) {
-			$("#students_form_div").toggleClass("active");
-			if (!$("#parents_form_div").hasClass("active")) {
-				$("#parents_form_div").toggleClass("active");
-			}
-		} else {
-			$('html, body').animate({
-		        scrollTop: $("#parents_form_div").offset().top
-		    }, 500);
-			if (!$("#parents_form_div").hasClass("active")) {
-				$("#parents_form_div").toggleClass("active");
-			}
-		}
-	});
-
-	$("#parents_form_div .close_form").on("click", function() {
-		if ($("#parents_form_div").hasClass("active")) {
-			$('html, body').animate({
-		        scrollTop: $("#sunday").offset().top
-		    }, 500);
-		    $("#parents_form_div").toggleClass("active");
-		}
-	});
 
 </script>
 </body>

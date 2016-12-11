@@ -450,9 +450,72 @@ header {
 	width: 100%;
 }
 
+#join_us p {
+	margin: 0;
+}
+
+#join_us p.top_buffer {
+	margin-top: 20px;
+}
+
+#join_us p.top_buffer2 {
+	margin-top: 40px;
+}
+
+#join_us p.bottom_buffer {
+	margin-bottom: 20px;
+}
+
+#join_us p.right_aligned {
+	text-align: right;
+}
+
+#join_us h4.right_aligned {
+	text-align: right;
+}
+
+#join_us p i {
+	font-family: "Gentium Book Basic", serif;
+}
+
+#join_us a {
+	text-decoration: none;
+}
+
+#join_us a.address {
+	text-decoration: underline;
+}
+
+#kids_button:hover {
+	color: white;
+}
+
+#ride_button:hover {
+	color: white;
+}
+
 .form_div.active {
 	border-top: 1px dotted #CCC;
 	border-bottom: 1px dotted #CCC;
+}
+
+#submit_thanks {
+	max-height: 0px;
+	overflow: hidden;
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+#submit_thanks.active {
+	max-height: 200px;
+}
+
+#submit_thanks h4 {
+	font-family: "Gentium Book Basic", serif;
+	font-style: italic;
+	font-weight: 400;
 }
 
 .form label {
