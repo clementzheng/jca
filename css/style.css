@@ -500,22 +500,26 @@ header {
 }
 
 #submit_thanks {
-	max-height: 0px;
-	overflow: hidden;
-	-webkit-transition: all 200ms ease-in-out;
-	-moz-transition: all 200ms ease-in-out;
-	-o-transition: all 200ms ease-in-out;
-	transition: all 200ms ease-in-out;
+	max-height: 0;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: all 1000ms ease-in-out;
+	-moz-transition: all 1000ms ease-in-out;
+	-o-transition: all 1000ms ease-in-out;
+	transition: all 1000ms ease-in-out;
 }
 
 #submit_thanks.active {
-	max-height: 200px;
+	max-height: 500px;
+	visibility: visible;
+	opacity: 1.0;
 }
 
 #submit_thanks h4 {
 	font-family: "Gentium Book Basic", serif;
 	font-style: italic;
 	font-weight: 400;
+	margin: 50px 0;
 }
 
 .form label {

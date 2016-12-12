@@ -70,12 +70,6 @@ $(document).ready(function() {
 
 	//SUBMIT FORM BEHAVIOR
 
-	$("#submit_thanks .close_form").on("click", function() {
-		if ($("#submit_thanks").hasClass("active")) {
-			$("#submit_thanks").toggleClass("active");
-		}
-	});	
-
 	$('#submit_thanks').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
 		$(window).one('scroll', function() {
 			if ($("#submit_thanks").hasClass("active")) {
