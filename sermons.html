@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 	<title>Journey Church of Atlanta</title>
 	<meta name="author" content="Journey Church of Atlanta">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!--FONTS-->
 	<link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
@@ -75,10 +76,9 @@
 
 	.sermon_row {
 		background: white;
-		box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.25);
 		margin: 20px 0;
-		padding: 20px 20px 10px 20px;
 		box-sizing: border-box;
+		border-bottom: 1px solid #CCC;
 	}
 
 	.sermon_row .speaker {
@@ -110,7 +110,7 @@
 
 	.sermon_row .buttons {
 		position: relative;
-		float: right;
+		float: left;
 		width: auto;
 		height: 80px;
 	}
@@ -118,10 +118,10 @@
 	.buttons .button {
 		position: relative;
 		float: left;
-		width: 80px;
-		height: 80px;
+		width: 60px;
+		height: 60px;
 		margin: 0 5px;
-		opacity: 0.5;
+		opacity: 0.7;
 	}
 
 	.buttons .button:hover {
@@ -161,8 +161,9 @@
 	}
 
 	#sermon_table_filter {
-		float: right;
+		float: left;
 		font-size: 1.8rem;
+		margin-top: 3rem;
 	}
 
 	#sermon_table_filter input {
@@ -171,15 +172,54 @@
 
 	.dataTables_info {
 		font-size: 1.4rem;
+		width: 100%;
+		text-align: center;
 	}
 
 	.dataTables_paginate {
-		float: right;
+		float: left;
+		width: 100%;
+		text-align: center;
 		font-size: 1.4rem;
 	}
 
 	.dataTables_paginate a {
 		margin: 0 0.5rem;
+	}
+
+	@media only screen 
+		and (min-width: 800px) 
+		and (-webkit-min-device-pixel-ratio: 1) {
+		.sermon_row .buttons {
+			float: right;
+		}
+		.sermon_row {
+			box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+			padding: 20px 20px 10px 20px;
+			box-sizing: border-box;
+			border: none;
+		}
+		.buttons .button {
+			position: relative;
+			float: left;
+			width: 80px;
+			height: 80px;
+			margin: 0 5px;
+			opacity: 0.5;
+		}
+		#sermon_table_filter {
+			float: right;
+			margin-top: 0;
+		}
+		.dataTables_paginate {
+			float: right;
+			width: auto;
+			text-align: right;
+		}
+		.dataTables_info {
+			width: auto;
+			text-align: right;
+		}
 	}
 
 

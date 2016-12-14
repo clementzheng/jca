@@ -28,8 +28,8 @@ b {
 }
 
 p {
-	font-size: 1.7rem;
-	line-height: 2.8rem;
+	font-size: 1.6rem;
+	line-height: 2.5rem;
 	margin: 0 0 20px 0;
 	padding: 0;
 }
@@ -50,21 +50,21 @@ h2, h3, h4 {
 
 h1 {
 	font-size: 5.0rem;
-	letter-spacing: 0.3rem;
+	letter-spacing: 0.2rem;
 	text-transform: none;
 }
 
 h2 {
-	font-size: 3.5rem;
-	letter-spacing: 0.25rem;
+	font-size: 3.0rem;
+	letter-spacing: 0.1rem;
 }
 
 h3 {
-	font-size: 3.2rem;
+	font-size: 2.5rem;
 }
 
 h4 {
-	font-size: 2.0rem;
+	font-size: 1.6rem;
 }
 
 br {
@@ -188,6 +188,12 @@ p a {
 @media only screen 
 	and (min-width: 800px) 
 	and (-webkit-min-device-pixel-ratio: 1) {
+	p {
+		font-size: 1.7rem;
+		line-height: 2.8rem;
+		margin: 0 0 20px 0;
+		padding: 0;
+	}
 	h1 {
 		font-size: 10.0rem;
 		letter-spacing: 0.0rem;
@@ -619,7 +625,7 @@ textarea {
 	user-select: none;           /* Non-prefixed version, currently not supported by any browser */
 }
 
-.nav_item {
+.nav_bar .nav_item {
 	position: relative;
 	float: left;
 	margin: 0 25px 0 0;
@@ -628,12 +634,12 @@ textarea {
 	cursor: pointer;
 }
 
-.nav_item a {
+.nav_bar .nav_item a {
 	color: white;
 	text-decoration: none;
 }
 
-.nav_title {
+.nav_bar .nav_title {
 	position: relative;
 	float: left;
 	font-size: 1.5rem;
@@ -643,10 +649,10 @@ textarea {
 	padding: 5px 16px;
 }
 
-.nav_title a {
+.nav_bar .nav_title a {
 }
 
-.nav_link {
+.nav_bar .nav_link {
 	position: relative;
 	float: left;
 	font-size: 1.4rem;
@@ -664,7 +670,7 @@ textarea {
 	transition: all 200ms ease-in-out;
 }
 
-.nav_link a {
+.nav_bar .nav_link a {
 	position: relative;
 	float: left;
 	padding: 18px 0 20px 16px;
@@ -675,7 +681,7 @@ textarea {
 	background-color: #FFF;
 }
 
-.nav_item:hover .nav_link {
+.nav_bar .nav_item:hover .nav_link {
 	line-height: 0.8rem;
 	visibility: visible;
 	opacity: 1;
@@ -683,20 +689,20 @@ textarea {
 	color: #FFF;
 }
 
-.nav_item:hover .nav_link a {
+.nav_bar .nav_item:hover .nav_link a {
 	color: #FFF;
 	width: 190px;
 	background: none;
 	visibility: visible;
 }
 
-.nav_item:hover .nav_title {
+.nav_bar .nav_item:hover .nav_title {
 	opacity: 1.0;
 	background: none;
 	color: #FFF;
 }
 
-.nav_item:hover .nav_title a {
+.nav_bar .nav_item:hover .nav_title a {
 	color: transparent !important;
 	text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.8);
 	-webkit-background-clip: text;
@@ -704,7 +710,7 @@ textarea {
           background-clip: text;
 }
 
-.nav_link:hover a {
+.nav_bar .nav_link:hover a {
 	color: transparent !important;
 	text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.8);
 	-webkit-background-clip: text;
@@ -730,7 +736,7 @@ textarea {
 	position: absolute;
 	top: 40px;
 	right: 30px;
-	width: 4rem;
+	width: 3.5rem;
 	z-index: 100;
 	opacity: 0.75;
 	cursor: pointer;
@@ -780,7 +786,7 @@ textarea {
 .nav_content_mobile .nav_item {
 	color: black;
 	clear: both;
-	margin-bottom: 60px;
+	margin-bottom: 5rem;
 }
 
 .nav_content_mobile .nav_item a {
@@ -789,19 +795,23 @@ textarea {
 }
 
 .nav_content_mobile .nav_item .nav_title {
-	font-size: 2rem;
-	line-height: 2.3rem;
+	text-transform: uppercase;
+	font-size: 2.1rem;
+	line-height: 2.6rem;
 	font-weight: 700;
 	clear: both;
+	margin-bottom: 1.5rem;
 }
 
 .nav_content_mobile .nav_item .nav_link {
+	text-transform: uppercase;
 	visibility: visible;
 	opacity: 1.0;
-	font-size: 2rem;
-	line-height: 2.3rem;
+	font-size: 2.1rem;
+	line-height: 2.6rem;
 	clear: both;
 	color: black;
+	margin-bottom: 1.5rem;
 }
 
 .nav_content_mobile .nav_item .nav_link a {
@@ -824,6 +834,12 @@ textarea {
 
 .nav_content_mobile .nav_item .nav_link:hover a {
 	color: black;
+	opacity: 0.8;
+	background: none;
+}
+
+.nav_content_mobile .nav_item .nav_link a:hover {
+	color: black !important;
 	opacity: 0.8;
 	background: none;
 }
