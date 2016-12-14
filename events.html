@@ -45,8 +45,16 @@
 		width: 100%;
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 0 20px;
+		padding: 0;
 		box-sizing: border-box;
+	}
+
+	@media only screen 
+	and (min-width: 800px) 
+	and (-webkit-min-device-pixel-ratio: 1) {
+		.event_container {
+			padding: 0 20px;
+		}
 	}
 
 	.event_item {
