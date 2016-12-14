@@ -20,7 +20,7 @@
 	/*PAGE SPECIFIC FORMATTING*/
 
 	.background#landing_splash {
-		background: #222 url('images/family.jpg') no-repeat fixed center top;
+		background: #222 url('images/landing.jpg') no-repeat fixed center top;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -34,7 +34,7 @@
 	}
 
 	#message_splash {
-		background: #222 url('images/family_blur.jpg') no-repeat fixed top center;
+		background: #222 url('images/landing_blur.jpg') no-repeat fixed top center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -44,7 +44,7 @@
 		height: auto;
 		color: #333;
 		box-sizing: border-box;
-		padding: 20vh 0;
+		padding: 30vh 0;
 	}
 
 
@@ -158,7 +158,17 @@
 
 	#landingTitleDiv {
 		margin-top: -10.0rem;
+		opacity: 0;
+		-webkit-transition: all 1200ms ease-in-out;
+		-moz-transition: all 1200ms ease-in-out;
+		-o-transition: all 1200ms ease-in-out;
+		transition: all 1200ms ease-in-out;
 	}
+
+	#landingTitleDiv.active {
+		opacity: 1.0;
+	}
+
 
 	.landingTitle {
 		position: relative;
@@ -180,10 +190,10 @@
 
 	.landingTitle span h1 {
 		font-family: "Karla", sans-serif;
-		-webkit-transition: all 800ms ease-in-out;
-		-moz-transition: all 800ms ease-in-out;
-		-o-transition: all 800ms ease-in-out;
-		transition: all 800ms ease-in-out;
+		-webkit-transition: all 1200ms ease-in-out;
+		-moz-transition: all 1200ms ease-in-out;
+		-o-transition: all 1200ms ease-in-out;
+		transition: all 1200ms ease-in-out;
 		text-transform: none;
 		font-size: 7.0rem;
 		letter-spacing: 0.0rem;
@@ -470,9 +480,9 @@
 				<div class="page_title" id="landingTitleDiv">
 					<div id="landingTitle1" class="landingTitle"><span><h1>Journey</h1></span><span><h1>welcomes</h1></span></div>
 					<div id="landingTitle3" class="landingTitle">
-						<span class="active"><h1>you.</h1></span>
-						<span><h1>Atlanta.</h1></span>
 						<span><h1>the world.</h1></span>
+						<span><h1>you.</h1></span>
+						<span><h1>Atlanta.</h1></span>
 					</div>
 				</div>
 			</div>
@@ -481,7 +491,7 @@
 		<div class="full_container" id="message_splash">
 			<div class="container">
 				<div class="twelve column">
-					<h2>The Journey Church of Atlanta<br>is a community all about God and all about people.</h2>
+					<h2>You weren’t meant to go through life alone.</h2>
 					<p><i>Come journey with us, no matter what you’ve been through.<br>Let’s experience Christ’s love together.</i></p>
 					<p><a class="secondary_button" href="imnew.html">Learn More About Us</a></p>
 				</div>
@@ -506,7 +516,7 @@
 				</div>
 				<div class="six column top_buffer bottom_buffer centered">
 					<h3 class="">11:00 AM</h3>
-					<h4 class="" style="text-transform:uppercase;">Midtown</h4>
+					<h4 class="" style="text-transform:uppercase; padding:0.5rem 0;"><q>Midtown</q></h4>
 					<p class=""><i>college (18&ndash;24yo) service</i></p>
 					<p class="top_buffer bottom_buffer">Georgia Tech Architecture East Auditorium<br>
 					<a class="address">245 Fourth Street NW<br>Atlanta, GA 30332</a></p>
@@ -514,7 +524,7 @@
 				</div>
 				<div class="six column top_buffer bottom_buffer centered">
 					<h3>1:30 PM</h3>
-					<h4 class="" style="text-transform:uppercase;">Eastside</h4>
+					<h4 class="" style="text-transform:uppercase; padding:0.5rem 0;"><q>Eastside</q></h4>
 					<p><i>with children's ministry</i></p>
 					<p class="top_buffer bottom_buffer">Westminster Presbyterian Church<br>
 					<a class="address">1438 Sheridan Road NE<br>Atlanta, GA 30324</a></p>
@@ -590,7 +600,7 @@
 		<div class="full_container form_div bottom_buffer2" id="submit_thanks">
 			<div class="container bottom_buffer">
 				<div class="twelve column block_title">
-					<h4 class="centered">Thanks for messaging us. We’ll reach out to you shortly.</h4>
+					<h4 class="centered">Thanks for reaching out! You’ll hear from us soon.</h4>
 				</div>
 			</div>
 		</div>
@@ -632,6 +642,10 @@
 
 /*page specific script*/
 
+	setTimeout(function() {
+		$("#landingTitleDiv").toggleClass("active");
+	}, 150);
+
 	$("#contact_us_button").on("click", function() {
 		$('#submit_thanks.active').toggleClass('active');
 		$('html, body').animate({
@@ -669,7 +683,7 @@
 		$("#landingTitle3 span:eq("+titleCount+") h1").css("color", "rgba(255, 255, 255, 1.0");
 	}
 
-	setInterval(changeTitle, 2000);
+	setInterval(changeTitle, 2500);
 
 	$('#announcement_link').on('click', function() {
 		$('html, body').animate({
