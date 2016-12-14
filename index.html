@@ -57,10 +57,6 @@
 		padding: 0 20px;
 	}
 
-	#message_splash div h2 {
-		font-size: 4.0rem;
-	}
-
 	#message_splash div p {
 		font-family: "Gentium Book Basic", serif;
 		margin: 50px 0 0 0;
@@ -310,8 +306,8 @@
 	#announcement_link {
 		position: absolute;
 		right: 0;
-		top: 45vh;
-		background: rgba(0, 0, 0, 0.4);
+		top: 12rem;
+		background: rgba(0, 0, 0, 0.7);
 		z-index: 1000;
 		padding: 12px 16px 12px 36px;
 		border-radius: 40px 0 0 40px;
@@ -344,6 +340,14 @@
 
 	#announcement_link:hover p {
 		color: rgba(255, 255, 255, 0.9);
+	}
+
+	@media only screen 
+		and (min-width: 800px) 
+		and (-webkit-min-device-pixel-ratio: 1) {
+		#announcement_link {
+			top: 45vh;
+		}
 	}
 
 	</style>
@@ -518,7 +522,7 @@
 					<h2>Announcements</h2>
 				</div>
 				<div class="announcement_item">
-					<div class="four column announcement_image">
+					<div class="four column announcement_image bottom_buffer">
 						<img src="images/partners_small.jpg">
 					</div>
 					<div class="eight column announcement_body">
@@ -527,7 +531,7 @@
 					</div>
 				</div>
 				<div class="announcement_item">
-					<div class="four column announcement_image">
+					<div class="four column announcement_image bottom_buffer">
 						<img src="images/partners_small.jpg">
 					</div>
 					<div class="eight column announcement_body">
