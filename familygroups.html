@@ -41,6 +41,14 @@
 		padding: 20vh 0;
 	}
 
+	#familygroups .title p i {
+		display: block;
+		font-family: "Gentium Book Basic", serif;
+		margin: 3rem 0 0 0;
+		font-size: 2.5rem;
+		line-height: 3.3rem;
+	}
+
 	.test {
 		height: 300px;
 		background: #CCC;
@@ -58,13 +66,6 @@
 
 	#fg_form label {
 		font-size: 1.7rem;
-	}
-
-	#familygroups p i {
-		font-family: "Gentium Book Basic", serif;
-		display: block;
-		font-size: 2.0rem;
-		padding: 2.0rem 0;
 	}
 
 
@@ -175,37 +176,25 @@
 
 		<header class="background" id="fg_splash">
 			<div class="page_title">
-				<h1>Church is Family</h1>
+				<h1>Family Groups</h1>
 			</div>
 		</header>
 
 		<div class="full_container" id="familygroups">
-			<div class="container">
-				<div class="twelve column block_title">
-					<h2>Family Groups</h2>
+			<div class="container centered">
+				<div class="twelve column block_title title">
+					<h2>Community for the moments that matter</h2>
+					<p><i>Experience the depths of God’s love through honest, Biblical friendships. We call our Bible study small groups “Family Group” because joining a church means joining a family.</i></p>
 				</div>
 				<div class="ten column bottom_buffer one column_left">
-					<p>You weren’t meant to go through life alone.  God Himself exists in community&mdash;Father, Son and Holy Spirit&mdash;and we’re all sons and daughters of our Heavenly Father.  You were created to laugh, work, shed tears and share the joy of salvation with a family.</p>
-					<p><i>Feel at home and grow with God in an intimate setting, apart from Sunday worship.</i></p>
-					<p>The Journey Church is made of more than a dozen “family groups” spanning multiple neighborhoods and four college campuses.  Visit a family group gathering and discover the blessing of sharing life with other Christians.  Here, you’ll connect with 10-15 people of similar age who meet weekly to study God’s word, pray, serve and journey through life together.
-					</p>
+					<p>You weren’t meant to go through life alone. God longs to see us loving one another with brotherly affection: <i>A new commandment I give to you, that you love one another: just as I have loved you, you also are to love one another. (John 13:34)</i></p>
+					<p>It’s in this weekly, intimate space where we get to ask honest questions, form lifelong friendships, engage daily life with God’s word, and learn what it means to serve others.</p>
+					<p>Please visit any of our Family Group gatherings at the following locations and times.</p>
 				</div>
 			</div>
 		</div>
 
 		<div class="container top_buffer2">
-			<div class="five column right_buffer draw_line">
-				<h3 class="bottom_buffer">Campus Communities</h3>
-				<p><i>Monday through Wednesday evenings</i></p>
-			</div>
-			<div class="seven column left_buffer bottom_buffer draw_line">
-				<p>The Journey Church offers family groups on each of the following campuses:<br><br>
-				Georgia State University<br>
-				Georgia Institute of Technology<br>
-				Emory University<br>
-				Oxford College
-				</p>
-			</div>
 			<div class="five column right_buffer draw_line">
 				<h3 class="bottom_buffer">Singles</h3>
 				<p><i>Sunday through Wednesday evenings</i></p>
@@ -226,15 +215,25 @@
 				<p><i>Tuesday and Wednesday evenings</i></p>
 			</div>
 			<div class="seven column left_buffer bottom_buffer draw_line">
-				<p>asdasdasd
+				<p>We currently offer two Family Groups:<br><br>
+				Wives: Tue at 7:30 PM, location TBD<br>
+				Husbands: Wed at 7:30 PM, Chamblee-Tucker area<br>
 				</p>
 			</div>
+		</div>
+
+		<div class="container top_buffer2 centered">
+			<div class="twelve column">
+				<h3 class="bottom_buffer">Looking for a college campus Family Group?</h3>
+				<a href="college.html"><p class="centered primary_button top_buffer">Click for details</p></a>
+			</div>
+			
 		</div>
 
 		<div class="full_container gray_wrapper">
 			<div class="container">
 				<div class="twelve column block_title">
-					<h2>Visit a family group</h2>
+					<h2>Visiting a group</h2>
 				</div>
 				<div class="ten column centered one column_left">
 					<p>If you’re interested in finding a group that fits you, or just want more information, please fill out the fields below.  You’ll receive an email response shortly!</p>
@@ -245,19 +244,22 @@
 						<input id="fg_name_input" name="fg_name_input" type="text">
 						<label for="fg_year_input">Email Address?</label>
 						<input id="fg_year_input" name="fg_email_input" type="text">
-						<label for="gathering_campus_input">Are you looking for a campus community or a singles/families group?</label><br>
+						<label for="gathering_campus_input">Are you looking for a singles or families group?</label><br>
 						<div class="radio_button">
 							<input type="radio" name="fg_type_input" value="campus" checked>
-							<label for="midtown">Campus Community</label>
+							<label for="midtown">Singles</label>
 						</div>
 						<div class="radio_button">
 							<input type="radio" name="fg_type_input" value="singles">
-							<label for="Eastside">Singles / Family</label>
+							<label for="Eastside">Families</label>
 						</div>
 						<br><br>
-						<p class="centered top_buffer"><a class="primary_button">Submit</a></p>
+						<p class="centered top_buffer"><a class="primary_button" id="fg_submit">Submit</a></p>
 					</div>
 				</div>
+			</div>
+			<div class="twelve column" id="submit_thanks">
+				<h4 class="centered">Thanks for reaching out! You’ll hear from us soon.</h4>
 			</div>
 		</div>
 
@@ -293,9 +295,13 @@
 
 <!--SCRIPTS-->
 <script src="js/script.js"></script>
+
 <script>
 
 /*page specific script*/
+	$('#fg_submit').on('click', function() {
+		activateSubmitThanks();
+	});
 
 </script>
 </body>
