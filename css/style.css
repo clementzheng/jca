@@ -198,7 +198,7 @@ p a {
 	}
 	.column {
 		padding: 0 2%;
-		margin: 0;
+		margin-left: 0;
 	}
 	.one.column { width: 8.3333%; }
 	.two.column { width: 16.6667%; }
