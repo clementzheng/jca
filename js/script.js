@@ -16,6 +16,8 @@ $(document).ready(function() {
 	}
 
 	if (mobile) {
+		$(".container").css("box-sizing", "border-box");
+		$(".container").css("padding", "0 10px");
 		$(".nav_menu_icon").css("width", "4rem");
 	}
 
