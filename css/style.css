@@ -163,6 +163,7 @@ p a {
 
 .column {
 	width: 100%;
+	padding: 0 10px;
 	float: left;
 	box-sizing: border-box;
 }
@@ -174,15 +175,6 @@ p a {
 .block_title {
 	margin: 75px 0 50px 0;
 	text-align: center;
-}
-
-@media only screen 
-	and (min-width: 400px) 
-	and (-webkit-min-device-pixel-ratio: 2) {
-	.container {
-		width: 80%;
-		padding: 0;
-	}
 }
 
 @media only screen 
