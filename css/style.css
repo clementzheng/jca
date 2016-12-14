@@ -295,6 +295,7 @@ header {
 	-o-background-size: cover;
 	background-size: cover;
 	overflow: hidden;
+	min-height: 600px;
 }
 
 .page_title {
@@ -361,6 +362,7 @@ header {
 }
 
 .primary_button {
+	display: inline-block;
 	font-size: 1.6rem;
 	font-weight: 400;
 	text-transform: uppercase;
@@ -387,6 +389,10 @@ header {
 }
 
 .secondary_button {
+	position: relative;
+	width: auto;
+	display: inline-block;
+	line-height: 2.3rem;
 	font-family: "Karla", sans-serif;
 	font-size: 1.6rem;
 	font-weight: 400;
