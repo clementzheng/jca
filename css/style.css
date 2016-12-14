@@ -542,6 +542,11 @@ header {
 	font-size: 2.0rem;
 }
 
+textarea {
+	font-family: "Karla", sans-serif;
+	font-size: 2.0rem;
+}
+
 .end_div {
 	margin-bottom: 150px;
 	position: relative;
