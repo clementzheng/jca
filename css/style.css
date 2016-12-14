@@ -510,6 +510,10 @@ header {
 }
 
 #submit_thanks {
+	position: relative;
+	float: left;
+	height: auto;
+	display: block;
 	max-height: 0;
 	visibility: hidden;
 	opacity: 0;
