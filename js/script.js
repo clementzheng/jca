@@ -16,7 +16,6 @@ $(document).ready(function() {
 	}
 
 	if (mobile) {
-		$(".container").css("width", "100%");
 		$(".nav_menu_icon").css("width", "4rem");
 	}
 
