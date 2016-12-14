@@ -162,8 +162,8 @@ p a {
 }
 
 .column {
-	width: 90%;
-	margin: 0 5%;
+	width: 96%;
+	margin-left: 2%;
 	float: left;
 	box-sizing: border-box;
 }
