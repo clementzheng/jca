@@ -10,8 +10,6 @@
 	
 	<!--FONTS-->
 	<link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
-	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700,700i" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato:700,700i,900,900i" rel="stylesheet">
 	<!--STYLE-->
@@ -62,56 +60,6 @@
 		margin: 50px 0 0 0;
 		font-size: 2.5rem;
 		line-height: 3.3rem;
-	}
-
-	#first_time_splash {
-		background: #222 url('images/atlanta_skyline_blur.jpg') no-repeat fixed center center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		overflow: hidden;
-		height: 100vh;
-		text-align: center;
-	}
-
-	#first_time_splash div {
-		position: absolute;	
-		top: 30%;
-		margin-top: -7.5rem;
-		color: white;
-		width: 100%;
-		text-align: center;
-		box-sizing: border-box;
-		padding: 0 20px;
-	}
-
-
-	#first_time_splash div h2 {
-		width: 100%;
-		position: relative;	
-		float: left;
-	}
-
-	#first_time_splash div p {
-		width: 100%;
-		position: relative;	
-		float: left;
-		text-align: center;
-		margin-top: 5.0rem;
-	}
-
-	@media (min-width: 550px) {
-		#first_time_splash div {
-			position: absolute;	
-			top: 50%;
-			margin-top: -7.5rem;
-			color: white;
-			width: 100%;
-			text-align: center;
-			box-sizing: border-box;
-			padding: 0 20px;
-		}
 	}
 
 	#contact_form_div {
@@ -257,32 +205,8 @@
 		width: 100%;
 	}
 
-	.highlight {
-		color: red;
-	}
-
 	#contact_us h4 {
 		font-weight: 900;
-	}
-
-	#updates {
-		position: relative;
-		float: left;
-		width: 100%;
-		padding: 80px 0 40px 0;
-		background: #EEE;
-	}
-
-	#service_updates h4 {
-		font-weight: 900;
-	}
-
-	#event_updates h4 {
-		font-weight: 900;
-	}
-
-	#updates_heading {
-		font-weight: 700;
 	}
 
 	#announcements {
@@ -683,7 +607,7 @@
 		$("#landingTitle3 span:eq("+titleCount+") h1").css("color", "rgba(255, 255, 255, 1.0");
 	}
 
-	setInterval(changeTitle, 2500);
+	setInterval(changeTitle, 3000);
 
 	$('#announcement_link').on('click', function() {
 		$('html, body').animate({
