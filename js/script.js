@@ -15,10 +15,6 @@ $(document).ready(function() {
 		}
 	}
 
-	if (mobile) {
-		$(".nav_menu_icon").css("width", "4rem");
-	}
-
 	$(window).on('resize', function() {
 		if ($(window).innerWidth()<900 || mobile) {
 			$(".nav_bar").css("display", "none");
