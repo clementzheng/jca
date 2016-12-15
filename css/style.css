@@ -380,6 +380,7 @@ header {
 	border: 1px solid #999999;
 	white-space: normal;
 	text-decoration: none;
+	z-index: 999;
 }
 
 .primary_button:hover {
@@ -409,6 +410,7 @@ header {
 	cursor: pointer;
 	box-sizing: border-box;
 	text-decoration: none;
+	z-index: 999;
 }
 
 .secondary_button:hover {
