@@ -515,6 +515,20 @@ header {
 	border-bottom: 1px dotted #CCC;
 }
 
+.form_div .container {
+	margin-top: 50px;
+}
+
+@media only screen 
+	and (min-width: 800px) 
+	and (-webkit-min-device-pixel-ratio: 1) {
+
+	.form_div .container {
+		margin-top: 50px;
+	}
+
+}
+
 #submit_thanks {
 	position: relative;
 	float: left;
