@@ -72,8 +72,36 @@
 		float: left;
 		display: block;
 		width: 100%;
+		padding: 0 5%;
+		box-sizing: border-box;
 		height: auto;
 		overflow: hidden;
+	}
+
+	.event_body {
+		position: relative;
+		float: left;
+		display: block;
+		width: 100%;
+		padding: 0 5%;
+		box-sizing: border-box;
+		height: auto;
+		overflow: hidden;
+	}
+
+	@media only screen 
+	and (min-width: 800px) 
+	and (-webkit-min-device-pixel-ratio: 1) {
+		.event_image {
+			width: 40%;
+			padding: 0;
+			padding-right: 5%;
+		}
+
+		.event_body {
+			padding: 0;
+			width: 60%;
+		}
 	}
 
 	.event_image img {
@@ -230,30 +258,30 @@
 		<div class="full_container top_buffer2" id="events">
 			<div class="event_container bottom_buffer">
 				<div class="event_item">
-					<div class="four column event_image">
+					<div class="event_image">
 						<img src="images/partners_small.jpg">
 					</div>
-					<div class="seven column event_body">
+					<div class="event_body">
 						<p class="event_date">Jan 31 @ 1:00 PM</p>
 						<p class="event_title">Outreach at Piedmont Park</p>
 						<p class="event_description">Come out on Saturday to Piedmont Park. We’ll be handing out goodie bags and having conversations with people about God and faith.</p>
 					</div>
 				</div>
 				<div class="event_item">
-					<div class="four column event_image">
+					<div class="event_image">
 						<img src="images/partners_small.jpg">
 					</div>
-					<div class="seven column event_body">
+					<div class="event_body">
 						<p class="event_date">Jan 31 @ 1:00 PM</p>
 						<p class="event_title">Outreach at Piedmont Park</p>
 						<p class="event_description">Come out on Saturday to Piedmont Park. We’ll be handing out goodie bags and having conversations with people about God and faith.</p>
 					</div>
 				</div>
 				<div class="event_item">
-					<div class="four column event_image">
+					<div class="event_image">
 						<img src="images/partners_small.jpg">
 					</div>
-					<div class="seven column event_body">
+					<div class="event_body">
 						<p class="event_date">Jan 31 @ 1:00 PM</p>
 						<p class="event_title">Outreach at Piedmont Park</p>
 						<p class="event_description">Come out on Saturday to Piedmont Park. We’ll be handing out goodie bags and having conversations with people about God and faith.</p>
