@@ -37,18 +37,88 @@
 		letter-spacing: 0.6rem;
 	}
 
-	.top_border {
-		border-top: 2px solid #DDDDDD;
+	#lt_title_block {
+		position: relative;
+		float: left;
+		height: auto;
+		background: #222 url('images/family.jpg') no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		box-sizing: border-box;
+		padding: 20px;
+		z-index: 999;
 	}
 
-	.test {
-		height: 300px;
-		background: #CCC;
-		border: 1px solid white;
+	#lt_title_block .block_title {
+		padding: 6vh 0 4vh 0;
+		margin: 0;
+		color: white;
 	}
 
-	#paypal img {
-		width: 200px;
+	#lt_title_block .block_title p i {
+		display: block;
+		padding: 0;
+		margin: 2.5rem auto 0 auto;
+		font-family: "Gentium Book Basic", serif;
+		font-weight: 400;
+		font-size: 2.3rem;
+		max-width: 960px;
+	}
+
+	#lt_title_block .block_title p {
+		padding: 0;
+		margin: 2.5rem auto 0 auto;
+		font-weight: 400;
+		max-width: 960px;
+		color: white;
+	}
+
+	#lt_title_block .block_title p a {
+		color: white;
+	}
+
+	#child_form_div {
+		opacity: 0;
+		position: relative;
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding-top: 0px;
+		max-height: 0px;
+		overflow: hidden;
+		z-index: 99;
+		-webkit-transition: all 500ms ease-in-out;
+		-moz-transition: all 500ms ease-in-out;
+		-o-transition: all 500ms ease-in-out;
+		transition: all 500ms ease-in-out;
+	}
+
+	#child_form_div.active {
+		opacity: 1.0;
+		margin: 50px 0 50px 0;
+		padding-top: 50px;
+		max-height: 900px;
+	}
+
+	.close_form {
+		position: absolute;
+		top: 20px;
+		right: 30px;
+		width: 40px;
+		height: 40px;
+	}
+
+	.close_form img {
+		width: 100%;
+		height: 100%;
+		opacity: 0.25;
+		cursor: pointer;
+	}
+
+	.close_form:hover img {
+		opacity: 0.5;
 	}
 
 
@@ -159,10 +229,80 @@
 
 		<header class="background" id="teams_splash">
 			<div class="page_title">
-				<h1>Ministry Teams</h1>
-				<h4>coming soon</h4>
+				<h1>Little Travelers</h1>
 			</div>
 		</header>
+
+		<div class="full_container bottom_buffer top_buffer2" id="lt_title_block">
+			<div class="twelve column block_title">
+				<h2>Let the children come to me</h2>
+				<p><i>Do not hinder them, for to such belongs the kingdom of God. (Mark 10:14)</i></p>
+			</div>
+		</div>
+
+		<div class="full_container top_buffer2 bottom_buffer2">
+			<div class="container">
+				<div class="ten column top_buffer bottom_buffer one column_left">
+					<p>During our 1:30 PM “Eastside” Sunday service, all children in grades kindergarten and above are invited to join our Sunday School program, “Little Travelers.”  We strive to teach children about the love of God and how to become more like Jesus Christ.  Every week, children learn about stories from the Bible, and summaries of each lesson are emailed to parents so you can more fully get involved.</p>
+					<p>If you have children younger than kindergarten age, please let us know via the form below so we can prepare to welcome your child.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="full_container bottom_buffer" id="lt_title_block">
+			<div class="twelve column block_title">
+				<h2>How to Participate</h2>
+				<p><i>1:30 PM at “Eastside”</i></p>
+				<p>Westminster Presbyterian Church
+				<br><a class="address" href="https://goo.gl/maps/4ki5sUNTbFr" target="_blank">1438 Sheridan Road NE<br>Atlanta, GA 30324</a>
+				</p>
+			</div>
+		</div>
+
+		<div class="full_container top_buffer2 bottom_buffer2" id="lt_info_div">
+			<div class="container">
+				<div class="ten column top_buffer bottom_buffer one column_left">
+					<p><b>Before your Sunday visit,</b> please fill out the form below to let us know the names and ages of your children, as well as any allergies or other important notes.</p>
+					<p><b>As you enter the building,</b> talk to any greeter wearing a blue “Welcoming” nametag and they will happily escort your family to the “Little Travelers” room.</p>
+					<p><b>After worship service,</b> come back to the same “Little Travelers” room to sign your children out.  You’ll receive an email from our teachers with a lesson summary and, occasionally, weekday activities to help your children be engaged from Sunday to Sunday.</p>
+				</div>
+				<div class="ten column one column_left centered">
+					<a><p class="primary_button top_buffer" id="child_button">Tell us about your child</p></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="full_container form_div" id="child_form_div">
+			<div class="close_form">
+				<img src="images/cancel_black.svg">
+			</div>
+			<div class="container bottom_buffer2">
+				<div class="twelve column">
+					<h3 class="centered bottom_buffer">Tell us about your child</h3>
+				</div>
+				<div class="eight column two column_left top_buffer">
+					<div id="fg_form" class="form">
+						<label for="child_name_input">What is his/her names and ages?</label>
+						<textarea id="child_name_input" name="child_name_input" style="width: 100%; margin: 10px 0 30px 0; min-height:50px; resize:vertical;"></textarea>
+						<label for="child_parent_input">What is your and/or your spouse's name?</label>
+						<textarea id="child_parent_input" name="child_parent_input" style="width: 100%; margin: 10px 0 30px 0; min-height:50px; resize:vertical;"></textarea>
+						<label for="child_email_input">Please leave your email so we can get in touch:</label>
+						<textarea id="child_email_input" name="child_email_input" style="width: 100%; margin: 10px 0 30px 0; min-height:50px; resize:vertical;"></textarea>
+						<label for="child_allergy_input">Please let us know of any allergies, or anything else our teachers should pay attention to:</label>
+						<textarea id="child_allergy_input" name="child_allergy_input" style="width: 100%; margin: 10px 0 30px 0; min-height:100px; resize:vertical;"></textarea>
+						<p class="centered top_buffer"><a class="primary_button" id="child_submit">Submit</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="full_container form_div bottom_buffer2" id="submit_thanks">
+			<div class="container bottom_buffer">
+				<div class="twelve column block_title">
+					<h4 class="centered">Thanks for reaching out! You’ll hear from us soon.</h4>
+				</div>
+			</div>
+		</div>
 
 		<div class="footer">
 			<div class="container">
@@ -198,6 +338,32 @@
 <script src="js/script.js"></script>
 <script>
 
+	$("#child_button").on("click", function() {
+		$('#submit_thanks.active').toggleClass('active');
+		$('html, body').animate({
+	        scrollTop: $("#child_form_div").offset().top
+	    }, 500);
+		if (!$("#child_form_div").hasClass("active")) {
+			$("#child_form_div").toggleClass("active");
+		}
+	});
+
+	$("#child_form_div .close_form").on("click", function() {
+		if ($("#child_form_div").hasClass("active")) {
+			$("#child_form_div").toggleClass("active");
+			$('html, body').animate({
+		        scrollTop: $("#lt_info_div").offset().top + 300
+		    }, 500);
+		}
+	});
+
+	//VINCENT: THIS IS THE BEHAVIOR FOR SUBMITTING A FORM
+	$('#child_submit').on('click', function() {
+		if ($("#child_form_div").hasClass("active")) {
+			$("#child_form_div").toggleClass("active");
+		}
+		activateSubmitThanks();
+	});
 
 </script>
 </body>
