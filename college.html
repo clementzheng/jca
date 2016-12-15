@@ -19,8 +19,8 @@
 	<style>
 	/*PAGE SPECIFIC FORMATTING*/
 
-	.background#teams_splash {
-		background: url('images/teams.jpg') no-repeat fixed center center;
+	.background#college_splash {
+		background: url('images/family.jpg') no-repeat fixed center center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -29,26 +29,114 @@
 		margin-bottom: 0px;
 	}
 
-	#teams_splash h4 {
-		font-family: "Gentium Book Basic", serif;
-		font-size: 5.0rem;
+	#college_message h3 {
+		font-family: "Gentium Book Basic";
 		font-weight: 400;
-		margin-top: 3.0rem;
-		letter-spacing: 0.6rem;
+		font-style: italic;
+		margin: 10rem 0;
 	}
 
-	.top_border {
-		border-top: 2px solid #DDDDDD;
+	.college_title_block {
+		position: relative;
+		float: left;
+		height: auto;
+		background: #222 url('images/family.jpg') no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		box-sizing: border-box;
+		padding: 20px;
+		z-index: 999;
 	}
 
-	.test {
-		height: 300px;
-		background: #CCC;
-		border: 1px solid white;
+	.college_title_block .block_title {
+		padding: 6vh 0 4vh 0;
+		margin: 0;
+		color: white;
 	}
 
-	#paypal img {
-		width: 200px;
+	.college_title_block .block_title p i {
+		display: block;
+		padding: 0;
+		margin: 2.5rem auto 0 auto;
+		font-family: "Gentium Book Basic", serif;
+		font-weight: 400;
+		font-size: 2.3rem;
+		max-width: 960px;
+	}
+
+	.college_title_block .block_title p {
+		padding: 0;
+		margin: 2.5rem auto 0 auto;
+		font-weight: 400;
+		max-width: 960px;
+		color: white;
+	}
+
+	.college_title_block .block_title p a {
+		color: white;
+	}
+
+	.college_info_block .location_title {
+		position: relative;
+		float: left;
+		width: 35%;
+		margin: 0;
+	}
+
+	.college_info_block .location_details {
+		position: relative;
+		float: left;
+		width: 60%;	
+		margin: 0;
+	}
+
+	#qs_info_div p i {
+		font-family: "Gentium Book Basic", serif;
+		font-size: 2.0rem;
+	}
+
+	#cfg_form_div {
+		opacity: 0;
+		position: relative;
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding-top: 0px;
+		max-height: 0px;
+		overflow: hidden;
+		z-index: 99;
+		-webkit-transition: all 500ms ease-in-out;
+		-moz-transition: all 500ms ease-in-out;
+		-o-transition: all 500ms ease-in-out;
+		transition: all 500ms ease-in-out;
+	}
+
+	#cfg_form_div.active {
+		opacity: 1.0;
+		margin: 50px 0 50px 0;
+		padding-top: 50px;
+		max-height: 900px;
+	}
+
+	.close_form {
+		position: absolute;
+		top: 20px;
+		right: 30px;
+		width: 40px;
+		height: 40px;
+	}
+
+	.close_form img {
+		width: 100%;
+		height: 100%;
+		opacity: 0.25;
+		cursor: pointer;
+	}
+
+	.close_form:hover img {
+		opacity: 0.5;
 	}
 
 
@@ -157,12 +245,211 @@
 
 	<div class="content_container">
 
-		<header class="background" id="teams_splash">
+		<header class="background" id="college_splash">
 			<div class="page_title">
-				<h1>Ministry Teams</h1>
-				<h4>coming soon</h4>
+				<h1>College Community</h1>
 			</div>
 		</header>
+
+		<div class="container top_buffer2 bottom_buffer2" id="college_message">
+			<div class="twelve column centered">
+				<h3>Your time in college is arguably one of the most important in your life.<br><br>We’ll walk with you as you discover yourself in God, and have some amazing times together along the way.</h3>
+			</div>
+		</div>
+
+		<div class="full_container bottom_buffer college_title_block" id="cs_title_block">
+			<div class="twelve column block_title">
+				<h2>Sunday Service</h2>
+				<p><i>11:00 AM at “Midtown”</i></p>
+				<p>Georgia Tech Architecture East Auditorium
+				<br><a class="address" href="https://goo.gl/maps/S5dzx6wd5DP2" target="_blank">245 Fourth Street NW<br>Atlanta, GA 30332</a>
+				</p>
+			</div>
+		</div>
+
+		<div class="full_container top_buffer2 bottom_buffer2 college_info_block" id="cs_info_div">
+			<div class="container">
+				<div class="ten column top_buffer one column_left">
+					<p>Come worship with us on Sundays right on Georgia Tech campus.  Transportation is provided every week from Georgia State University, Oxford College, Emory University and back.  Please see below for pick-up locations and times:</p>
+				</div>
+				<br>
+				<div class="ten column one column_left">
+					<div class="location_title">
+						<p><b>Georgia State University</b></p>
+					</div>
+					<div class="location_details">
+						<p>Commons at 10:40 AM</p>
+					</div>
+				</div>
+				<div class="ten column one column_left">
+					<div class="location_title">
+						<p><b>Oxford College</b></p>
+					</div>
+					<div class="location_details">
+						<p>Lil's Cafeteria at 10:15 AM</p>
+					</div>
+				</div>
+				<div class="ten column one column_left">
+					<div class="location_title">
+						<p><b>Emory Main Campus</b></p>
+					</div>
+					<div class="location_details">
+						<p>Dobbs Circle at 10:15 AM and 10:30 AM</p>
+					</div>
+				</div>
+				<div class="ten column one column_left">
+					<div class="location_title">
+						<p><b>Emory Clairmont Campus</b></p>
+					</div>
+					<div class="location_details">
+						<p>SAAC Circle at 10:30 AM</p>
+					</div>
+				</div>
+				<div class="ten column one column_left top_buffer">
+					<h3>Parking Details</h3>
+					<p class="top_buffer">If you’re driving, Sunday parking on Georgia Tech campus is free of charge in Area Lot 4: <a href="https://goo.gl/maps/vgndfKG2i9D2" target="_blank">345 Ferst Drive, Atlanta, GA 30318</a>.  Please drive all the way to the back of the lot for the shortest walk to the Architecture East Auditorium.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="full_container bottom_buffer college_title_block" id="qs_title_block">
+			<div class="twelve column block_title">
+				<h2>Friday “QUEST” Service</h2>
+				<p><i>7:30 PM</i></p>
+				<p>Westminster Presbyterian Church
+				<br><a class="address" href="https://goo.gl/maps/4ki5sUNTbFr" target="_blank">1438 Sheridan Road NE<br>Atlanta, GA 30324</a></p>
+				</p>
+			</div>
+		</div>
+
+		<div class="full_container top_buffer2 bottom_buffer2" id="qs_info_div">
+			<div class="container">
+				<div class="ten column top_buffer one column_left">
+					<p><i>The Friday night that will really change your life.</i></p>
+					<p>We know what you’re thinking&mdash;“Friday Night? C’mon.” Trust us. You won’t be disappointed. Our Friday night services are intimate and powerful times with Jesus and fam. It usually ends with us dancing around.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="full_container bottom_buffer college_title_block" id="cfg_title_block">
+			<div class="twelve column block_title">
+				<h2>Family Groups</h2>
+				<p><i>Experience the depths of God’s love through honest, Biblical friendships. We call our Bible study small groups “Family Group” because joining a church means joining a family.</i></p>
+				</p>
+			</div>
+		</div>
+
+		<div class="full_container top_buffer2" id="cfg_info_div">
+			<div class="container">
+				<div class="ten column top_buffer one column_left">
+					<p>We really get it.  We went through it.  The highs.  The lows.  The fear and the excitement.  We've learned that it's so much better together, and we'd love to walk with you through it all.</p>
+					<p>Family Groups are safe spaces to ask honest questions, make mistakes, and experience divine love during some of the most tumultuous times in life.  Think of it as a cozy living room full of friends to discuss faith, ask questions about God’s word, and share the struggles and victories of everyday life.</p>
+				</div>
+				<div class="ten column one column_left top_buffer centered">
+					<h3>Monday, Tuesday, and Wednesday evenings</h3>
+					<p class="top_buffer">We currently offer Family Groups on the following campuses:
+					<br><i>Georgia Tech</i>
+					<br><i>Georgia State University</i>
+					<br><i>Oxford College</i>
+					<br><i>Emory University</i></p>
+				</div>
+				<div class="ten column one column_left centered">
+					<p>If you’d like to visit a group, or just want more information, shoot us a note using the form below:</p>
+					<p class="top_buffer"><a class="primary_button" id="cfg_button">Tell me more</a></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="full_container form_div" id="cfg_form_div">
+			<div class="close_form">
+				<img src="images/cancel_black.svg">
+			</div>
+			<div class="container bottom_buffer2">
+				<div class="twelve column">
+					<h3 class="centered bottom_buffer">Tell me more</h3>
+				</div>
+				<div class="eight column two column_left">
+					<div id="fg_form" class="form">
+						<label for="cfg_name_input">What is your name?</label>
+						<input id="cfg_name_input" name="cfg_name_input" type="text">
+						<label for="cfg_email_input">Email Address?</label>
+						<input id="cfg_email_input" name="cfg_email_input" type="text">
+						<label for="cfg_campus_input">I’d like to visit a Family group at</label><br>
+						<div class="radio_button">
+							<input type="radio" name="cfg_type_input" value="GT" checked>
+							<label for="cfg_type_input">Georgia Tech</label>
+						</div>
+						<div class="radio_button">
+							<input type="radio" name="cfg_type_input" value="GSU" >
+							<label for="cfg_type_input">Georgia State University</label>
+						</div>
+						<div class="radio_button">
+							<input type="radio" name="cfg_type_input" value="OC" >
+							<label for="cfg_type_input">Oxford College</label>
+						</div>
+						<div class="radio_button">
+							<input type="radio" name="cfg_type_input" value="EC" >
+							<label for="cfg_type_input">Emory University</label>
+						</div>
+						<br><br>
+						<p class="centered top_buffer"><a class="primary_button" id="cfg_submit">Submit</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="full_container form_div bottom_buffer2" id="submit_thanks">
+			<div class="container bottom_buffer">
+				<div class="twelve column block_title">
+					<h4 class="centered">Thanks for reaching out! You’ll hear from us soon.</h4>
+				</div>
+			</div>
+		</div>
+
+		<div class="full_container bottom_buffer college_title_block" id="cpm_title_block">
+			<div class="twelve column block_title">
+				<h2>Prayer Meetings</h2>
+				<p><i><q>Let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in time of need.</q> Hebrews 4:16</i></p>
+			</div>
+		</div>
+
+		<div class="full_container top_buffer2 bottom_buffer2 college_info_block end_div" id="cpm_info_div">
+			<div class="container">
+				<div class="ten column one column_left top_buffer">
+					<h3>Morning Prayer at 7:00 AM</h3>
+					<p class="top_buffer">Start your mornings with prayer.  We offer a safe environment for you to connect with the Lord and be encouraged by the prayers of your community.  It ends promptly at 8:00 AM so you can get to class on time.  Choose from two locations:</p>
+				</div>
+				<div class="ten column one column_left">
+					<div class="location_title">
+						<p><b>Tuesday &amp; Thursday</b></p>
+					</div>
+					<div class="location_details">
+						<p>Georgia Tech:  Student Center, Rm. 320</p>
+					</div>
+				</div>
+				<div class="ten column one column_left">
+					<div class="location_title">
+						<p><b>Wednesday &amp; Thursday</b></p>
+					</div>
+					<div class="location_details">
+						<p>Emory University:  Clairmont Campus, SAAC Rm. 301</p>
+					</div>
+				</div>
+				<div class="ten column one column_left top_buffer">
+					<h3>Evening Prayer at 7:00 PM</h3>
+					<p class="top_buffer">Every Thursday evening, students across campuses gather together to worship, pray and intercede for one another.  Ends at 8:30 PM.  Choose from two locations:</p>
+				</div>
+				<div class="ten column one column_left">
+					<div class="location_title">
+						<p><b>Thursdays, only</b></p>
+					</div>
+					<div class="location_details">
+						<p>Georgia Tech:  Student Center, Rm. 301</p>
+						<p>Emory University:  Math &amp; Science, N304</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div class="footer">
 			<div class="container">
@@ -197,7 +484,32 @@
 <!--SCRIPTS-->
 <script src="js/script.js"></script>
 <script>
+	$("#cfg_button").on("click", function() {
+		$('#submit_thanks.active').toggleClass('active');
+		$('html, body').animate({
+	        scrollTop: $("#cfg_form_div").offset().top
+	    }, 500);
+		if (!$("#cfg_form_div").hasClass("active")) {
+			$("#cfg_form_div").toggleClass("active");
+		}
+	});
 
+	$("#cfg_form_div .close_form").on("click", function() {
+		if ($("#cfg_form_div").hasClass("active")) {
+			$("#cfg_form_div").toggleClass("active");
+			$('html, body').animate({
+		        scrollTop: $("#cfg_info_div").offset().top + 300
+		    }, 500);
+		}
+	});
+
+	//VINCENT: THIS IS THE BEHAVIOR FOR SUBMITTING A FORM
+	$('#cfg_submit').on('click', function() {
+		if ($("#cfg_form_div").hasClass("active")) {
+			$("#cfg_form_div").toggleClass("active");
+		}
+		activateSubmitThanks();
+	});
 
 </script>
 </body>
