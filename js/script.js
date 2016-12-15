@@ -17,6 +17,8 @@ $(document).ready(function() {
 
 	if (mobile) {
 		$(".nav_menu_icon").css("width", "3.0rem");
+		$("#JCA_logo").css("left", "25px");
+		$("#JCA_logo").css("top", "25px");
 	}
 
 	$(window).on('resize', function() {
