@@ -21,6 +21,9 @@ body {
 	font-size: 1.5rem;
 	color: #333;
 	 -webkit-text-size-adjust: 100%;
+}
+
+.background {
 	background-attachment: scroll !important;
 }
 
