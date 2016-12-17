@@ -45,7 +45,7 @@
 	}
 
 	#sunday_title_block .block_title {
-		padding: 10vh 0;
+		padding: 15vh 0;
 		margin: 0;
 		color: white;
 	}
@@ -73,7 +73,7 @@
 	}
 
 	#friday_title_block .block_title {
-		padding: 10vh 0;
+		padding: 15vh 0;
 		margin: 0;
 		color: white;
 	}
@@ -199,7 +199,7 @@
 			</div>
 		</header>
 
-		<div class="full_container bottom_buffer top_buffer background" id="sunday_title_block">
+		<div class="full_container bottom_buffer top_buffer" id="sunday_title_block">
 			<div class="block_title">
 				<h2>Sunday Services</h2>
 				<p><i>Our Sunday celebrations are prayerful, Spirit-filled, Bible-based times of worship, teaching and community building. We would love to see you this Sunday. You can find us at the following times and locations:</i></p>
@@ -227,7 +227,7 @@
 			</div>
 		</div>
 
-		<div class="full_container bottom_buffer background" id="friday_title_block">
+		<div class="full_container bottom_buffer" id="friday_title_block">
 			<div class="block_title">
 				<h2>Friday Prayer Meeting</h2>
 				<p><i>Start your weekend by spending time with your community in prayer.</i></p>
@@ -286,59 +286,7 @@
 
 /*page specific script*/
 
-	$("#ride_button").on("click", function() {
-		if ($("#parents_form_div").hasClass("active")) {
-			$("#parents_form_div").toggleClass("active");
-			if (!$("#students_form_div").hasClass("active")) {
-				$("#students_form_div").toggleClass("active");
-			}
-		} else {
-			$('html, body').animate({
-	       		scrollTop: $("#students_form_div").offset().top
-		    }, 500);
-			if (!$("#students_form_div").hasClass("active")) {
-				$("#students_form_div").toggleClass("active");
-			}
-		}
-	});
-
-	$("#students_form_div .close_form").on("click", function() {
-		if ($("#students_form_div").hasClass("active")) {
-			$('html, body').animate({
-		        scrollTop: $("#join_us").offset().top
-		    }, 500);
-		    $("#students_form_div").toggleClass("active");
-		}
-	});
-
-	$("#kids_button").on("click", function() {
-		if ($("#students_form_div").hasClass("active")) {
-			$("#students_form_div").toggleClass("active");
-			if (!$("#parents_form_div").hasClass("active")) {
-				$("#parents_form_div").toggleClass("active");
-			}
-		} else {
-			$('html, body').animate({
-		        scrollTop: $("#parents_form_div").offset().top
-		    }, 500);
-			if (!$("#parents_form_div").hasClass("active")) {
-				$("#parents_form_div").toggleClass("active");
-			}
-		}
-	});
-
-	$("#parents_form_div .close_form").on("click", function() {
-		if ($("#parents_form_div").hasClass("active")) {
-			$('html, body').animate({
-		        scrollTop: $("#join_us").offset().top
-		    }, 500);
-		    $("#parents_form_div").toggleClass("active");
-		}
-	});
-
-	$(".expand").on("click", function() {
-		$(this).toggleClass("active");
-	});
+	
 
 </script>
 </body>
